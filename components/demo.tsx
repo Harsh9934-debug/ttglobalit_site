@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 import MegaMenu from "./ui/mega-menu";
 import type { MegaMenuItem } from "./ui/mega-menu";
