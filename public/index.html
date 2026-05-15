@@ -9,18 +9,69 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        .hexagon-bg {
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            background-color: #f3f4f6;
+        .text-orange { color: #ea580c; }
+        .bg-orange { background-color: #ea580c; }
+
+        #main-header {
+            transition: all 0.3s ease;
         }
-        .text-orange {
-            color: #ea580c;
+        #main-header.scrolled {
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 24px rgba(0,0,0,0.04);
         }
-        .bg-orange {
-            background-color: #ea580c;
+        @media (min-width: 768px) {
+            #main-header.scrolled {
+                margin-top: 12px;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: calc(100% - 48px);
+                border-radius: 12px;
+                border: 1px solid rgba(0,0,0,0.06);
+            }
         }
-        .shape-bottom {
-            clip-path: polygon(0 80%, 100% 50%, 100% 100%, 0% 100%);
+
+        /* Hamburger animation */
+        .hamburger-line {
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+        .hamburger-open .hamburger-line:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+        .hamburger-open .hamburger-line:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+        .hamburger-open .hamburger-line:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        /* Mobile menu animation */
+        #mobile-menu {
+            transition: all 0.3s ease;
+        }
+        #mobile-menu.open {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #mobile-menu:not(.open) {
+            opacity: 0;
+            transform: translateY(-8px);
+            pointer-events: none;
+        }
+
+        /* Dropdown animations */
+        .dropdown-menu {
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            transform-origin: top;
+        }
+        .dropdown-menu.show {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: translateY(0) scale(1) !important;
+            pointer-events: auto !important;
         }
     </style>
 </head>
