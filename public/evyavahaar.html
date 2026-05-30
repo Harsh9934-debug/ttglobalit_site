@@ -19,7 +19,8 @@
 <body class="antialiased text-gray-800 relative bg-white overflow-x-hidden" style="font-family: 'Inter', system-ui, -apple-system, sans-serif">
 
     <!-- Navigation -->
-    <nav class="flex items-center justify-between px-8 md:px-16 py-5 bg-white sticky top-0 z-50 shadow-sm border-b border-gray-100">
+    <nav class="fixed top-0 left-0 right-0 z-50 pt-3 pb-2 px-3 md:px-6 bg-transparent pointer-events-none">
+        <div class="max-w-screen-xl mx-auto bg-white/95 backdrop-blur-xl rounded-full border border-gray-300/70 shadow-[0_4px_24px_rgba(0,0,0,0.1)] px-5 py-2 flex items-center justify-between pointer-events-auto">
         <a href="index.html" class="flex items-center gap-3 cursor-pointer">
             <div class="relative flex items-center justify-center">
                 <img src="assets/logo.png" alt="TT Global IT Logo" class="h-10 w-auto object-contain">
@@ -101,14 +102,19 @@
                 </div>
             </div>
         </div>
-        <div class="lg:hidden flex items-center">
+        <div class="flex items-center gap-2">
+            <a href="contact-us.html" class="hidden lg:flex items-center gap-1.5 bg-gray-900 hover:bg-gray-800 text-white rounded-full px-5 py-2 text-sm font-semibold transition-colors duration-200 whitespace-nowrap">Contact Us</a>
+            <div class="lg:hidden flex items-center">
             <button id="mobile-menu-btn" class="text-[#ea580c] focus:outline-none hover:text-orange-800 transition p-2">
                 <svg class="w-8 h-8 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </div>
+            </div>
+        </div>
+        </div>
     </nav>
 
-    <div id="mobile-menu" class="fixed inset-0 top-[81px] bg-white z-40 hidden flex-col border-t border-gray-100 p-6 overflow-y-auto lg:hidden">
+    <div id="mobile-menu" class="fixed inset-0 top-[68px] bg-white z-40 hidden flex-col border-t border-gray-100 p-6 overflow-y-auto lg:hidden">
         <div class="flex flex-col gap-6">
             <div class="space-y-4"><p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">What We Do</p><div class="pl-4 space-y-4 border-l border-gray-200"><a href="overview.html" class="block text-gray-700 font-medium">Overview</a><a href="industries.html" class="block text-gray-700 font-medium">Industries</a></div></div>
             <div class="space-y-4"><p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Esahakara</p><div class="pl-4 space-y-4 border-l border-gray-200"><a href="Esahakara.html" class="block text-gray-700 font-medium">Esahakara Application</a><a href="esahakara-pigmy-agent-app.html" class="block text-gray-700 font-medium">Pigmy Agent App</a><a href="esahakara-customer-app.html" class="block text-gray-700 font-medium">Customer App</a></div></div>
@@ -120,7 +126,7 @@
     </div>
 
     <!-- Hero -->
-    <section class="relative min-h-[50vh] md:min-h-[60vh] flex items-center overflow-hidden bg-[#0A0A0A] py-16 md:py-20">
+    <section class="relative min-h-[50vh] md:min-h-[60vh] flex items-center overflow-hidden bg-[#0A0A0A] pt-[76px] pb-16 md:pb-20">
         <div class="absolute inset-0 z-0">
             <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
             <div class="absolute top-0 right-1/4 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-orange-600/10 rounded-full blur-[100px] md:blur-[150px] animate-pulse pointer-events-none"></div>
