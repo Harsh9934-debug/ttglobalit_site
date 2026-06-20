@@ -200,7 +200,7 @@
     addMessage(greetings[Math.floor(Math.random() * greetings.length)], 'bot');
   }
 
-  btn.addEventListener('click', function () {
+  function toggleChat() {
     isOpen = !isOpen;
     btn.classList.toggle('open', isOpen);
     panel.classList.toggle('open', isOpen);
@@ -208,6 +208,10 @@
       addWelcomeMessage();
       populateQuestions();
     }
-  });
+  }
+
+  btn.addEventListener('click', toggleChat);
+
+  window.toggleTTChat = toggleChat;
 
 })();
