@@ -211,6 +211,7 @@
   }
 
   btn.addEventListener('click', toggleChat);
+  window.toggleChat = toggleChat;
 
   window.toggleTTChat = toggleChat;
 
