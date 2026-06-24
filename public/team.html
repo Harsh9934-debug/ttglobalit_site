@@ -3,23 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refund Policy | TT GLOBAL IT</title>
+    <title>Leadership Team | TT GLOBAL IT</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        .hexagon-bg { clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); background-color: #f3f4f6; }
-        .text-orange { color: #ea580c; }
-        .bg-orange { background-color: #ea580c; }
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
-        .animate-float { animation: float 4s ease-in-out infinite; }
+        @keyframes fadeInUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+        .reveal { animation: fadeInUp 0.6s ease-out both; }
     </style>
 </head>
-<body class="antialiased text-gray-800 relative bg-white overflow-x-hidden" style="font-family: 'Inter', system-ui, -apple-system, sans-serif">
+<body class="antialiased text-gray-800 bg-white overflow-x-hidden" style="font-family:'Inter',system-ui,-apple-system,sans-serif">
 
-    <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-sm">
         <div class="max-w-screen-2xl mx-auto px-6 lg:px-10 h-14 flex items-center justify-between">
         <div class="flex items-center gap-3 cursor-pointer">
@@ -118,7 +113,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="team.html" class="flex items-start space-x-3 group/item">
+                                    <a href="#" class="flex items-start space-x-3 group/item">
                                         <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500">
                                             <svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                                         </div>
@@ -187,10 +182,10 @@
                                     <li>
                                         <a href="team.html" class="flex items-start space-x-3 group/item">
                                             <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500">
-                                                <svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
+                                                <svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                                             </div>
                                             <div class="w-max leading-5">
-                                                <p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600">Team leads</p>
+                                                <p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600">Team Leads</p>
                                                 <p class="shrink-0 text-xs text-gray-500 transition-colors duration-300 group-hover/item:text-gray-600">Meet our leadership</p>
                                             </div>
                                         </a>
@@ -259,129 +254,127 @@
         </div>
     </div>
 
-    <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 top-[81px] bg-white z-40 hidden flex-col border-t border-gray-100 p-6 overflow-y-auto lg:hidden">
-        <div class="flex flex-col gap-6">
-            <div class="space-y-4">
-                <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">What We Do</p>
-                <div class="pl-4 space-y-4 border-l border-gray-200">
-                    <a href="overview.html" class="block text-gray-700 font-medium hover:text-orange-600 transition-colors">Overview</a>
-                    <a href="industries.html" class="block text-gray-700 font-medium hover:text-orange-600 transition-colors">Industries</a>
-                </div>
-            </div>
-            <div class="space-y-4">
-                <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Esahakara</p>
-                <div class="pl-4 space-y-4 border-l border-gray-200">
-                    <a href="Esahakara.html" class="block text-gray-700 font-medium hover:text-orange-600 transition-colors">Esahakara Application</a>
-                    <a href="esahakara-pigmy-agent-app.html" class="block text-gray-700 font-medium hover:text-orange-600 transition-colors">Pigmy Agent App</a>
-                    <a href="team.html" class="block text-gray-700 font-medium hover:text-orange-600 transition-colors">Customer App</a>
-                </div>
-            </div>
-            <a href="aboutus.html" class="text-gray-800 font-semibold text-base hover:text-orange-600 transition-colors">About Us</a>
-            <a href="Internship.html" class="text-orange-600 font-semibold text-base">Internship</a>
-            <div class="space-y-4">
-                <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">More</p>
-                <div class="pl-4 space-y-4 border-l border-gray-200">
-                    <a href="team.html" class="block text-gray-700 font-medium hover:text-orange-600 transition-colors">Careers</a>
-                    <a href="contact-us.html" class="block text-gray-700 font-medium hover:text-orange-600 transition-colors">Contact Us</a>
-                    <a href="team.html" class="block text-gray-700 font-medium hover:text-orange-600 transition-colors">Team Leads</a>
-                    <a href="careers.html" class="block text-gray-700 font-medium hover:text-orange-600 transition-colors">Careers</a><a href="privacy.html" class="block text-gray-700 font-medium hover:text-orange-600 transition-colors">Privacy Policy</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="relative min-h-[50vh] md:min-h-[60vh] flex items-center overflow-hidden bg-[#0A0A0A] py-16 md:py-20">
+    <!-- Hero -->
+    <section class="relative min-h-[52vh] flex items-end overflow-hidden bg-[#0A0A0A] pt-14">
         <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
-            <div class="absolute top-0 right-1/4 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-orange-600/10 rounded-full blur-[100px] md:blur-[150px] animate-pulse pointer-events-none"></div>
-            <div class="absolute bottom-1/4 left-1/4 w-[250px] md:w-[400px] h-[250px] md:h-[400px] bg-orange-500/10 rounded-full blur-[80px] md:blur-[130px] animate-pulse pointer-events-none"></div>
-            <div class="absolute inset-0 bg-gradient-to-r from-[#0A0A0A] via-[#0A0A0A]/70 to-[#0A0A0A]/20"></div>
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_0%,#000_60%,transparent_100%)]"></div>
+            <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-orange-600/10 rounded-full blur-[140px] pointer-events-none"></div>
+            <div class="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-orange-500/8 rounded-full blur-[120px] pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent"></div>
         </div>
-        <div class="container mx-auto px-6 md:px-16 relative z-10 text-center">
-            <div class="inline-flex items-center border border-orange-500/30 bg-orange-500/10 py-1.5 px-4 md:px-5 rounded-full text-xs md:text-sm font-medium text-orange-400 tracking-wide backdrop-blur-sm mb-5 md:mb-6">
-                <span class="w-1.5 h-1.5 bg-orange-400 rounded-full mr-2 animate-pulse"></span>
-                Policy
+        <div class="max-w-screen-xl mx-auto px-6 lg:px-16 relative z-10 pb-16 pt-20 w-full">
+            <div class="inline-flex items-center gap-2 border border-orange-500/25 bg-orange-500/8 py-1.5 px-4 rounded-full text-xs font-semibold text-orange-400 tracking-widest uppercase mb-6">
+                <span class="w-1.5 h-1.5 bg-orange-500 rounded-full animate-pulse"></span>
+                Our People
             </div>
-            <h1 class="text-3xl sm:text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight">
-                Refund<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-amber-500">Policy</span>
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-black text-white tracking-tight leading-[0.95] mb-5">
+                Leadership<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400">Team</span>
             </h1>
-            <p class="text-gray-400 text-base md:text-lg lg:text-xl max-w-2xl mx-auto mt-4 md:mt-6 font-light leading-relaxed px-2">
-                Understanding our refund and cancellation terms.
+            <p class="text-gray-400 text-lg max-w-2xl leading-relaxed">
+                The experienced minds behind TT Global IT — driving innovation, strategy, and delivery across every product we build.
             </p>
         </div>
     </section>
 
-    <!-- Content Section -->
-    <section class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-6 md:px-16 max-w-4xl">
-            <div class="space-y-12 md:space-y-16">
+    <!-- Chairman's Message -->
+    <section class="py-16 md:py-20 bg-gray-50 border-y border-gray-100">
+        <div class="max-w-screen-xl mx-auto px-6 lg:px-16">
+            <div class="flex flex-col md:flex-row items-start gap-10 md:gap-16">
+                <div class="shrink-0">
+                    <img src="assets/clients/team/sunil.png" alt="Sunil M S" class="w-72 h-72 object-cover rounded-2xl shadow-md object-top">
+                </div>
+                <div class="relative">
+                    <p class="text-lg font-bold text-gray-900 mb-0.5">Sunil M S</p>
+                    <p class="text-sm font-semibold text-orange-500 mb-6">Managing Director &amp; CEO</p>
+                    <span class="text-6xl text-gray-200 font-serif leading-none select-none">&ldquo;</span>
+                    <p class="text-gray-600 text-base md:text-lg leading-relaxed italic -mt-4">
+                        Great organizations are built on a foundation of shared vision, mutual respect, and collective effort. They thrive on trust, transparency, and a strong sense of purpose that unites every individual toward common goals. Effective communication, continuous learning, and a culture of accountability empower teams to innovate, adapt, and grow together. By valuing diversity, encouraging collaboration, and recognizing contributions, organizations create an environment where excellence becomes a habit and success is achieved as a collective journey.
+                    </p>
+                    <span class="text-6xl text-gray-200 font-serif leading-none select-none float-right">&rdquo;</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Overview -->
-                <div>
-                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">1. Overview</h2>
-                    <p class="text-gray-600 leading-relaxed mb-4">At TT GLOBAL IT, we are committed to providing high-quality services and products. This Refund Policy outlines the terms and conditions under which refunds may be granted for our services, including software products, internships, and training programs.</p>
-                    <p class="text-gray-600 leading-relaxed">Please review this policy carefully before making any payments. By purchasing or enrolling in our services, you agree to the terms of this Refund Policy.</p>
+    <!-- Team Grid -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-screen-xl mx-auto px-6 lg:px-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Nagarathna C -->
+                <div class="group bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="relative h-72 bg-gradient-to-br from-orange-50 to-amber-50 overflow-hidden">
+                        <img src="assets/clients/team/Nagarathna.png" alt="Nagarathna C" class="w-full h-full object-cover object-top">
+                        <span class="absolute top-4 right-4 px-3 py-1 bg-orange-500 text-white text-xs font-bold rounded-full shadow">25 YOE</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-2.5 py-1 rounded-full bg-orange-50 text-orange-700 text-xs font-semibold mb-3">Chairperson</div>
+                        <h3 class="text-xl font-black text-gray-900 mb-1">Nagarathna C</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">25 years of leadership experience steering technology vision and governance at TT Global IT.</p>
+                    </div>
                 </div>
 
-                <!-- Eligibility -->
-                <div>
-                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">2. Eligibility</h2>
-                    <p class="text-gray-600 leading-relaxed mb-4">Refund eligibility is determined on a case-by-case basis. In general, refund requests may be considered under the following circumstances:</p>
-                    <ul class="list-disc pl-6 space-y-2 text-gray-600">
-                        <li>Cancellation of a service or product by TT GLOBAL IT</li>
-                        <li>Technical issues that prevent access to purchased services</li>
-                        <li>Duplicate payment or billing errors</li>
-                        <li>Requests made within the specified cancellation period (if applicable)</li>
-                    </ul>
-                    <p class="text-gray-600 leading-relaxed mt-4">Refunds are not automatically granted and require a formal request to be submitted and reviewed by our team.</p>
+                <!-- Jyothi H -->
+                <div class="group bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="relative h-72 bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden">
+                        <img src="assets/clients/team/jyothi.png" alt="Jyothi H" class="w-full h-full object-cover" style="object-position: center 30%">
+                        <span class="absolute top-4 right-4 px-3 py-1 bg-orange-500 text-white text-xs font-bold rounded-full shadow">15 YOE</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold mb-3">Chief Operating Officer</div>
+                        <h3 class="text-xl font-black text-gray-900 mb-1">Jyothi H</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">15 years optimizing operations, delivery pipelines, and team performance at scale.</p>
+                    </div>
                 </div>
 
-                <!-- Process -->
-                <div>
-                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">3. Refund Process</h2>
-                    <p class="text-gray-600 leading-relaxed mb-4">To request a refund, please follow these steps:</p>
-                    <ol class="list-decimal pl-6 space-y-2 text-gray-600">
-                        <li>Submit a written refund request to <strong>info@ttglobalit.in</strong> with your order details and reason for the request</li>
-                        <li>Our support team will acknowledge receipt within 2-3 business days</li>
-                        <li>Your request will be reviewed and you will be notified of the decision within 7-10 business days</li>
-                        <li>If approved, the refund will be processed through the original payment method</li>
-                    </ol>
+                <!-- Kalmani Mrutunjaya -->
+                <div class="group bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="relative h-72 bg-gradient-to-br from-emerald-50 to-teal-50 overflow-hidden">
+                        <img src="assets/clients/team/Kalmani%20Mrutunjaya.png" alt="Kalmani Mrutunjaya" class="w-full h-full object-cover object-top">
+                        <span class="absolute top-4 right-4 px-3 py-1 bg-orange-500 text-white text-xs font-bold rounded-full shadow">22 YOE</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold mb-3">Chief Marketing Officer</div>
+                        <h3 class="text-xl font-black text-gray-900 mb-1">Kalmani Mrutunjaya</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">22 years in banking sector marketing, building brand strategy and go-to-market for financial institutions.</p>
+                    </div>
                 </div>
 
-                <!-- Timeline -->
-                <div>
-                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">4. Timeline</h2>
-                    <p class="text-gray-600 leading-relaxed mb-4">Refund requests must be submitted within 7 days of the original purchase date to be considered for a full refund. Requests made after this period may be evaluated at our discretion and may be subject to partial refund or store credit.</p>
-                    <p class="text-gray-600 leading-relaxed">Once a refund is approved, the amount will be credited back to your original payment method within 10-15 business days, depending on your financial institution's processing times.</p>
+                <!-- Venkata Narayana Sairaju -->
+                <div class="group bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="relative h-72 bg-gradient-to-br from-purple-50 to-violet-50 overflow-hidden">
+                        <img src="assets/clients/team/Venkata.png" alt="Venkata Narayana Sairaju" class="w-full h-full object-cover object-top">
+                        <span class="absolute top-4 right-4 px-3 py-1 bg-orange-500 text-white text-xs font-bold rounded-full shadow">18 YOE</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-2.5 py-1 rounded-full bg-purple-50 text-purple-700 text-xs font-semibold mb-3">Chief Technology Officer</div>
+                        <h3 class="text-xl font-black text-gray-900 mb-1">Venkata Narayana Sairaju</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">18 years architecting enterprise-grade software, cloud infrastructure, and banking technology platforms.</p>
+                    </div>
                 </div>
 
-                <!-- Exceptions -->
-                <div>
-                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">5. Exceptions</h2>
-                    <p class="text-gray-600 leading-relaxed mb-4">The following are generally not eligible for refunds:</p>
-                    <ul class="list-disc pl-6 space-y-2 text-gray-600">
-                        <li>Services that have been fully delivered or consumed</li>
-                        <li>Custom software development projects that have been initiated</li>
-                        <li>Internship or training programs that are more than 25% complete</li>
-                        <li>Change of mind or personal circumstances (at our discretion)</li>
-                        <li>Services purchased through unauthorized third-party resellers</li>
-                    </ul>
-                    <p class="text-gray-600 leading-relaxed mt-4">We reserve the right to make exceptions to this policy in extraordinary circumstances at our sole discretion.</p>
+                <!-- Krishna B G -->
+                <div class="group bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="relative h-72 bg-gradient-to-br from-rose-50 to-pink-50 overflow-hidden">
+                        <img src="assets/clients/team/Krishna.png" alt="Krishna B G" class="w-full h-full object-cover object-top">
+                        <span class="absolute top-4 right-4 px-3 py-1 bg-orange-500 text-white text-xs font-bold rounded-full shadow">10 YOE</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-2.5 py-1 rounded-full bg-rose-50 text-rose-700 text-xs font-semibold mb-3">Senior Project Manager</div>
+                        <h3 class="text-xl font-black text-gray-900 mb-1">Krishna B G</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">10 years leading cross-functional teams, delivering complex fintech projects on time and within scope.</p>
+                    </div>
                 </div>
 
-                <!-- Contact -->
-                <div>
-                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">6. Contact</h2>
-                    <p class="text-gray-600 leading-relaxed mb-4">If you have any questions or wish to submit a refund request, please contact us:</p>
-                    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 space-y-2 text-gray-600">
-                        <p><strong class="text-gray-900">Email:</strong> info@ttglobalit.in</p>
-                        <p><strong class="text-gray-900">Phone:</strong> +91 807-3804-799 | +91 8660402580</p>
-                        <p><strong class="text-gray-900">Corporate Office:</strong> #166 &167, 5th Cross, Hebbal, Bengaluru 560024</p>
-                        <p><strong class="text-gray-900">Head Office:</strong> 35 Mayasandra, Turuvekere, Tumkur 572221</p>
-                        <p><strong class="text-gray-900">Branch:</strong> 291/A KIADB, Hebbal Industrial Area, Mysuru 570016</p>
+                <div class="group bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="relative h-72 bg-gradient-to-br from-rose-50 to-pink-50 overflow-hidden">
+                        <img src="assets/clients/team/MrManojKumarSharma.png" alt="Mr Manoj Kumar Sharma" class="w-full h-full object-cover object-top">
+                        <span class="absolute top-4 right-4 px-3 py-1 bg-orange-500 text-white text-xs font-bold rounded-full shadow">10 YOE</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-2.5 py-1 rounded-full bg-rose-50 text-rose-700 text-xs font-semibold mb-3">Senior Project Manager</div>
+                        <h3 class="text-xl font-black text-gray-900 mb-1">Mr Manoj Kumar Sharma</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Manoj is an Engineering Graduate ( B. Tech. in Computer Science & Engg) from IET, Lucknow India and a Masters in Computer Science from ENSIMAG, Grenoble, France. He is currently based in India and has lived and worked in France and Switzerland. With over 22 years of experience in management consulting in IT, Banking, Telecom, Mobile comprising of offshore transitions from Europe/US to India from scratch to complete delivery. </p>
                     </div>
                 </div>
 
@@ -389,7 +382,25 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- CTA -->
+    <section class="py-16 md:py-20 bg-[#0A0A0A] relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-600/5 rounded-full blur-[120px]"></div>
+        </div>
+        <div class="max-w-screen-xl mx-auto px-6 lg:px-16 text-center relative z-10">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Want to join this team?</h2>
+            <p class="text-gray-400 text-base md:text-lg mt-3 max-w-xl mx-auto mb-8">We're always looking for talented, driven people to grow with us.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="careers.html" class="inline-flex items-center gap-2 px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-full font-bold text-base transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(234,88,12,0.4)]">
+                    View Open Roles <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+                <a href="contact-us.html" class="inline-flex items-center gap-2 px-8 py-4 bg-white/5 hover:bg-white/10 text-white rounded-full font-semibold text-base border border-white/15 hover:border-white/30 transition-all duration-300">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
     <footer class="bg-black border-t border-white/10 pt-16 md:pt-20 pb-10 text-gray-400">
         <div class="container mx-auto px-8 md:px-16">
             <div class="grid grid-cols-2 lg:grid-cols-5 gap-6 md:gap-10 border-b border-white/10 pb-14">
@@ -403,7 +414,7 @@
                 <div><h4 class="text-white font-semibold uppercase tracking-wider mb-4 text-xs">Services</h4><ul class="space-y-2 text-xs"><li><a href="#" class="hover:text-orange-500 transition-colors">Artificial Intelligence</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Cloud</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Cybersecurity</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Data and Analytics</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Enterprise Solutions</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">IoT and Digital Engineering</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">TTGLOBALIT and AWS Cloud</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">TTGLOBALIT Enterprise Cloud</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">TTGLOBALIT and Google Cloud</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">TTGLOBALIT and Microsoft Cloud</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">TTGLOBALIT and Pinnacle Teleservice</a></li></ul></div>
                 <div class="col-span-full lg:col-span-2">
                     <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div class="col-span-full lg:col-span-1"><h4 class="text-white font-semibold uppercase tracking-wider mb-4 text-xs">Products & Platforms</h4><ul class="space-y-2 text-xs"><li><a href="#" class="hover:text-orange-500 transition-colors">TTGLOBALIT ESAHAKARA</a></li><li><a href="evyavahaar.html" class="hover:text-orange-500 transition-colors">TTGLOBALIT EVYAVAHAAR</a></li><li><a href="echits.html" class="hover:text-orange-500 transition-colors">TTGLOBALIT ECHITS</a></li><li><a href="ribill.html" class="hover:text-orange-500 transition-colors">TTGLOBALIT RIBILL</a></li><li><a href="pinnacle.html" class="hover:text-orange-500 transition-colors">TTGLOBALIT PINNACLE AND META Service</a></li></ul></div>
+                        <div class="col-span-full lg:col-span-1"><h4 class="text-white font-semibold uppercase tracking-wider mb-4 text-xs">Products & Platforms</h4><ul class="space-y-2 text-xs"><li><a href="https://esahakara.com/" target="_blank" rel="noopener" class="hover:text-orange-500 transition-colors">TTGLOBALIT ESAHAKARA</a></li><li><a href="https://evyavahaar.com/" target="_blank" rel="noopener" class="hover:text-orange-500 transition-colors">TTGLOBALIT EVYAVAHAAR</a></li><li><a href="echits.html" class="hover:text-orange-500 transition-colors">TTGLOBALIT ECHITS</a></li><li><a href="https://rebileasy.com" target="_blank" rel="noopener" class="hover:text-orange-500 transition-colors">TTGLOBALIT RIBILL</a></li><li><a href="https://www.bolzanogroup.com/" target="_blank" rel="noopener" class="hover:text-orange-500 transition-colors">TTGLOBALIT BOLZANO GROUP</a></li></ul></div>
                         <div><h4 class="text-white font-semibold uppercase tracking-wider mb-4 text-xs">Insights</h4><ul class="space-y-2 text-xs"><li><a href="#" class="hover:text-orange-500 transition-colors">Customer Stories</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Cloud</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Blockchain</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">IoT</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Pinnacle & Meta with TTGLOBALIT</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Future of Work</a></li></ul></div>
                         <div><h4 class="text-white font-semibold uppercase tracking-wider mb-4 text-xs">More Info</h4><ul class="space-y-2 text-xs"><li><a href="#" class="hover:text-orange-500 transition-colors">Careers</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Corporate Social Responsibility</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Diversity, Equity, and Inclusion</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">TTGLOBALIT Research</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">The TTGLOBALIT Way</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Who we are</a></li></ul></div>
                     </div>
@@ -411,34 +422,229 @@
             </div>
             <div class="pt-8 text-center text-xs text-gray-600 flex flex-col md:flex-row justify-between items-center gap-2">
                 <p>&copy; 2019-2026 TRANSCRIPT TECHNOLOGY GLOBAL INFOTECH PRIVATE LIMITED</p>
-                <div class="flex items-center gap-4">
-                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
-                    <a href="terms-and-conditions.html" class="hover:text-white transition-colors">Terms of Service</a>
-                    <a href="refund-policy.html" class="hover:text-white transition-colors">Refund Policy</a>
-                </div>
+                <div class="flex items-center gap-4"><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a><a href="terms-and-conditions.html" class="hover:text-white transition-colors">Terms of Service</a></div>
             </div>
         </div>
     </footer>
 
+    <!-- Three.js for Shader Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js"></script>
     <script>
+        // Mobile Menu Toggle
         document.addEventListener('DOMContentLoaded', () => {
             const menuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
-            menuBtn.addEventListener('click', () => { if (mobileMenu.classList.contains('hidden')) { mobileMenu.classList.remove('hidden'); mobileMenu.classList.add('flex'); } else { mobileMenu.classList.add('hidden'); mobileMenu.classList.remove('flex'); } });
-            function closeDropdown(dropdown, arrow) { if (!dropdown) return; dropdown.classList.remove('visible', 'opacity-100', 'translate-y-0', 'scale-100'); dropdown.classList.add('opacity-0', 'invisible', 'translate-y-2', 'scale-95'); dropdown.style.pointerEvents = 'none'; if (arrow) arrow.classList.remove('rotate-180'); }
-            function openDropdown(dropdown, arrow) { if (!dropdown) return; dropdown.classList.remove('opacity-0', 'invisible', 'translate-y-2', 'scale-95'); dropdown.classList.add('visible', 'opacity-100', 'translate-y-0', 'scale-100'); dropdown.style.pointerEvents = 'auto'; if (arrow) arrow.classList.add('rotate-180'); }
-            const moreBtn = document.querySelector('[data-more-btn]'); const moreDropdown = document.querySelector('[data-more-dropdown]'); const moreArrow = document.querySelector('[data-more-arrow]');
-            const wwdBtn = document.querySelector('[data-whatwedo-btn]'); const wwdDropdown = document.querySelector('[data-whatwedo-dropdown]'); const wwdArrow = document.querySelector('[data-whatwedo-arrow]');
-            const esahakaraBtn = document.querySelector('[data-esahakara-btn]'); const esahakaraDropdown = document.querySelector('[data-esahakara-dropdown]'); const esahakaraArrow = document.querySelector('[data-esahakara-arrow]');
-            const productsBtn = document.querySelector('[data-products-btn]'); const productsDropdown = document.querySelector('[data-products-dropdown]'); const productsArrow = document.querySelector('[data-products-arrow]');
-            const allDropdowns = [[moreDropdown, moreArrow], [wwdDropdown, wwdArrow], [esahakaraDropdown, esahakaraArrow], [productsDropdown, productsArrow]];
-            function closeAll() { allDropdowns.forEach(([d, a]) => closeDropdown(d, a)); }
-            if (wwdBtn) wwdBtn.addEventListener('click', (e) => { e.stopPropagation(); const isOpen = wwdDropdown.classList.contains('visible'); closeAll(); if (!isOpen) openDropdown(wwdDropdown, wwdArrow); });
-            if (esahakaraBtn) esahakaraBtn.addEventListener('click', (e) => { e.stopPropagation(); const isOpen = esahakaraDropdown.classList.contains('visible'); closeAll(); if (!isOpen) openDropdown(esahakaraDropdown, esahakaraArrow); });
-            if (productsBtn) productsBtn.addEventListener('click', (e) => { e.stopPropagation(); const isOpen = productsDropdown.classList.contains('visible'); closeAll(); if (!isOpen) openDropdown(productsDropdown, productsArrow); });
-            if (moreBtn) moreBtn.addEventListener('click', (e) => { e.stopPropagation(); const isOpen = moreDropdown.classList.contains('visible'); closeAll(); if (!isOpen) openDropdown(moreDropdown, moreArrow); });
-            document.addEventListener('click', closeAll);
+            
+            menuBtn.addEventListener('click', () => {
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.add('flex');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                }
+            });
+
+            // More dropdown toggle (click instead of hover)
+            const moreBtn = document.querySelector('[data-more-btn]');
+            const moreDropdown = document.querySelector('[data-more-dropdown]');
+            const moreArrow = document.querySelector('[data-more-arrow]');
+
+            if (moreBtn && moreDropdown) {
+                moreBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isOpen = moreDropdown.classList.contains('visible');
+                    if (isOpen) {
+                        moreDropdown.classList.remove('visible', 'opacity-100', 'translate-y-0', 'scale-100');
+                        moreDropdown.classList.add('opacity-0', 'invisible', 'translate-y-2', 'scale-95');
+                        moreDropdown.style.pointerEvents = 'none';
+                        moreArrow.classList.remove('rotate-180');
+                    } else {
+                        moreDropdown.classList.remove('opacity-0', 'invisible', 'translate-y-2', 'scale-95');
+                        moreDropdown.classList.add('visible', 'opacity-100', 'translate-y-0', 'scale-100');
+                        moreDropdown.style.pointerEvents = 'auto';
+                        moreArrow.classList.add('rotate-180');
+                    }
+                });
+
+            }
+
+            // What We Do toggle (click instead of hover)
+            const wwdBtn = document.querySelector('[data-whatwedo-btn]');
+            const wwdDropdown = document.querySelector('[data-whatwedo-dropdown]');
+            const wwdArrow = document.querySelector('[data-whatwedo-arrow]');
+
+            function closeDropdown(dropdown, arrow) {
+                if (!dropdown) return;
+                dropdown.classList.remove('visible', 'opacity-100', 'translate-y-0', 'scale-100');
+                dropdown.classList.add('opacity-0', 'invisible', 'translate-y-2', 'scale-95');
+                dropdown.style.pointerEvents = 'none';
+                if (arrow) arrow.classList.remove('rotate-180');
+            }
+
+            function openDropdown(dropdown, arrow) {
+                if (!dropdown) return;
+                dropdown.classList.remove('opacity-0', 'invisible', 'translate-y-2', 'scale-95');
+                dropdown.classList.add('visible', 'opacity-100', 'translate-y-0', 'scale-100');
+                dropdown.style.pointerEvents = 'auto';
+                if (arrow) arrow.classList.add('rotate-180');
+            }
+
+            if (wwdBtn && wwdDropdown) {
+                wwdBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isOpen = wwdDropdown.classList.contains('visible');
+                    closeDropdown(moreDropdown, moreArrow);
+                    closeDropdown(esahakaraDropdown, esahakaraArrow);
+                    if (isOpen) {
+                        closeDropdown(wwdDropdown, wwdArrow);
+                    } else {
+                        openDropdown(wwdDropdown, wwdArrow);
+                    }
+                });
+            }
+
+            // Esahakara dropdown toggle
+            const esahakaraBtn = document.querySelector('[data-esahakara-btn]');
+            const esahakaraDropdown = document.querySelector('[data-esahakara-dropdown]');
+            const esahakaraArrow = document.querySelector('[data-esahakara-arrow]');
+
+            if (esahakaraBtn && esahakaraDropdown) {
+                esahakaraBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isOpen = esahakaraDropdown.classList.contains('visible');
+                    closeDropdown(moreDropdown, moreArrow);
+                    closeDropdown(wwdDropdown, wwdArrow);
+                    closeDropdown(productsDropdown, productsArrow);
+                    if (isOpen) {
+                        closeDropdown(esahakaraDropdown, esahakaraArrow);
+                    } else {
+                        openDropdown(esahakaraDropdown, esahakaraArrow);
+                    }
+                });
+            }
+
+            const productsBtn = document.querySelector('[data-products-btn]');
+            const productsDropdown = document.querySelector('[data-products-dropdown]');
+            const productsArrow = document.querySelector('[data-products-arrow]');
+
+            if (productsBtn && productsDropdown) {
+                productsBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isOpen = productsDropdown.classList.contains('visible');
+                    closeDropdown(moreDropdown, moreArrow);
+                    closeDropdown(wwdDropdown, wwdArrow);
+                    closeDropdown(esahakaraDropdown, esahakaraArrow);
+                    if (isOpen) {
+                        closeDropdown(productsDropdown, productsArrow);
+                    } else {
+                        openDropdown(productsDropdown, productsArrow);
+                    }
+                });
+            }
+
+            document.addEventListener('click', (e) => {
+                closeDropdown(moreDropdown, moreArrow);
+                closeDropdown(wwdDropdown, wwdArrow);
+                closeDropdown(esahakaraDropdown, esahakaraArrow);
+                closeDropdown(productsDropdown, productsArrow);
+            });
         });
+
+        (function initThreeJS() {
+            const container = document.getElementById('shader-container');
+            if (!container || !window.THREE) return;
+
+            const THREE = window.THREE;
+            
+            const camera = new THREE.Camera();
+            camera.position.z = 1;
+            
+            const scene = new THREE.Scene();
+            const geometry = new THREE.PlaneBufferGeometry(2, 2);
+            
+            const uniforms = {
+                time: { type: "f", value: 1.0 },
+                resolution: { type: "v2", value: new THREE.Vector2() },
+            };
+            
+            const vertexShader = `
+                void main() {
+                    gl_Position = vec4( position, 1.0 );
+                }
+            `;
+            
+            const fragmentShader = `
+                #define TWO_PI 6.2831853072
+                #define PI 3.14159265359
+
+                precision highp float;
+                uniform vec2 resolution;
+                uniform float time;
+                
+                float random (in float x) {
+                    return fract(sin(x)*1e4);
+                }
+                float random (vec2 st) {
+                    return fract(sin(dot(st.xy, vec2(12.9898,78.233)))*43758.5453123);
+                }
+                
+                varying vec2 vUv;
+
+                void main(void) {
+                    vec2 uv = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
+                    
+                    vec2 fMosaicScal = vec2(4.0, 2.0);
+                    vec2 vScreenSize = vec2(256,256);
+                    uv.x = floor(uv.x * vScreenSize.x / fMosaicScal.x) / (vScreenSize.x / fMosaicScal.x);
+                    uv.y = floor(uv.y * vScreenSize.y / fMosaicScal.y) / (vScreenSize.y / fMosaicScal.y);       
+                    
+                    float t = time*0.06+random(uv.x)*0.4;
+                    float lineWidth = 0.0008;
+
+                    vec3 color = vec3(0.0);
+                    for(int j = 0; j < 3; j++){
+                        for(int i=0; i < 5; i++){
+                            color[j] += lineWidth*float(i*i) / abs(fract(t - 0.01*float(j)+float(i)*0.01)*1.0 - length(uv));        
+                        }
+                    }
+                    gl_FragColor = vec4(color[2],color[1],color[0],1.0);
+                }
+            `;
+            
+            const material = new THREE.ShaderMaterial({
+                uniforms: uniforms,
+                vertexShader: vertexShader,
+                fragmentShader: fragmentShader,
+            });
+            
+            const mesh = new THREE.Mesh(geometry, material);
+            scene.add(mesh);
+            
+            const renderer = new THREE.WebGLRenderer({ alpha: true });
+            renderer.setPixelRatio(window.devicePixelRatio);
+            // Size is set in resize handler
+            
+            container.appendChild(renderer.domElement);
+            
+            function onWindowResize() {
+                const rect = container.getBoundingClientRect();
+                renderer.setSize(rect.width, rect.height);
+                uniforms.resolution.value.x = renderer.domElement.width;
+                uniforms.resolution.value.y = renderer.domElement.height;
+            }
+            
+            onWindowResize();
+            window.addEventListener("resize", onWindowResize, false);
+            
+            function animate() {
+                requestAnimationFrame(animate);
+                uniforms.time.value += 0.05;
+                renderer.render(scene, camera);
+            }
+            
+            animate();
+        })();
     </script>
 
 <script src="chatbot.js"></script></body>
