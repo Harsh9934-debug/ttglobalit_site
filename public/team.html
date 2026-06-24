@@ -350,7 +350,7 @@ Under his leadership, Transcript Technology Global Infotech Pvt. Ltd. continues 
                     </div>
                 </div>
                 <div class="team-card group cursor-pointer bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
-                     data-name="Subramanya M N" data-role="CFO" data-yoe="25" data-img="assets/clients/team/Subramanya.png"
+                     data-name="Subramanya M N" data-role="CFO" data-designation="Chief Financial Officer" data-yoe="25" data-img="assets/clients/team/Subramanya.png"
                      data-bio="Subramanya M N brings 25 years of financial leadership to TT Global IT. As Chief Financial Officer, he oversees financial planning, risk management, and fiscal governance, ensuring the company’s long-term financial health and sustainable growth across all business units.">
                     <div class="relative h-72 bg-gradient-to-br from-rose-50 to-pink-50 overflow-hidden">
                         <img src="assets/clients/team/Subramanya.png" alt="Subramanya M N" class="w-full h-full object-cover object-top">
@@ -363,7 +363,7 @@ Under his leadership, Transcript Technology Global Infotech Pvt. Ltd. continues 
                     </div>
                 </div>
                 <div class="team-card group cursor-pointer bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
-                     data-name="Manoj Kumar Sharma" data-role="CMO" data-yoe="22" data-img="assets/clients/team/MrManojKumarSharma.png"
+                     data-name="Manoj Kumar Sharma" data-role="CMO" data-designation="Chief Marketing Officer" data-yoe="22" data-img="assets/clients/team/MrManojKumarSharma.png"
                      data-bio="Manoj Kumar Sharma is a Computer Science graduate with a Master’s degree from France and over 22 years of experience in IT consulting, banking, telecom, and offshore delivery across India and Europe. He brings a global perspective to marketing and client strategy at TT Global IT.">
                     <div class="relative h-72 bg-gradient-to-br from-rose-50 to-pink-50 overflow-hidden">
                         <img src="assets/clients/team/MrManojKumarSharma.png" alt="Manoj Kumar Sharma" class="w-full h-full object-cover object-top">
@@ -409,7 +409,7 @@ Under his leadership, Transcript Technology Global Infotech Pvt. Ltd. continues 
                 
 
                 <div class="team-card group cursor-pointer bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
-                     data-name="Hareesh N" data-role="CFO" data-yoe="25" data-img="assets/clients/team/harish.png"
+                     data-name="Hareesh N" data-role="Senior Software Engineering" data-yoe="15" data-img="assets/clients/team/harish.png"
                      data-bio="Senior Software Engineer with 5+ years of experience is responsible for developing, maintaining, and improving software applications. The role involves writing clean code, fixing bugs, implementing new features, and working closely with the team to deliver reliable software solutions.">
                     <div class="relative h-72 bg-gradient-to-br from-rose-50 to-pink-50 overflow-hidden">
                         <img src="assets/clients/team/harish.png" alt="Hareesh N" class="w-full h-full object-cover object-top">
@@ -424,7 +424,7 @@ Under his leadership, Transcript Technology Global Infotech Pvt. Ltd. continues 
 
 
                 <div class="team-card group cursor-pointer bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
-                     data-name="Harshit N" data-role="CFO" data-yoe="25" data-img="assets/clients/team/harshit.png"
+                     data-name="Harshit N" data-role="Software Engineering" data-yoe="2" data-img="assets/clients/team/harshit.png"
                      data-bio="Software Engineer with 2+ years of experience is responsible for developing, maintaining, and improving software applications. The role involves writing clean code, fixing bugs, implementing new features, and working closely with the team to deliver reliable software solutions.">
                     <div class="relative h-72 bg-gradient-to-br from-rose-50 to-pink-50 overflow-hidden">
                         <img src="assets/clients/team/harshit.png" alt="Harshit N" class="w-full h-full object-cover object-top">
@@ -713,15 +713,15 @@ Under his leadership, Transcript Technology Global Infotech Pvt. Ltd. continues 
         <button id="modal-close" class="absolute top-4 right-4 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 transition-colors">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
-        <div class="h-72 bg-gray-100 overflow-hidden">
-            <img id="modal-img" src="" alt="" class="w-full h-full object-cover">
+        <div class="bg-gray-50 flex items-center justify-center overflow-hidden" style="height:280px">
+            <img id="modal-img" src="" alt="" class="max-h-full max-w-full object-contain">
         </div>
         <div class="p-8 max-h-[50vh] overflow-y-auto">
+            <h2 id="modal-name" class="text-2xl font-black text-gray-900 mb-1"></h2>
+            <p id="modal-designation" class="text-orange-600 font-semibold text-sm mb-3"></p>
             <div class="flex items-center gap-3 mb-4">
-                <span id="modal-role" class="inline-flex items-center px-3 py-1 rounded-full bg-orange-50 text-orange-700 text-xs font-semibold"></span>
                 <span id="modal-yoe" class="inline-flex items-center px-3 py-1 rounded-full bg-gray-900 text-white text-xs font-bold"></span>
             </div>
-            <h2 id="modal-name" class="text-2xl font-black text-gray-900 mb-4"></h2>
             <div id="modal-bio" class="text-gray-600 text-sm leading-relaxed space-y-3"></div>
         </div>
     </div>
@@ -733,9 +733,9 @@ Under his leadership, Transcript Technology Global Infotech Pvt. Ltd. continues 
             const img = document.getElementById('modal-img');
             img.src = card.dataset.img;
             img.alt = card.dataset.name;
-            img.style.objectPosition = card.dataset.imgPos || 'center top';
+            img.style.objectPosition = '';
             document.getElementById('modal-name').textContent = card.dataset.name;
-            document.getElementById('modal-role').textContent = card.dataset.role;
+            document.getElementById('modal-designation').textContent = card.dataset.designation || card.dataset.role;
             document.getElementById('modal-yoe').textContent = card.dataset.yoe + ' YOE';
             const paras = (card.dataset.bio || '').split(/\n\n+/).filter(p => p.trim());
             document.getElementById('modal-bio').innerHTML = paras.map(p => `<p>${p.trim()}</p>`).join('');
