@@ -246,7 +246,7 @@
                         <svg class="w-7 h-7 text-orange-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                     </div>
                     <h3 class="text-base font-bold text-gray-900 mb-2">Email</h3>
-                    <p class="text-gray-500 text-sm">ttglobalit7@gmail.com</p>
+                    <p class="text-gray-500 text-sm">ttglobalinfotech7@gmail.com</p>
                 </div>
                 <div class="bg-white rounded-2xl p-6 md:p-8 border border-gray-200 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center group">
                     <div class="w-14 h-14 rounded-xl bg-orange-500/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-500 transition-all duration-300">
@@ -283,7 +283,7 @@
                         </div>
                         <div>
                             <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all duration-200 text-sm" placeholder="john@example.com">
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition-all duration-200 text-sm" placeholder="ttglobalinfotech7@gmail.com">
                         </div>
                     </div>
                     <div class="mt-6">
@@ -308,7 +308,7 @@
                         ✓ Message sent! We'll get back to you within 24 hours.
                     </div>
                     <div id="error-msg" class="hidden mt-5 p-4 bg-red-50 border border-red-200 rounded-xl text-red-600 text-sm font-semibold text-center">
-                        Something went wrong. Please email us directly at info@ttglobalit.in
+                        Something went wrong. Please email us directly at ttglobalinfotech7@gmail.com
                     </div>
                 </form>
                 <script>
@@ -338,7 +338,7 @@
                     // Localhost preview mode
                     const isLocal = ['localhost','127.0.0.1',''].includes(window.location.hostname);
                     if (isLocal) {
-                        successMsg.innerHTML = '✓ <strong>Preview mode</strong> — form works on live site. Check <strong>ttglobalit7@gmail.com</strong> for formsubmit activation link first.';
+                        successMsg.innerHTML = '✓ <strong>Preview mode</strong> — form works on live site. Check <strong>ttglobalinfotech7@gmail.com</strong> for formsubmit activation link first.';
                         successMsg.classList.remove('hidden');
                         errorMsg.classList.add('hidden');
                         btn.disabled = false;
@@ -349,7 +349,7 @@
                     }
 
                     try {
-                        const res = await fetch('https://formsubmit.co/ajax/ttglobalit7@gmail.com', {
+                        const res = await fetch('https://formsubmit.co/ajax/ttglobalinfotech7@gmail.com', {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                             body: JSON.stringify({ ...data, _subject: 'New Contact Form — TT Global IT', _captcha: 'false' })
@@ -365,7 +365,7 @@
                         }
                     } catch(err) {
                         console.error('Form error:', err);
-                        errorMsg.innerHTML = 'Something went wrong. Please email us directly at <a href="mailto:ttglobalit7@gmail.com" class="underline">ttglobalit7@gmail.com</a>';
+                        errorMsg.innerHTML = 'Something went wrong. Please email us directly at <a href="mailto:ttglobalinfotech7@gmail.com" class="underline">ttglobalinfotech7@gmail.com</a>';
                         errorMsg.classList.remove('hidden');
                         successMsg.classList.add('hidden');
                     } finally {
