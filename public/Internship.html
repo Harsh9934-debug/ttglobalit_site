@@ -18,13 +18,13 @@
         .filter-btn.selected { background-color:#ea580c; color:white; border-color:#ea580c; }
     </style>
 </head>
-<body class="antialiased text-gray-800 bg-white overflow-x-hidden">
+<body class="antialiased text-gray-800 bg-white overflow-x-hidden" data-page-id="Internship">
 
     <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-sm">
         <div class="max-w-screen-2xl mx-auto px-6 lg:px-10 h-14 flex items-center justify-between">
         <a href="index.html" class="flex items-center gap-3 cursor-pointer">
             <div class="relative flex items-center justify-center">
-                <img src="assets/logo.png" alt="TT Global IT Logo" class="h-9 w-auto object-contain">
+                <img src="assets/logo.png" alt="TT Global IT Logo" class="h-9 w-auto object-contain" data-cms="global.nav.logoSrc" data-cms-field="src">
             </div>
         </a>
         
@@ -33,7 +33,7 @@
             
             <div class="relative" data-whatwedo-menu>
                 <button data-whatwedo-btn class="h-full px-3 lg:px-4 flex cursor-pointer items-center gap-1 text-[13px] font-medium text-gray-600 hover:text-gray-900 transition-colors whitespace-nowrap">
-                    <span class="relative z-10">What We do</span>
+                    <span class="relative z-10" data-cms="global.nav.whatWeDo.label">What We do</span>
                     <svg data-whatwedo-arrow class="w-3 h-3 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </button>
                 <div data-whatwedo-dropdown class="absolute left-0 top-full mt-2.5 w-max z-50 opacity-0 invisible translate-y-2 scale-95 transition-all duration-300 transform origin-top-left pointer-events-none">
@@ -42,8 +42,8 @@
                         <div class="w-56">
                             <h3 class="mb-4 text-sm font-medium uppercase tracking-wider text-gray-400">What We Do</h3>
                             <ul class="space-y-4">
-                                <li><a href="overview.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-orange-50 transition-colors duration-200 group/item"><div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-gray-200 bg-gray-50 text-gray-500 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500 transition-all duration-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div><div><p class="text-sm font-medium text-gray-800 group-hover/item:text-orange-600 transition-colors">Overview</p><p class="text-xs text-gray-500">What we offer</p></div></a></li>
-                                <li><a href="industries.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-orange-50 transition-colors duration-200 group/item"><div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-gray-200 bg-gray-50 text-gray-500 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500 transition-all duration-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg></div><div><p class="text-sm font-medium text-gray-800 group-hover/item:text-orange-600 transition-colors">Industries</p><p class="text-xs text-gray-500">Sectors we serve</p></div></a></li>
+                                <li><a href="overview.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-orange-50 transition-colors duration-200 group/item"><div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-gray-200 bg-gray-50 text-gray-500 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500 transition-all duration-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div><div><p class="text-sm font-medium text-gray-800 group-hover/item:text-orange-600 transition-colors" data-cms="global.nav.overview.title">Overview</p><p class="text-xs text-gray-500" data-cms="global.nav.overview.subtitle">What we offer</p></div></a></li>
+                                <li><a href="industries.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-orange-50 transition-colors duration-200 group/item"><div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-gray-200 bg-gray-50 text-gray-500 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500 transition-all duration-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg></div><div><p class="text-sm font-medium text-gray-800 group-hover/item:text-orange-600 transition-colors" data-cms="global.nav.industries.title">Industries</p><p class="text-xs text-gray-500" data-cms="global.nav.industries.subtitle">Sectors we serve</p></div></a></li>
                             </ul>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
 
             <div class="relative" data-esahakara-menu>
                 <button data-esahakara-btn class="h-full px-3 lg:px-4 flex cursor-pointer items-center gap-1 text-[13px] font-medium text-gray-600 hover:text-gray-900 transition-colors whitespace-nowrap">
-                    <span>Esahakara</span>
+                    <span data-cms="global.nav.esahakara.label">Esahakara</span>
                     <svg data-esahakara-arrow class="w-3 h-3 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </button>
                 <div data-esahakara-dropdown class="absolute left-0 top-full mt-2.5 w-max z-50 opacity-0 invisible translate-y-2 scale-95 transition-all duration-300 transform origin-top-left pointer-events-none">
@@ -61,9 +61,9 @@
                         <div class="w-64">
                             <h3 class="mb-4 text-sm font-medium uppercase tracking-wider text-gray-400">Esahakara</h3>
                             <ul class="space-y-6">
-                                <li><a href="Esahakara.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600">Esahakara Application</p><p class="shrink-0 text-xs text-gray-500 transition-colors group-hover/item:text-gray-600">Core banking solution</p></div></a></li>
-                                <li><a href="esahakara-pigmy-agent-app.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600">Esahakara Pigmy Agent App</p><p class="shrink-0 text-xs text-gray-500 transition-colors group-hover/item:text-gray-600">Agent mobile application</p></div></a></li>
-                                <li><a href="esahakara-customer-app.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600">Esahakara Customer App</p><p class="shrink-0 text-xs text-gray-500 transition-colors group-hover/item:text-gray-600">Customer mobile application</p></div></a></li>
+                                <li><a href="Esahakara.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600" data-cms="global.nav.esahakaraApp.title">Esahakara Application</p><p class="shrink-0 text-xs text-gray-500 transition-colors group-hover/item:text-gray-600" data-cms="global.nav.esahakaraApp.subtitle">Core banking solution</p></div></a></li>
+                                <li><a href="esahakara-pigmy-agent-app.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600" data-cms="global.nav.esahakaraPigmy.title">Esahakara Pigmy Agent App</p><p class="shrink-0 text-xs text-gray-500 transition-colors group-hover/item:text-gray-600" data-cms="global.nav.esahakaraPigmy.subtitle">Agent mobile application</p></div></a></li>
+                                <li><a href="esahakara-customer-app.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600" data-cms="global.nav.esahakaraCustomer.title">Esahakara Customer App</p><p class="shrink-0 text-xs text-gray-500 transition-colors group-hover/item:text-gray-600" data-cms="global.nav.esahakaraCustomer.subtitle">Customer mobile application</p></div></a></li>
                             </ul>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
             </div>
                         <div class="relative" data-products-menu>
                 <button data-products-btn class="h-full px-3 lg:px-4 flex cursor-pointer items-center gap-1 text-[13px] font-medium text-gray-600 hover:text-gray-900 transition-colors whitespace-nowrap">
-                    <span>Products</span>
+                    <span data-cms="global.nav.products.label">Products</span>
                     <svg data-products-arrow class="w-3 h-3 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </button>
                 <div data-products-dropdown class="absolute left-0 top-full mt-2.5 w-max z-50 opacity-0 invisible translate-y-2 scale-95 transition-all duration-300 transform origin-top-left pointer-events-none">
@@ -80,25 +80,25 @@
                         <div class="w-64">
                             <h3 class="mb-4 text-sm font-medium uppercase tracking-wider text-gray-400">Products</h3>
                             <ul class="space-y-6">
-                                <li><a href="evyavahaar.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600">EVYAVAHAAR</p><p class="shrink-0 text-xs text-gray-500">GST Billing</p></div></a></li>
-                                <li><a href="echits.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2z"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600">ECHITS</p><p class="shrink-0 text-xs text-gray-500">Chit Fund Management</p></div></a></li>
-                                <li><a href="ribill.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600">RIBILL</p><p class="shrink-0 text-xs text-gray-500">Retail Billing &amp; POS</p></div></a></li>
-                                <li><a href="pinnacle.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600">PINNACLE &amp; META</p><p class="shrink-0 text-xs text-gray-500">Telecom &amp; Digital Services</p></div></a></li>
+                                <li><a href="evyavahaar.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600" data-cms="global.nav.evyavahaar.title">EVYAVAHAAR</p><p class="shrink-0 text-xs text-gray-500" data-cms="global.nav.evyavahaar.subtitle">GST Billing</p></div></a></li>
+                                <li><a href="echits.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2z"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600" data-cms="global.nav.echits.title">ECHITS</p><p class="shrink-0 text-xs text-gray-500" data-cms="global.nav.echits.subtitle">Chit Fund Management</p></div></a></li>
+                                <li><a href="ribill.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600" data-cms="global.nav.ribill.title">RIBILL</p><p class="shrink-0 text-xs text-gray-500" data-cms="global.nav.ribill.subtitle">Retail Billing &amp; POS</p></div></a></li>
+                                <li><a href="pinnacle.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600" data-cms="global.nav.pinnacle.title">PINNACLE &amp; META</p><p class="shrink-0 text-xs text-gray-500" data-cms="global.nav.pinnacle.subtitle">Telecom &amp; Digital Services</p></div></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
             <a href="aboutus.html" class="h-full px-3 lg:px-4 flex cursor-pointer items-center gap-1 text-[13px] font-medium text-gray-600 hover:text-gray-900 transition-colors whitespace-nowrap">
-                <span>About Us</span>
+                <span data-cms="global.nav.aboutUs.label">About Us</span>
             </a>
             <a href="Internship.html" class="h-full px-3 lg:px-4 flex cursor-pointer items-center gap-1 text-[13px] font-medium text-orange-600 transition-colors whitespace-nowrap">
-                <span>Internship</span>
+                <span data-cms="global.nav.internship.label">Internship</span>
             </a>
             
             <div class="relative" data-more-menu>
                 <button data-more-btn class="h-full px-3 lg:px-4 flex cursor-pointer items-center gap-1 text-[13px] font-medium text-gray-600 hover:text-gray-900 transition-colors whitespace-nowrap">
-                    <span>More</span>
+                    <span data-cms="global.nav.more.label">More</span>
                     <svg data-more-arrow class="w-3 h-3 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </button>
                 <div data-more-dropdown class="absolute right-0 top-full mt-2.5 w-max z-50 opacity-0 invisible translate-y-2 scale-95 transition-all duration-300 transform origin-top-right pointer-events-none">
@@ -114,8 +114,8 @@
                                                 <svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                             </div>
                                             <div class="w-max leading-5">
-                                                <p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600">Contact Us</p>
-                                                <p class="shrink-0 text-xs text-gray-500 transition-colors duration-300 group-hover/item:text-gray-600">Get in touch with us</p>
+                                                <p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600" data-cms="global.nav.contactUs.title">Contact Us</p>
+                                                <p class="shrink-0 text-xs text-gray-500 transition-colors duration-300 group-hover/item:text-gray-600" data-cms="global.nav.contactUs.subtitle">Get in touch with us</p>
                                             </div>
                                         </a>
                                     </li>
@@ -130,8 +130,8 @@
                                                 <svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
                                             </div>
                                             <div class="w-max leading-5">
-                                                <p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600">Team leads</p>
-                                                <p class="shrink-0 text-xs text-gray-500 transition-colors duration-300 group-hover/item:text-gray-600">Meet our leadership</p>
+                                                <p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600" data-cms="global.nav.teamLeads.title">Team leads</p>
+                                                <p class="shrink-0 text-xs text-gray-500 transition-colors duration-300 group-hover/item:text-gray-600" data-cms="global.nav.teamLeads.subtitle">Meet our leadership</p>
                                             </div>
                                         </a>
                                     </li>
@@ -141,8 +141,8 @@
                                                 <svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                                             </div>
                                             <div class="w-max leading-5">
-                                                <p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600">Privacy Policy</p>
-                                                <p class="shrink-0 text-xs text-gray-500 transition-colors duration-300 group-hover/item:text-gray-600">How we handle data</p>
+                                                <p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600" data-cms="global.nav.privacyPolicy.title">Privacy Policy</p>
+                                                <p class="shrink-0 text-xs text-gray-500 transition-colors duration-300 group-hover/item:text-gray-600" data-cms="global.nav.privacyPolicy.subtitle">How we handle data</p>
                                             </div>
                                         </a>
                                     </li>
@@ -156,7 +156,7 @@
 
         <!-- Mobile Menu Button -->
         <div class="flex items-center gap-4">
-            <a href="contact-us.html" class="hidden lg:flex text-[13px] font-medium text-gray-700 hover:text-orange-600 transition-colors whitespace-nowrap">Contact Us</a><button onclick="toggleChat()" class="hidden lg:flex items-center gap-1.5 px-4 py-1.5 bg-orange-500 hover:bg-orange-600 text-white text-[13px] font-semibold rounded-full transition-all duration-200 whitespace-nowrap"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>Ask AI</button>
+            <a href="contact-us.html" class="hidden lg:flex text-[13px] font-medium text-gray-700 hover:text-orange-600 transition-colors whitespace-nowrap" data-cms="global.nav.contactCta.label">Contact Us</a><button onclick="toggleChat()" class="hidden lg:flex items-center gap-1.5 px-4 py-1.5 bg-orange-500 hover:bg-orange-600 text-white text-[13px] font-semibold rounded-full transition-all duration-200 whitespace-nowrap"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>Ask AI</button>
             <div class="lg:hidden flex items-center">
             <button id="mobile-menu-btn" class="text-gray-700 hover:text-orange-600 focus:outline-none transition p-2">
                 <svg class="w-8 h-8 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -211,15 +211,15 @@
             <div class="flex justify-center mb-8">
                 <div class="inline-flex items-center border border-orange-500/30 bg-orange-500/10 py-1.5 px-5 rounded-full text-sm font-medium text-orange-400 tracking-wide backdrop-blur-sm">
                     <span class="w-2 h-2 bg-orange-400 rounded-full mr-2.5 animate-pulse"></span>
-                    Applications Open &mdash; Batch 2026
+                    <span data-cms="hero.badge">Applications Open &mdash; Batch 2026</span>
                 </div>
             </div>
             <div class="text-center max-w-4xl mx-auto">
-                <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight leading-[1.05]">
+                <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight leading-[1.05]" data-cms="hero.heading" data-cms-field="html">
                     Build the Future.<br>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400">Start Here.</span>
                 </h1>
-                <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mt-6 font-light leading-relaxed">
+                <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mt-6 font-light leading-relaxed" data-cms="hero.subtext">
                     Right skills and right opportunities &mdash; the two prerequisites to get on the road of success.
                 </p>
             </div>
@@ -231,7 +231,7 @@
                         <input id="hero-search" type="text" placeholder="Search by domain, skill, or keyword..." class="bg-transparent text-white placeholder-gray-500 text-sm flex-1 focus:outline-none" oninput="filterJobs(this.value)">
                     </div>
                     <a href="#positions" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl font-bold text-sm hover:from-orange-600 hover:to-orange-700 hover:shadow-[0_0_30px_rgba(234,88,12,0.5)] transition-all duration-300 whitespace-nowrap">
-                        Find Internships
+                        <span data-cms="hero.searchCta.label">Find Internships</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
                 </div>
@@ -249,20 +249,20 @@
             <div class="container mx-auto px-6 md:px-16 py-5">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 md:divide-x md:divide-white/10">
                     <div class="text-center md:px-8">
-                        <div class="text-2xl md:text-3xl font-extrabold text-white">17+</div>
-                        <div class="text-gray-500 text-xs mt-1 uppercase tracking-wider">Open Positions</div>
+                        <div class="text-2xl md:text-3xl font-extrabold text-white" data-cms="hero.stats.positions.value">17+</div>
+                        <div class="text-gray-500 text-xs mt-1 uppercase tracking-wider" data-cms="hero.stats.positions.label">Open Positions</div>
                     </div>
                     <div class="text-center md:px-8">
-                        <div class="text-2xl md:text-3xl font-extrabold text-white">6</div>
-                        <div class="text-gray-500 text-xs mt-1 uppercase tracking-wider">Domains</div>
+                        <div class="text-2xl md:text-3xl font-extrabold text-white" data-cms="hero.stats.domains.value">6</div>
+                        <div class="text-gray-500 text-xs mt-1 uppercase tracking-wider" data-cms="hero.stats.domains.label">Domains</div>
                     </div>
                     <div class="text-center md:px-8">
-                        <div class="text-2xl md:text-3xl font-extrabold text-white">100%</div>
-                        <div class="text-gray-500 text-xs mt-1 uppercase tracking-wider">Certificate Rate</div>
+                        <div class="text-2xl md:text-3xl font-extrabold text-white" data-cms="hero.stats.certRate.value">100%</div>
+                        <div class="text-gray-500 text-xs mt-1 uppercase tracking-wider" data-cms="hero.stats.certRate.label">Certificate Rate</div>
                     </div>
                     <div class="text-center md:px-8">
-                        <div class="text-2xl md:text-3xl font-extrabold text-white">Live</div>
-                        <div class="text-gray-500 text-xs mt-1 uppercase tracking-wider">Real Projects</div>
+                        <div class="text-2xl md:text-3xl font-extrabold text-white" data-cms="hero.stats.liveProjects.value">Live</div>
+                        <div class="text-gray-500 text-xs mt-1 uppercase tracking-wider" data-cms="hero.stats.liveProjects.label">Real Projects</div>
                     </div>
                 </div>
             </div>
@@ -274,48 +274,48 @@
         <div class="container mx-auto px-6 md:px-16">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <div class="inline-flex items-center border border-orange-200 bg-orange-50 py-1 px-4 rounded-full text-xs font-semibold text-orange-700 tracking-widest uppercase mb-6">About the Program</div>
-                    <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">
+                    <div class="inline-flex items-center border border-orange-200 bg-orange-50 py-1 px-4 rounded-full text-xs font-semibold text-orange-700 tracking-widest uppercase mb-6" data-cms="about.badge">About the Program</div>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight" data-cms="about.heading" data-cms-field="html">
                         Where learning meets<br><span class="text-orange-500">real impact</span>
                     </h2>
-                    <p class="text-gray-500 mt-6 leading-relaxed text-base">TT GLOBAL IT provides interns a digital learning environment &mdash; not classroom theory, but live projects on updated technology. You work alongside our engineers, shipping real features for real products.</p>
-                    <p class="text-gray-500 mt-4 leading-relaxed text-base">Students and job-seekers looking to build careers in specific tech domains can apply. No minimum batch size &mdash; even a single student can participate.</p>
+                    <p class="text-gray-500 mt-6 leading-relaxed text-base" data-cms="about.paragraph1">TT GLOBAL IT provides interns a digital learning environment &mdash; not classroom theory, but live projects on updated technology. You work alongside our engineers, shipping real features for real products.</p>
+                    <p class="text-gray-500 mt-4 leading-relaxed text-base" data-cms="about.paragraph2">Students and job-seekers looking to build careers in specific tech domains can apply. No minimum batch size &mdash; even a single student can participate.</p>
                     <div class="mt-8 grid grid-cols-2 gap-4">
                         <div class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
                             <div class="w-8 h-8 rounded-lg bg-orange-100 flex items-center justify-center shrink-0">
                                 <svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                             </div>
-                            <div><p class="font-semibold text-gray-900 text-sm">Certificate Provided</p><p class="text-xs text-gray-500 mt-0.5">On successful completion</p></div>
+                            <div><p class="font-semibold text-gray-900 text-sm" data-cms="about.perk1.title">Certificate Provided</p><p class="text-xs text-gray-500 mt-0.5" data-cms="about.perk1.subtitle">On successful completion</p></div>
                         </div>
                         <div class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
                             <div class="w-8 h-8 rounded-lg bg-orange-100 flex items-center justify-center shrink-0">
                                 <svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                             </div>
-                            <div><p class="font-semibold text-gray-900 text-sm">Flexible Duration</p><p class="text-xs text-gray-500 mt-0.5">Summer or academic year</p></div>
+                            <div><p class="font-semibold text-gray-900 text-sm" data-cms="about.perk2.title">Flexible Duration</p><p class="text-xs text-gray-500 mt-0.5" data-cms="about.perk2.subtitle">Summer or academic year</p></div>
                         </div>
                         <div class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
                             <div class="w-8 h-8 rounded-lg bg-orange-100 flex items-center justify-center shrink-0">
                                 <svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                             </div>
-                            <div><p class="font-semibold text-gray-900 text-sm">Mentored Work</p><p class="text-xs text-gray-500 mt-0.5">Industry professionals guide you</p></div>
+                            <div><p class="font-semibold text-gray-900 text-sm" data-cms="about.perk3.title">Mentored Work</p><p class="text-xs text-gray-500 mt-0.5" data-cms="about.perk3.subtitle">Industry professionals guide you</p></div>
                         </div>
                         <div class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
                             <div class="w-8 h-8 rounded-lg bg-orange-100 flex items-center justify-center shrink-0">
                                 <svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                             </div>
-                            <div><p class="font-semibold text-gray-900 text-sm">Live Projects</p><p class="text-xs text-gray-500 mt-0.5">Ship real features, real products</p></div>
+                            <div><p class="font-semibold text-gray-900 text-sm" data-cms="about.perk4.title">Live Projects</p><p class="text-xs text-gray-500 mt-0.5" data-cms="about.perk4.subtitle">Ship real features, real products</p></div>
                         </div>
                     </div>
                 </div>
                 <div class="relative">
                     <div class="rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
-                        <img src="assets/hero3.png" alt="Team collaboration" class="w-full h-auto max-h-[480px] object-contain bg-gray-50">
+                        <img src="assets/hero3.png" alt="Team collaboration" class="w-full h-auto max-h-[480px] object-contain bg-gray-50" data-cms="about.image" data-cms-field="src">
                     </div>
                     <div class="absolute -bottom-5 -left-5 bg-white rounded-2xl shadow-xl border border-gray-100 px-5 py-4 flex items-center gap-4">
                         <div class="w-10 h-10 rounded-xl bg-orange-500 flex items-center justify-center">
                             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                         </div>
-                        <div><p class="font-bold text-gray-900 text-sm">Applications Open</p><p class="text-xs text-gray-500">Batch 2025 &mdash; Apply now</p></div>
+                        <div><p class="font-bold text-gray-900 text-sm" data-cms="about.badgeCard.title">Applications Open</p><p class="text-xs text-gray-500" data-cms="about.badgeCard.subtitle">Batch 2025 &mdash; Apply now</p></div>
                     </div>
                 </div>
             </div>
@@ -325,7 +325,7 @@
     <!-- Fan Section -->
     <section class="pt-14 md:pt-20 pb-0 bg-white overflow-hidden">
         <div class="text-center px-4 mb-6 md:mb-10">
-            <h2 style="font-size:clamp(2rem,6.5vw,6.5rem);font-weight:900;letter-spacing:-0.02em;line-height:1;white-space:nowrap;">
+            <h2 style="font-size:clamp(2rem,6.5vw,6.5rem);font-weight:900;letter-spacing:-0.02em;line-height:1;white-space:nowrap;" data-cms="fan.heading" data-cms-field="html">
                 LET'S <span style="color:#ea580c;">START YOUR</span> CAREER
             </h2>
         </div>
@@ -380,30 +380,30 @@
         </div>
         <div class="container mx-auto px-6 md:px-16 relative z-10">
             <div class="text-center mb-16">
-                <div class="inline-flex items-center border border-orange-500/30 bg-orange-500/10 py-1 px-4 rounded-full text-xs font-semibold text-orange-400 tracking-widest uppercase mb-6">How It Works</div>
-                <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight">Your path to an internship</h2>
-                <p class="text-gray-500 mt-4 max-w-xl mx-auto text-base">Four simple steps from application to day one.</p>
+                <div class="inline-flex items-center border border-orange-500/30 bg-orange-500/10 py-1 px-4 rounded-full text-xs font-semibold text-orange-400 tracking-widest uppercase mb-6" data-cms="howItWorks.badge">How It Works</div>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight" data-cms="howItWorks.heading">Your path to an internship</h2>
+                <p class="text-gray-500 mt-4 max-w-xl mx-auto text-base" data-cms="howItWorks.subtext">Four simple steps from application to day one.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:border-orange-500/40 transition-all duration-300">
                     <div class="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center text-white font-extrabold text-sm mb-6 shadow-lg shadow-orange-500/30">1</div>
-                    <h3 class="text-white font-bold text-base mb-2">Choose Domain</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Pick the tech domain that matches your interest and skill level from our open positions.</p>
+                    <h3 class="text-white font-bold text-base mb-2" data-cms="howItWorks.step1.title">Choose Domain</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed" data-cms="howItWorks.step1.description">Pick the tech domain that matches your interest and skill level from our open positions.</p>
                 </div>
                 <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:border-orange-500/40 transition-all duration-300">
                     <div class="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center text-white font-extrabold text-sm mb-6 shadow-lg shadow-orange-500/30">2</div>
-                    <h3 class="text-white font-bold text-base mb-2">Send Application</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Email your name, college, and domain of interest to <span class="text-orange-400">ttglobalinfotech7@gmail.com</span></p>
+                    <h3 class="text-white font-bold text-base mb-2" data-cms="howItWorks.step2.title">Send Application</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed" data-cms="howItWorks.step2.description" data-cms-field="html">Email your name, college, and domain of interest to <span class="text-orange-400">ttglobalinfotech7@gmail.com</span></p>
                 </div>
                 <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:border-orange-500/40 transition-all duration-300">
                     <div class="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center text-white font-extrabold text-sm mb-6 shadow-lg shadow-orange-500/30">3</div>
-                    <h3 class="text-white font-bold text-base mb-2">Get Confirmation</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Receive your offer letter and onboarding details within 2&ndash;3 business days.</p>
+                    <h3 class="text-white font-bold text-base mb-2" data-cms="howItWorks.step3.title">Get Confirmation</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed" data-cms="howItWorks.step3.description">Receive your offer letter and onboarding details within 2&ndash;3 business days.</p>
                 </div>
                 <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:border-orange-500/40 transition-all duration-300">
                     <div class="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center text-white font-extrabold text-sm mb-6 shadow-lg shadow-orange-500/30">4</div>
-                    <h3 class="text-white font-bold text-base mb-2">Start &amp; Earn Certificate</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Work on live projects and receive your completion certificate on finishing the program.</p>
+                    <h3 class="text-white font-bold text-base mb-2" data-cms="howItWorks.step4.title">Start &amp; Earn Certificate</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed" data-cms="howItWorks.step4.description">Work on live projects and receive your completion certificate on finishing the program.</p>
                 </div>
             </div>
         </div>
@@ -413,9 +413,9 @@
     <section class="py-20 md:py-28 bg-gray-50" id="positions">
         <div class="container mx-auto px-6 md:px-16">
             <div class="text-center mb-12">
-                <div class="inline-flex items-center border border-orange-200 bg-orange-50 py-1 px-4 rounded-full text-xs font-semibold text-orange-700 tracking-widest uppercase mb-6">Open Positions</div>
-                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight">Find your domain</h2>
-                <p class="text-gray-500 mt-4 max-w-xl mx-auto">17 openings across 6 domains. Filter to find yours.</p>
+                <div class="inline-flex items-center border border-orange-200 bg-orange-50 py-1 px-4 rounded-full text-xs font-semibold text-orange-700 tracking-widest uppercase mb-6" data-cms="positions.badge">Open Positions</div>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight" data-cms="positions.heading">Find your domain</h2>
+                <p class="text-gray-500 mt-4 max-w-xl mx-auto" data-cms="positions.subtext">17 openings across 6 domains. Filter to find yours.</p>
             </div>
             <div class="flex flex-wrap gap-2 justify-center mb-10">
                 <button onclick="setFilter('all')" class="filter-btn selected text-sm font-medium px-5 py-2 rounded-full border border-gray-200 bg-white text-gray-700 hover:border-orange-400 transition-all duration-200" data-filter="all">All Domains</button>
@@ -432,10 +432,10 @@
                     </div>
                     <div class="flex-1 min-w-0">
                         <div class="flex flex-wrap items-center gap-2 mb-1">
-                            <h3 class="font-bold text-gray-900 text-base">Android App Development</h3>
+                            <h3 class="font-bold text-gray-900 text-base" data-cms="positions.job1.title">Android App Development</h3>
                             <span class="text-xs bg-orange-50 text-orange-600 border border-orange-200 px-2.5 py-0.5 rounded-full font-medium">Mobile</span>
                         </div>
-                        <p class="text-gray-500 text-sm">Build and deploy Android apps using Kotlin and modern Android frameworks on real production codebases.</p>
+                        <p class="text-gray-500 text-sm" data-cms="positions.job1.description">Build and deploy Android apps using Kotlin and modern Android frameworks on real production codebases.</p>
                         <div class="flex flex-wrap gap-2 mt-3">
                             <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-md">Kotlin</span>
                             <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-md">Android SDK</span>
@@ -443,8 +443,8 @@
                         </div>
                     </div>
                     <div class="flex flex-col items-start sm:items-end gap-3 shrink-0">
-                        <span class="flex items-center gap-1.5 text-sm font-semibold text-orange-600"><span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span> 3 Openings</span>
-                        <a href="mailto:ttglobalinfotech7@gmail.com?subject=Internship Application - Android App Development" class="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-xl transition-colors">Apply <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+                        <span class="flex items-center gap-1.5 text-sm font-semibold text-orange-600"><span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span> <span data-cms="positions.job1.openings">3 Openings</span></span>
+                        <a href="mailto:ttglobalinfotech7@gmail.com?subject=Internship Application - Android App Development" class="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-xl transition-colors"><span data-cms="positions.applyLabel">Apply</span> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
                     </div>
                 </div>
                 <div class="job-card active flex-col sm:flex-row items-start sm:items-center gap-5 bg-white rounded-2xl border border-gray-200 p-6 hover:border-orange-300 hover:shadow-lg transition-all duration-300" data-category="iot" data-title="Internet of Things IoT">
@@ -453,10 +453,10 @@
                     </div>
                     <div class="flex-1 min-w-0">
                         <div class="flex flex-wrap items-center gap-2 mb-1">
-                            <h3 class="font-bold text-gray-900 text-base">Internet of Things (IoT)</h3>
+                            <h3 class="font-bold text-gray-900 text-base" data-cms="positions.job2.title">Internet of Things (IoT)</h3>
                             <span class="text-xs bg-orange-50 text-orange-600 border border-orange-200 px-2.5 py-0.5 rounded-full font-medium">IoT</span>
                         </div>
-                        <p class="text-gray-500 text-sm">Work on connected devices, sensors, and smart systems with real-world IoT deployments.</p>
+                        <p class="text-gray-500 text-sm" data-cms="positions.job2.description">Work on connected devices, sensors, and smart systems with real-world IoT deployments.</p>
                         <div class="flex flex-wrap gap-2 mt-3">
                             <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-md">Arduino</span>
                             <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-md">Raspberry Pi</span>
@@ -464,8 +464,8 @@
                         </div>
                     </div>
                     <div class="flex flex-col items-start sm:items-end gap-3 shrink-0">
-                        <span class="flex items-center gap-1.5 text-sm font-semibold text-orange-600"><span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span> 2 Openings</span>
-                        <a href="mailto:ttglobalinfotech7@gmail.com?subject=Internship Application - IoT" class="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-xl transition-colors">Apply <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+                        <span class="flex items-center gap-1.5 text-sm font-semibold text-orange-600"><span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span> <span data-cms="positions.job2.openings">2 Openings</span></span>
+                        <a href="mailto:ttglobalinfotech7@gmail.com?subject=Internship Application - IoT" class="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-xl transition-colors"><span data-cms="positions.applyLabel">Apply</span> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
                     </div>
                 </div>
                 <div class="job-card active flex-col sm:flex-row items-start sm:items-center gap-5 bg-white rounded-2xl border border-gray-200 p-6 hover:border-orange-300 hover:shadow-lg transition-all duration-300" data-category="ai" data-title="Machine Learning">
@@ -474,10 +474,10 @@
                     </div>
                     <div class="flex-1 min-w-0">
                         <div class="flex flex-wrap items-center gap-2 mb-1">
-                            <h3 class="font-bold text-gray-900 text-base">Machine Learning</h3>
+                            <h3 class="font-bold text-gray-900 text-base" data-cms="positions.job3.title">Machine Learning</h3>
                             <span class="text-xs bg-orange-50 text-orange-600 border border-orange-200 px-2.5 py-0.5 rounded-full font-medium">AI / ML</span>
                         </div>
-                        <p class="text-gray-500 text-sm">Develop ML models to solve real-world problems using Python, TensorFlow, and scikit-learn.</p>
+                        <p class="text-gray-500 text-sm" data-cms="positions.job3.description">Develop ML models to solve real-world problems using Python, TensorFlow, and scikit-learn.</p>
                         <div class="flex flex-wrap gap-2 mt-3">
                             <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-md">Python</span>
                             <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-md">TensorFlow</span>
@@ -485,8 +485,8 @@
                         </div>
                     </div>
                     <div class="flex flex-col items-start sm:items-end gap-3 shrink-0">
-                        <span class="flex items-center gap-1.5 text-sm font-semibold text-orange-600"><span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span> 3 Openings</span>
-                        <a href="mailto:ttglobalinfotech7@gmail.com?subject=Internship Application - Machine Learning" class="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-xl transition-colors">Apply <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+                        <span class="flex items-center gap-1.5 text-sm font-semibold text-orange-600"><span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span> <span data-cms="positions.job3.openings">3 Openings</span></span>
+                        <a href="mailto:ttglobalinfotech7@gmail.com?subject=Internship Application - Machine Learning" class="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-xl transition-colors"><span data-cms="positions.applyLabel">Apply</span> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
                     </div>
                 </div>
                 <div class="job-card active flex-col sm:flex-row items-start sm:items-center gap-5 bg-white rounded-2xl border border-gray-200 p-6 hover:border-orange-300 hover:shadow-lg transition-all duration-300" data-category="web" data-title="Full Stack Development">
@@ -495,10 +495,10 @@
                     </div>
                     <div class="flex-1 min-w-0">
                         <div class="flex flex-wrap items-center gap-2 mb-1">
-                            <h3 class="font-bold text-gray-900 text-base">Full Stack Development</h3>
+                            <h3 class="font-bold text-gray-900 text-base" data-cms="positions.job4.title">Full Stack Development</h3>
                             <span class="text-xs bg-orange-50 text-orange-600 border border-orange-200 px-2.5 py-0.5 rounded-full font-medium">Web Dev</span>
                         </div>
-                        <p class="text-gray-500 text-sm">Build end-to-end web applications with modern frontend frameworks and backend APIs.</p>
+                        <p class="text-gray-500 text-sm" data-cms="positions.job4.description">Build end-to-end web applications with modern frontend frameworks and backend APIs.</p>
                         <div class="flex flex-wrap gap-2 mt-3">
                             <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-md">React</span>
                             <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-md">Node.js</span>
@@ -506,8 +506,8 @@
                         </div>
                     </div>
                     <div class="flex flex-col items-start sm:items-end gap-3 shrink-0">
-                        <span class="flex items-center gap-1.5 text-sm font-semibold text-orange-600"><span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span> 4 Openings</span>
-                        <a href="mailto:ttglobalinfotech7@gmail.com?subject=Internship Application - Full Stack Development" class="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-xl transition-colors">Apply <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+                        <span class="flex items-center gap-1.5 text-sm font-semibold text-orange-600"><span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span> <span data-cms="positions.job4.openings">4 Openings</span></span>
+                        <a href="mailto:ttglobalinfotech7@gmail.com?subject=Internship Application - Full Stack Development" class="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-xl transition-colors"><span data-cms="positions.applyLabel">Apply</span> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
                     </div>
                 </div>
                 <div class="job-card active flex-col sm:flex-row items-start sm:items-center gap-5 bg-white rounded-2xl border border-gray-200 p-6 hover:border-orange-300 hover:shadow-lg transition-all duration-300" data-category="data" data-title="Data Analysis Python">
@@ -516,10 +516,10 @@
                     </div>
                     <div class="flex-1 min-w-0">
                         <div class="flex flex-wrap items-center gap-2 mb-1">
-                            <h3 class="font-bold text-gray-900 text-base">Data Analysis using Python</h3>
+                            <h3 class="font-bold text-gray-900 text-base" data-cms="positions.job5.title">Data Analysis using Python</h3>
                             <span class="text-xs bg-orange-50 text-orange-600 border border-orange-200 px-2.5 py-0.5 rounded-full font-medium">Data</span>
                         </div>
-                        <p class="text-gray-500 text-sm">Analyze datasets, create visualizations, and derive business insights using Python and Pandas.</p>
+                        <p class="text-gray-500 text-sm" data-cms="positions.job5.description">Analyze datasets, create visualizations, and derive business insights using Python and Pandas.</p>
                         <div class="flex flex-wrap gap-2 mt-3">
                             <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-md">Python</span>
                             <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-md">Pandas</span>
@@ -527,8 +527,8 @@
                         </div>
                     </div>
                     <div class="flex flex-col items-start sm:items-end gap-3 shrink-0">
-                        <span class="flex items-center gap-1.5 text-sm font-semibold text-orange-600"><span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span> 2 Openings</span>
-                        <a href="mailto:ttglobalinfotech7@gmail.com?subject=Internship Application - Data Analysis" class="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-xl transition-colors">Apply <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+                        <span class="flex items-center gap-1.5 text-sm font-semibold text-orange-600"><span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span> <span data-cms="positions.job5.openings">2 Openings</span></span>
+                        <a href="mailto:ttglobalinfotech7@gmail.com?subject=Internship Application - Data Analysis" class="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-xl transition-colors"><span data-cms="positions.applyLabel">Apply</span> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
                     </div>
                 </div>
                 <div class="job-card active flex-col sm:flex-row items-start sm:items-center gap-5 bg-white rounded-2xl border border-gray-200 p-6 hover:border-orange-300 hover:shadow-lg transition-all duration-300" data-category="ai" data-title="Data Science AI">
@@ -537,10 +537,10 @@
                     </div>
                     <div class="flex-1 min-w-0">
                         <div class="flex flex-wrap items-center gap-2 mb-1">
-                            <h3 class="font-bold text-gray-900 text-base">Data Science &amp; AI</h3>
+                            <h3 class="font-bold text-gray-900 text-base" data-cms="positions.job6.title">Data Science &amp; AI</h3>
                             <span class="text-xs bg-orange-50 text-orange-600 border border-orange-200 px-2.5 py-0.5 rounded-full font-medium">AI / ML</span>
                         </div>
-                        <p class="text-gray-500 text-sm">Specialize in Data Science and Artificial Intelligence with advanced algorithms and production AI tools.</p>
+                        <p class="text-gray-500 text-sm" data-cms="positions.job6.description">Specialize in Data Science and Artificial Intelligence with advanced algorithms and production AI tools.</p>
                         <div class="flex flex-wrap gap-2 mt-3">
                             <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-md">Python</span>
                             <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-md">PyTorch</span>
@@ -548,8 +548,8 @@
                         </div>
                     </div>
                     <div class="flex flex-col items-start sm:items-end gap-3 shrink-0">
-                        <span class="flex items-center gap-1.5 text-sm font-semibold text-orange-600"><span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span> 3 Openings</span>
-                        <a href="mailto:ttglobalinfotech7@gmail.com?subject=Internship Application - Data Science and AI" class="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-xl transition-colors">Apply <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+                        <span class="flex items-center gap-1.5 text-sm font-semibold text-orange-600"><span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span> <span data-cms="positions.job6.openings">3 Openings</span></span>
+                        <a href="mailto:ttglobalinfotech7@gmail.com?subject=Internship Application - Data Science and AI" class="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-xl transition-colors"><span data-cms="positions.applyLabel">Apply</span> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
                     </div>
                 </div>
                 <div id="no-results" class="hidden text-center py-16 text-gray-400">
@@ -565,37 +565,37 @@
     <section class="py-20 md:py-28 bg-white">
         <div class="container mx-auto px-6 md:px-16">
             <div class="text-center mb-14">
-                <div class="inline-flex items-center border border-orange-200 bg-orange-50 py-1 px-4 rounded-full text-xs font-semibold text-orange-700 tracking-widest uppercase mb-6">Benefits</div>
-                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight">Why intern with us?</h2>
+                <div class="inline-flex items-center border border-orange-200 bg-orange-50 py-1 px-4 rounded-full text-xs font-semibold text-orange-700 tracking-widest uppercase mb-6" data-cms="benefits.badge">Benefits</div>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight" data-cms="benefits.heading">Why intern with us?</h2>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="group p-8 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-xl hover:border-orange-200 hover:-translate-y-1.5 transition-all duration-300 text-center">
                     <div class="w-14 h-14 rounded-2xl bg-orange-50 group-hover:bg-orange-500 flex items-center justify-center mx-auto mb-6 transition-all duration-300">
                         <svg class="w-7 h-7 text-orange-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
                     </div>
-                    <h3 class="text-base font-bold text-gray-900 mb-3">Real-time Projects</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Live applications that power actual businesses &mdash; not toy problems or sandboxed demos.</p>
+                    <h3 class="text-base font-bold text-gray-900 mb-3" data-cms="benefits.item1.title">Real-time Projects</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed" data-cms="benefits.item1.description">Live applications that power actual businesses &mdash; not toy problems or sandboxed demos.</p>
                 </div>
                 <div class="group p-8 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-xl hover:border-orange-200 hover:-translate-y-1.5 transition-all duration-300 text-center">
                     <div class="w-14 h-14 rounded-2xl bg-orange-50 group-hover:bg-orange-500 flex items-center justify-center mx-auto mb-6 transition-all duration-300">
                         <svg class="w-7 h-7 text-orange-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
                     </div>
-                    <h3 class="text-base font-bold text-gray-900 mb-3">Hands-on Experience</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Work in your desired field with modern tools and guided mentorship from day one.</p>
+                    <h3 class="text-base font-bold text-gray-900 mb-3" data-cms="benefits.item2.title">Hands-on Experience</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed" data-cms="benefits.item2.description">Work in your desired field with modern tools and guided mentorship from day one.</p>
                 </div>
                 <div class="group p-8 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-xl hover:border-orange-200 hover:-translate-y-1.5 transition-all duration-300 text-center">
                     <div class="w-14 h-14 rounded-2xl bg-orange-50 group-hover:bg-orange-500 flex items-center justify-center mx-auto mb-6 transition-all duration-300">
                         <svg class="w-7 h-7 text-orange-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                     </div>
-                    <h3 class="text-base font-bold text-gray-900 mb-3">Industry Skills</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Practical skills today's tech industry demands &mdash; not theoretical curriculum exercises.</p>
+                    <h3 class="text-base font-bold text-gray-900 mb-3" data-cms="benefits.item3.title">Industry Skills</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed" data-cms="benefits.item3.description">Practical skills today's tech industry demands &mdash; not theoretical curriculum exercises.</p>
                 </div>
                 <div class="group p-8 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-xl hover:border-orange-200 hover:-translate-y-1.5 transition-all duration-300 text-center">
                     <div class="w-14 h-14 rounded-2xl bg-orange-50 group-hover:bg-orange-500 flex items-center justify-center mx-auto mb-6 transition-all duration-300">
                         <svg class="w-7 h-7 text-orange-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
                     </div>
-                    <h3 class="text-base font-bold text-gray-900 mb-3">Curriculum Integration</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Bridges academic curriculum with real work &mdash; reinforces and extends your coursework.</p>
+                    <h3 class="text-base font-bold text-gray-900 mb-3" data-cms="benefits.item4.title">Curriculum Integration</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed" data-cms="benefits.item4.description">Bridges academic curriculum with real work &mdash; reinforces and extends your coursework.</p>
                 </div>
             </div>
         </div>
@@ -623,13 +623,13 @@
     <section class="py-24 bg-gray-50 relative overflow-hidden">
       <div class="container mx-auto px-8 md:px-16">
         <div class="flex flex-col items-center text-center mb-16">
-          <div class="inline-flex items-center border border-orange-200 bg-orange-50 py-1 px-4 rounded-full text-sm font-medium text-orange-700 tracking-wide">
+          <div class="inline-flex items-center border border-orange-200 bg-orange-50 py-1 px-4 rounded-full text-sm font-medium text-orange-700 tracking-wide" data-cms="testimonials.badge">
             Testimonials
           </div>
-          <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight mt-6">
+          <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight mt-6" data-cms="testimonials.heading">
             What our clients say
           </h2>
-          <p class="text-gray-500 text-lg mt-4 max-w-xl">
+          <p class="text-gray-500 text-lg mt-4 max-w-xl" data-cms="testimonials.subtext">
             Trusted by cooperative societies and financial institutions across India.
           </p>
         </div>
@@ -639,185 +639,185 @@
             <!-- Card 1: Pradeep - Sri Anjaneya Souhardha -->
             <div class="p-8 rounded-3xl border border-gray-200 bg-white shadow-lg shadow-orange-500/5 w-[380px] shrink-0 flex flex-col">
               <div class="flex text-yellow-400 mb-3">★★★★★</div>
-              <p class="text-gray-600 leading-relaxed text-sm flex-1">Esahakara Core Banking Solution has transformed our banking operations with its user-friendly interface, seamless functionality, and robust features. The platform has significantly improved efficiency, making transactions smoother and ensuring secure financial management. We highly recommend Esahakara for any cooperative banking institution looking for a reliable, innovative, and efficient core banking solution.</p>
+              <p class="text-gray-600 leading-relaxed text-sm flex-1" data-cms="testimonials.t1.quote">Esahakara Core Banking Solution has transformed our banking operations with its user-friendly interface, seamless functionality, and robust features. The platform has significantly improved efficiency, making transactions smoother and ensuring secure financial management. We highly recommend Esahakara for any cooperative banking institution looking for a reliable, innovative, and efficient core banking solution.</p>
               <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-100">
 
                 <div>
-                  <div class="font-semibold text-gray-900 text-sm">Pradeep</div>
-                  <div class="text-xs text-gray-500">General Manager, Sri Anjaneya Souhardha Coop. Society, Davanagere</div>
+                  <div class="font-semibold text-gray-900 text-sm" data-cms="testimonials.t1.name">Pradeep</div>
+                  <div class="text-xs text-gray-500" data-cms="testimonials.t1.role">General Manager, Sri Anjaneya Souhardha Coop. Society, Davanagere</div>
                 </div>
               </div>
             </div>
             <!-- Card 2: Bahubali - Samyak Souhardha -->
             <div class="p-8 rounded-3xl border border-gray-200 bg-white shadow-lg shadow-orange-500/5 w-[380px] shrink-0 flex flex-col">
               <div class="flex text-yellow-400 mb-3">★★★★★</div>
-              <p class="text-gray-600 leading-relaxed text-sm flex-1">Managing member records, loans, and accounts used to be chaotic. This solution made everything digital, transparent, and fast.</p>
+              <p class="text-gray-600 leading-relaxed text-sm flex-1" data-cms="testimonials.t2.quote">Managing member records, loans, and accounts used to be chaotic. This solution made everything digital, transparent, and fast.</p>
               <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-100">
 
                 <div>
-                  <div class="font-semibold text-gray-900 text-sm">Bahubali</div>
-                  <div class="text-xs text-gray-500">President, Samyak Souhardha COOP Society, Vijayanagar</div>
+                  <div class="font-semibold text-gray-900 text-sm" data-cms="testimonials.t2.name">Bahubali</div>
+                  <div class="text-xs text-gray-500" data-cms="testimonials.t2.role">President, Samyak Souhardha COOP Society, Vijayanagar</div>
                 </div>
               </div>
             </div>
             <!-- Card 3: Patresh Hiremath - Sri Banderanganatha -->
             <div class="p-8 rounded-3xl border border-gray-200 bg-white shadow-lg shadow-orange-500/5 w-[380px] shrink-0 flex flex-col">
               <div class="flex text-yellow-400 mb-3">★★★★★</div>
-              <p class="text-gray-600 leading-relaxed text-sm flex-1">Their customer service is second to none. The ESAHAKARA is consistently outstanding, exceeding my expectations every time. I was completely impressed with their professionalism and customer service.</p>
+              <p class="text-gray-600 leading-relaxed text-sm flex-1" data-cms="testimonials.t3.quote">Their customer service is second to none. The ESAHAKARA is consistently outstanding, exceeding my expectations every time. I was completely impressed with their professionalism and customer service.</p>
               <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-100">
 
                 <div>
-                  <div class="font-semibold text-gray-900 text-sm">Patresh Hiremath</div>
-                  <div class="text-xs text-gray-500">President, Sri Banderanganatha Souhardha COOP Society, Vijayanagar</div>
+                  <div class="font-semibold text-gray-900 text-sm" data-cms="testimonials.t3.name">Patresh Hiremath</div>
+                  <div class="text-xs text-gray-500" data-cms="testimonials.t3.role">President, Sri Banderanganatha Souhardha COOP Society, Vijayanagar</div>
                 </div>
               </div>
             </div>
             <!-- Card 4: Srikanth Badiger - Swamivivekananda -->
             <div class="p-8 rounded-3xl border border-gray-200 bg-white shadow-lg shadow-orange-500/5 w-[380px] shrink-0 flex flex-col">
               <div class="flex text-yellow-400 mb-3">★★★★★</div>
-              <p class="text-gray-600 leading-relaxed text-sm flex-1">ESAHAKARA team delivers high-quality results, attentive service, and reasonable pricing. Truly exceptional partnership.</p>
+              <p class="text-gray-600 leading-relaxed text-sm flex-1" data-cms="testimonials.t4.quote">ESAHAKARA team delivers high-quality results, attentive service, and reasonable pricing. Truly exceptional partnership.</p>
               <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-100">
 
                 <div>
-                  <div class="font-semibold text-gray-900 text-sm">Srikanth Badiger</div>
-                  <div class="text-xs text-gray-500">CEO, Swamivivekananda COOP, Bagalkot</div>
+                  <div class="font-semibold text-gray-900 text-sm" data-cms="testimonials.t4.name">Srikanth Badiger</div>
+                  <div class="text-xs text-gray-500" data-cms="testimonials.t4.role">CEO, Swamivivekananda COOP, Bagalkot</div>
                 </div>
               </div>
             </div>
             <!-- Card 5: Sanjay - Sarvodaya -->
             <div class="p-8 rounded-3xl border border-gray-200 bg-white shadow-lg shadow-orange-500/5 w-[380px] shrink-0 flex flex-col">
               <div class="flex text-yellow-400 mb-3">★★★★★</div>
-              <p class="text-gray-600 leading-relaxed text-sm flex-1">ESAHAKARA team delivers high-quality results, attentive service, and reasonable pricing.</p>
+              <p class="text-gray-600 leading-relaxed text-sm flex-1" data-cms="testimonials.t5.quote">ESAHAKARA team delivers high-quality results, attentive service, and reasonable pricing.</p>
               <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-100">
 
                 <div>
-                  <div class="font-semibold text-gray-900 text-sm">Sanjay</div>
-                  <div class="text-xs text-gray-500">CEO, Sarvodaya COOP, Bengaluru</div>
+                  <div class="font-semibold text-gray-900 text-sm" data-cms="testimonials.t5.name">Sanjay</div>
+                  <div class="text-xs text-gray-500" data-cms="testimonials.t5.role">CEO, Sarvodaya COOP, Bengaluru</div>
                 </div>
               </div>
             </div>
             <!-- Card 6: Jyothi - Jai Jawan Jai Kishan -->
             <div class="p-8 rounded-3xl border border-gray-200 bg-white shadow-lg shadow-orange-500/5 w-[380px] shrink-0 flex flex-col">
               <div class="flex text-yellow-400 mb-3">★★★★★</div>
-              <p class="text-gray-600 leading-relaxed text-sm flex-1">We can now track daily deposits from agents and reconcile them instantly. It reduced our cash leakage risk significantly.</p>
+              <p class="text-gray-600 leading-relaxed text-sm flex-1" data-cms="testimonials.t6.quote">We can now track daily deposits from agents and reconcile them instantly. It reduced our cash leakage risk significantly.</p>
               <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-100">
 
                 <div>
-                  <div class="font-semibold text-gray-900 text-sm">Jyothi</div>
-                  <div class="text-xs text-gray-500">CEO, Jai Jawan Jai Kishan COOP, Belagavi</div>
+                  <div class="font-semibold text-gray-900 text-sm" data-cms="testimonials.t6.name">Jyothi</div>
+                  <div class="text-xs text-gray-500" data-cms="testimonials.t6.role">CEO, Jai Jawan Jai Kishan COOP, Belagavi</div>
                 </div>
               </div>
             </div>
             <!-- Card 7: Ravi Andani Math - Judicial Employee COOP Gadag -->
             <div class="p-8 rounded-3xl border border-gray-200 bg-white shadow-lg shadow-orange-500/5 w-[380px] shrink-0 flex flex-col">
               <div class="flex text-yellow-400 mb-3">★★★★★</div>
-              <p class="text-gray-600 leading-relaxed text-sm flex-1">Our members love the app – checking balances, paying dues, and even applying for loans from home.</p>
+              <p class="text-gray-600 leading-relaxed text-sm flex-1" data-cms="testimonials.t7.quote">Our members love the app – checking balances, paying dues, and even applying for loans from home.</p>
               <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-100">
 
                 <div>
-                  <div class="font-semibold text-gray-900 text-sm">Ravi Andani Math</div>
-                  <div class="text-xs text-gray-500">President, Judicial Employee COOP, Gadag</div>
+                  <div class="font-semibold text-gray-900 text-sm" data-cms="testimonials.t7.name">Ravi Andani Math</div>
+                  <div class="text-xs text-gray-500" data-cms="testimonials.t7.role">President, Judicial Employee COOP, Gadag</div>
                 </div>
               </div>
             </div>
             <!-- Card 8: Yadavad Datta - Judicial Employee COOP Bagalkot -->
             <div class="p-8 rounded-3xl border border-gray-200 bg-white shadow-lg shadow-orange-500/5 w-[380px] shrink-0 flex flex-col">
               <div class="flex text-yellow-400 mb-3">★★★★★</div>
-              <p class="text-gray-600 leading-relaxed text-sm flex-1">Members feel safe using the mobile app. With phone number login and OTP verification, our members trust the platform completely — especially our senior citizens.</p>
+              <p class="text-gray-600 leading-relaxed text-sm flex-1" data-cms="testimonials.t8.quote">Members feel safe using the mobile app. With phone number login and OTP verification, our members trust the platform completely — especially our senior citizens.</p>
               <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-100">
 
                 <div>
-                  <div class="font-semibold text-gray-900 text-sm">Yadavad Datta</div>
-                  <div class="text-xs text-gray-500">CEO, Judicial Employee COOP, Bagalkot</div>
+                  <div class="font-semibold text-gray-900 text-sm" data-cms="testimonials.t8.name">Yadavad Datta</div>
+                  <div class="text-xs text-gray-500" data-cms="testimonials.t8.role">CEO, Judicial Employee COOP, Bagalkot</div>
                 </div>
               </div>
             </div>
             <!-- Duplicate all 8 for seamless loop -->
             <div class="p-8 rounded-3xl border border-gray-200 bg-white shadow-lg shadow-orange-500/5 w-[380px] shrink-0 flex flex-col">
               <div class="flex text-yellow-400 mb-3">★★★★★</div>
-              <p class="text-gray-600 leading-relaxed text-sm flex-1">Esahakara Core Banking Solution has transformed our banking operations with its user-friendly interface, seamless functionality, and robust features. The platform has significantly improved efficiency, making transactions smoother and ensuring secure financial management. We highly recommend Esahakara for any cooperative banking institution looking for a reliable, innovative, and efficient core banking solution.</p>
+              <p class="text-gray-600 leading-relaxed text-sm flex-1" data-cms="testimonials.t1.quote">Esahakara Core Banking Solution has transformed our banking operations with its user-friendly interface, seamless functionality, and robust features. The platform has significantly improved efficiency, making transactions smoother and ensuring secure financial management. We highly recommend Esahakara for any cooperative banking institution looking for a reliable, innovative, and efficient core banking solution.</p>
               <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-100">
 
                 <div>
-                  <div class="font-semibold text-gray-900 text-sm">Pradeep</div>
-                  <div class="text-xs text-gray-500">General Manager, Sri Anjaneya Souhardha Coop. Society, Davanagere</div>
+                  <div class="font-semibold text-gray-900 text-sm" data-cms="testimonials.t1.name">Pradeep</div>
+                  <div class="text-xs text-gray-500" data-cms="testimonials.t1.role">General Manager, Sri Anjaneya Souhardha Coop. Society, Davanagere</div>
                 </div>
               </div>
             </div>
             <div class="p-8 rounded-3xl border border-gray-200 bg-white shadow-lg shadow-orange-500/5 w-[380px] shrink-0 flex flex-col">
               <div class="flex text-yellow-400 mb-3">★★★★★</div>
-              <p class="text-gray-600 leading-relaxed text-sm flex-1">Managing member records, loans, and accounts used to be chaotic. This solution made everything digital, transparent, and fast.</p>
+              <p class="text-gray-600 leading-relaxed text-sm flex-1" data-cms="testimonials.t2.quote">Managing member records, loans, and accounts used to be chaotic. This solution made everything digital, transparent, and fast.</p>
               <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-100">
 
                 <div>
-                  <div class="font-semibold text-gray-900 text-sm">Bahubali</div>
-                  <div class="text-xs text-gray-500">President, Samyak Souhardha COOP Society, Vijayanagar</div>
+                  <div class="font-semibold text-gray-900 text-sm" data-cms="testimonials.t2.name">Bahubali</div>
+                  <div class="text-xs text-gray-500" data-cms="testimonials.t2.role">President, Samyak Souhardha COOP Society, Vijayanagar</div>
                 </div>
               </div>
             </div>
             <div class="p-8 rounded-3xl border border-gray-200 bg-white shadow-lg shadow-orange-500/5 w-[380px] shrink-0 flex flex-col">
               <div class="flex text-yellow-400 mb-3">★★★★★</div>
-              <p class="text-gray-600 leading-relaxed text-sm flex-1">Their customer service is second to none. The ESAHAKARA is consistently outstanding, exceeding my expectations every time. I was completely impressed with their professionalism and customer service.</p>
+              <p class="text-gray-600 leading-relaxed text-sm flex-1" data-cms="testimonials.t3.quote">Their customer service is second to none. The ESAHAKARA is consistently outstanding, exceeding my expectations every time. I was completely impressed with their professionalism and customer service.</p>
               <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-100">
 
                 <div>
-                  <div class="font-semibold text-gray-900 text-sm">Patresh Hiremath</div>
-                  <div class="text-xs text-gray-500">President, Sri Banderanganatha Souhardha COOP Society, Vijayanagar</div>
+                  <div class="font-semibold text-gray-900 text-sm" data-cms="testimonials.t3.name">Patresh Hiremath</div>
+                  <div class="text-xs text-gray-500" data-cms="testimonials.t3.role">President, Sri Banderanganatha Souhardha COOP Society, Vijayanagar</div>
                 </div>
               </div>
             </div>
             <div class="p-8 rounded-3xl border border-gray-200 bg-white shadow-lg shadow-orange-500/5 w-[380px] shrink-0 flex flex-col">
               <div class="flex text-yellow-400 mb-3">★★★★★</div>
-              <p class="text-gray-600 leading-relaxed text-sm flex-1">ESAHAKARA team delivers high-quality results, attentive service, and reasonable pricing. Truly exceptional partnership.</p>
+              <p class="text-gray-600 leading-relaxed text-sm flex-1" data-cms="testimonials.t4.quote">ESAHAKARA team delivers high-quality results, attentive service, and reasonable pricing. Truly exceptional partnership.</p>
               <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-100">
 
                 <div>
-                  <div class="font-semibold text-gray-900 text-sm">Srikanth Badiger</div>
-                  <div class="text-xs text-gray-500">CEO, Swamivivekananda COOP, Bagalkot</div>
+                  <div class="font-semibold text-gray-900 text-sm" data-cms="testimonials.t4.name">Srikanth Badiger</div>
+                  <div class="text-xs text-gray-500" data-cms="testimonials.t4.role">CEO, Swamivivekananda COOP, Bagalkot</div>
                 </div>
               </div>
             </div>
             <div class="p-8 rounded-3xl border border-gray-200 bg-white shadow-lg shadow-orange-500/5 w-[380px] shrink-0 flex flex-col">
               <div class="flex text-yellow-400 mb-3">★★★★★</div>
-              <p class="text-gray-600 leading-relaxed text-sm flex-1">ESAHAKARA team delivers high-quality results, attentive service, and reasonable pricing.</p>
+              <p class="text-gray-600 leading-relaxed text-sm flex-1" data-cms="testimonials.t5.quote">ESAHAKARA team delivers high-quality results, attentive service, and reasonable pricing.</p>
               <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-100">
 
                 <div>
-                  <div class="font-semibold text-gray-900 text-sm">Sanjay</div>
-                  <div class="text-xs text-gray-500">CEO, Sarvodaya COOP, Bengaluru</div>
+                  <div class="font-semibold text-gray-900 text-sm" data-cms="testimonials.t5.name">Sanjay</div>
+                  <div class="text-xs text-gray-500" data-cms="testimonials.t5.role">CEO, Sarvodaya COOP, Bengaluru</div>
                 </div>
               </div>
             </div>
             <div class="p-8 rounded-3xl border border-gray-200 bg-white shadow-lg shadow-orange-500/5 w-[380px] shrink-0 flex flex-col">
               <div class="flex text-yellow-400 mb-3">★★★★★</div>
-              <p class="text-gray-600 leading-relaxed text-sm flex-1">We can now track daily deposits from agents and reconcile them instantly. It reduced our cash leakage risk significantly.</p>
+              <p class="text-gray-600 leading-relaxed text-sm flex-1" data-cms="testimonials.t6.quote">We can now track daily deposits from agents and reconcile them instantly. It reduced our cash leakage risk significantly.</p>
               <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-100">
 
                 <div>
-                  <div class="font-semibold text-gray-900 text-sm">Jyothi</div>
-                  <div class="text-xs text-gray-500">CEO, Jai Jawan Jai Kishan COOP, Belagavi</div>
+                  <div class="font-semibold text-gray-900 text-sm" data-cms="testimonials.t6.name">Jyothi</div>
+                  <div class="text-xs text-gray-500" data-cms="testimonials.t6.role">CEO, Jai Jawan Jai Kishan COOP, Belagavi</div>
                 </div>
               </div>
             </div>
             <div class="p-8 rounded-3xl border border-gray-200 bg-white shadow-lg shadow-orange-500/5 w-[380px] shrink-0 flex flex-col">
               <div class="flex text-yellow-400 mb-3">★★★★★</div>
-              <p class="text-gray-600 leading-relaxed text-sm flex-1">Our members love the app – checking balances, paying dues, and even applying for loans from home.</p>
+              <p class="text-gray-600 leading-relaxed text-sm flex-1" data-cms="testimonials.t7.quote">Our members love the app – checking balances, paying dues, and even applying for loans from home.</p>
               <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-100">
 
                 <div>
-                  <div class="font-semibold text-gray-900 text-sm">Ravi Andani Math</div>
-                  <div class="text-xs text-gray-500">President, Judicial Employee COOP, Gadag</div>
+                  <div class="font-semibold text-gray-900 text-sm" data-cms="testimonials.t7.name">Ravi Andani Math</div>
+                  <div class="text-xs text-gray-500" data-cms="testimonials.t7.role">President, Judicial Employee COOP, Gadag</div>
                 </div>
               </div>
             </div>
             <div class="p-8 rounded-3xl border border-gray-200 bg-white shadow-lg shadow-orange-500/5 w-[380px] shrink-0 flex flex-col">
               <div class="flex text-yellow-400 mb-3">★★★★★</div>
-              <p class="text-gray-600 leading-relaxed text-sm flex-1">Members feel safe using the mobile app. With phone number login and OTP verification, our members trust the platform completely — especially our senior citizens.</p>
+              <p class="text-gray-600 leading-relaxed text-sm flex-1" data-cms="testimonials.t8.quote">Members feel safe using the mobile app. With phone number login and OTP verification, our members trust the platform completely — especially our senior citizens.</p>
               <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-100">
 
                 <div>
-                  <div class="font-semibold text-gray-900 text-sm">Yadavad Datta</div>
-                  <div class="text-xs text-gray-500">CEO, Judicial Employee COOP, Bagalkot</div>
+                  <div class="font-semibold text-gray-900 text-sm" data-cms="testimonials.t8.name">Yadavad Datta</div>
+                  <div class="text-xs text-gray-500" data-cms="testimonials.t8.role">CEO, Judicial Employee COOP, Bagalkot</div>
                 </div>
               </div>
             </div>
@@ -831,11 +831,11 @@
         <div class="absolute inset-0 pointer-events-none"><div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-orange-600/5 rounded-full blur-[120px]"></div></div>
         <div class="container mx-auto px-6 md:px-16 relative z-10">
             <div class="max-w-2xl mx-auto text-center">
-                <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">Ready to start your journey?</h2>
-                <p class="text-gray-400 text-base md:text-lg mt-5 leading-relaxed">Email us at <a href="mailto:ttglobalinfotech7@gmail.com" class="text-orange-400 font-semibold hover:text-orange-300 transition-colors">ttglobalinfotech7@gmail.com</a> with your name, college, and domain of interest.</p>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight" data-cms="cta.heading">Ready to start your journey?</h2>
+                <p class="text-gray-400 text-base md:text-lg mt-5 leading-relaxed" data-cms="cta.subtext" data-cms-field="html">Email us at <a href="mailto:ttglobalinfotech7@gmail.com" class="text-orange-400 font-semibold hover:text-orange-300 transition-colors">ttglobalinfotech7@gmail.com</a> with your name, college, and domain of interest.</p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
-                    <a href="mailto:ttglobalinfotech7@gmail.com" class="inline-flex items-center gap-2.5 px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full font-bold text-base hover:shadow-[0_0_40px_rgba(234,88,12,0.45)] hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto justify-center">Apply Now <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
-                    <a href="tel:+918073804799" class="inline-flex items-center gap-2.5 px-8 py-4 bg-transparent hover:bg-white/5 text-gray-300 hover:text-white rounded-full font-semibold text-base border border-white/20 hover:border-white/40 transition-all duration-300 w-full sm:w-auto justify-center"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg> +91 807-3804-799</a>
+                    <a href="mailto:ttglobalinfotech7@gmail.com" class="inline-flex items-center gap-2.5 px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full font-bold text-base hover:shadow-[0_0_40px_rgba(234,88,12,0.45)] hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto justify-center"><span data-cms="cta.primaryButton.label">Apply Now</span> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+                    <a href="tel:+918073804799" class="inline-flex items-center gap-2.5 px-8 py-4 bg-transparent hover:bg-white/5 text-gray-300 hover:text-white rounded-full font-semibold text-base border border-white/20 hover:border-white/40 transition-all duration-300 w-full sm:w-auto justify-center"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg> <span data-cms="cta.secondaryButton.label">+91 807-3804-799</span></a>
                 </div>
             </div>
         </div>
@@ -845,29 +845,29 @@
     <section class="py-20 md:py-28 bg-white" id="faq">
         <div class="container mx-auto px-6 md:px-16 max-w-3xl">
             <div class="text-center mb-14">
-                <div class="inline-flex items-center border border-orange-200 bg-orange-50 py-1 px-4 rounded-full text-xs font-semibold text-orange-700 tracking-widest uppercase mb-6">FAQ</div>
-                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight">Frequently asked questions</h2>
+                <div class="inline-flex items-center border border-orange-200 bg-orange-50 py-1 px-4 rounded-full text-xs font-semibold text-orange-700 tracking-widest uppercase mb-6" data-cms="faq.badge">FAQ</div>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight" data-cms="faq.heading">Frequently asked questions</h2>
             </div>
             <div class="space-y-3">
                 <details class="group bg-white rounded-2xl border border-gray-200 p-6 open:border-orange-300 open:shadow-md transition-all duration-300">
-                    <summary class="flex items-center justify-between cursor-pointer list-none gap-4"><span class="font-bold text-gray-900 text-base">What is an internship?</span><svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
-                    <p class="mt-4 text-gray-600 leading-relaxed text-sm">An internship is an on-site work experience directly related to your major or career interest. It can be paid or unpaid, held during summer or throughout the academic year.</p>
+                    <summary class="flex items-center justify-between cursor-pointer list-none gap-4"><span class="font-bold text-gray-900 text-base" data-cms="faq.q1.question">What is an internship?</span><svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed text-sm" data-cms="faq.q1.answer">An internship is an on-site work experience directly related to your major or career interest. It can be paid or unpaid, held during summer or throughout the academic year.</p>
                 </details>
                 <details class="group bg-white rounded-2xl border border-gray-200 p-6 open:border-orange-300 open:shadow-md transition-all duration-300">
-                    <summary class="flex items-center justify-between cursor-pointer list-none gap-4"><span class="font-bold text-gray-900 text-base">What are the benefits of the internship?</span><svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
-                    <div class="mt-4 text-gray-600 text-sm leading-relaxed"><p class="mb-2">You get the opportunity to:</p><ul class="list-disc pl-5 space-y-1"><li>Gain valuable work experience before graduation</li><li>Develop new skills and refine existing ones</li><li>Apply coursework knowledge to real on-the-job situations</li><li>Reality-test career choices before committing</li><li>Build a professional network and get references</li></ul></div>
+                    <summary class="flex items-center justify-between cursor-pointer list-none gap-4"><span class="font-bold text-gray-900 text-base" data-cms="faq.q2.question">What are the benefits of the internship?</span><svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <div class="mt-4 text-gray-600 text-sm leading-relaxed" data-cms="faq.q2.answer" data-cms-field="html"><p class="mb-2">You get the opportunity to:</p><ul class="list-disc pl-5 space-y-1"><li>Gain valuable work experience before graduation</li><li>Develop new skills and refine existing ones</li><li>Apply coursework knowledge to real on-the-job situations</li><li>Reality-test career choices before committing</li><li>Build a professional network and get references</li></ul></div>
                 </details>
                 <details class="group bg-white rounded-2xl border border-gray-200 p-6 open:border-orange-300 open:shadow-md transition-all duration-300">
-                    <summary class="flex items-center justify-between cursor-pointer list-none gap-4"><span class="font-bold text-gray-900 text-base">Will I get a certificate?</span><svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
-                    <p class="mt-4 text-gray-600 leading-relaxed text-sm">Yes. Every intern receives a Certificate of Completion upon finishing the program.</p>
+                    <summary class="flex items-center justify-between cursor-pointer list-none gap-4"><span class="font-bold text-gray-900 text-base" data-cms="faq.q3.question">Will I get a certificate?</span><svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed text-sm" data-cms="faq.q3.answer">Yes. Every intern receives a Certificate of Completion upon finishing the program.</p>
                 </details>
                 <details class="group bg-white rounded-2xl border border-gray-200 p-6 open:border-orange-300 open:shadow-md transition-all duration-300">
-                    <summary class="flex items-center justify-between cursor-pointer list-none gap-4"><span class="font-bold text-gray-900 text-base">What documents do I need to bring?</span><svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
-                    <p class="mt-4 text-gray-600 leading-relaxed text-sm">If you need a letter before arriving, email <a href="mailto:ttglobalinfotech7@gmail.com" class="text-orange-600 font-medium hover:underline">ttglobalinfotech7@gmail.com</a> with all student names, registration numbers, college name, and addressee for the letter.</p>
+                    <summary class="flex items-center justify-between cursor-pointer list-none gap-4"><span class="font-bold text-gray-900 text-base" data-cms="faq.q4.question">What documents do I need to bring?</span><svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed text-sm" data-cms="faq.q4.answer" data-cms-field="html">If you need a letter before arriving, email <a href="mailto:ttglobalinfotech7@gmail.com" class="text-orange-600 font-medium hover:underline">ttglobalinfotech7@gmail.com</a> with all student names, registration numbers, college name, and addressee for the letter.</p>
                 </details>
                 <details class="group bg-white rounded-2xl border border-gray-200 p-6 open:border-orange-300 open:shadow-md transition-all duration-300">
-                    <summary class="flex items-center justify-between cursor-pointer list-none gap-4"><span class="font-bold text-gray-900 text-base">Is there a minimum group size to apply?</span><svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
-                    <p class="mt-4 text-gray-600 leading-relaxed text-sm">No minimum. Even a single student can participate &mdash; there is no maximum limit either.</p>
+                    <summary class="flex items-center justify-between cursor-pointer list-none gap-4"><span class="font-bold text-gray-900 text-base" data-cms="faq.q5.question">Is there a minimum group size to apply?</span><svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed text-sm" data-cms="faq.q5.answer">No minimum. Even a single student can participate &mdash; there is no maximum limit either.</p>
                 </details>
             </div>
         </div>
@@ -878,10 +878,10 @@
         <div class="container mx-auto px-8 md:px-16">
             <div class="grid grid-cols-2 lg:grid-cols-5 gap-6 md:gap-10 border-b border-white/10 pb-14">
                 <div class="space-y-5 col-span-full lg:col-span-1">
-                    <span class="font-bold text-lg tracking-widest text-white uppercase block">TT GLOBAL IT</span>
-                    <p class="text-xs leading-relaxed">Optimizing the digital presence of brands, fueled by a drive to provide exceptional solutions and cutting-edge software products.</p>
-                    <div class="space-y-2 pt-2"><p class="text-xs flex items-center gap-2"><svg class="w-3.5 h-3.5 text-orange-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg> +91 807-3804-799 | +91 8660402580</p><p class="text-xs flex items-center gap-2"><svg class="w-3.5 h-3.5 text-orange-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> ttglobalinfotech7@gmail.com</p></div>
-                    <div class="pt-2"><h4 class="text-white font-semibold uppercase tracking-wider mb-3 text-xs">Offices</h4><ul class="space-y-2 text-xs"><li><strong class="block text-gray-300">Corporate</strong> #166 &167, 5th Cross, Hebbal, Bengaluru 560024</li><li><strong class="block text-gray-300">Head Office</strong> 35 Mayasandra, Turuvekere, Tumkur 572221</li><li><strong class="block text-gray-300">Branch</strong> 291/A KIADB, Hebbal Industrial Area, Mysuru 570016</li></ul></div>
+                    <span class="font-bold text-lg tracking-widest text-white uppercase block" data-cms="global.footer.brandName">TT GLOBAL IT</span>
+                    <p class="text-xs leading-relaxed" data-cms="global.footer.brandBlurb">Optimizing the digital presence of brands, fueled by a drive to provide exceptional solutions and cutting-edge software products.</p>
+                    <div class="space-y-2 pt-2"><p class="text-xs flex items-center gap-2"><svg class="w-3.5 h-3.5 text-orange-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg> <span data-cms="global.footer.phone">+91 807-3804-799 | +91 8660402580</span></p><p class="text-xs flex items-center gap-2"><svg class="w-3.5 h-3.5 text-orange-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> <span data-cms="global.footer.email">ttglobalinfotech7@gmail.com</span></p></div>
+                    <div class="pt-2"><h4 class="text-white font-semibold uppercase tracking-wider mb-3 text-xs">Offices</h4><ul class="space-y-2 text-xs"><li><strong class="block text-gray-300" data-cms="global.footer.office1.label">Corporate</strong> <span data-cms="global.footer.office1.address">#166 &167, 5th Cross, Hebbal, Bengaluru 560024</span></li><li><strong class="block text-gray-300" data-cms="global.footer.office2.label">Head Office</strong> <span data-cms="global.footer.office2.address">35 Mayasandra, Turuvekere, Tumkur 572221</span></li><li><strong class="block text-gray-300" data-cms="global.footer.office3.label">Branch</strong> <span data-cms="global.footer.office3.address">291/A KIADB, Hebbal Industrial Area, Mysuru 570016</span></li></ul></div>
                 </div>
                 <div><h4 class="text-white font-semibold uppercase tracking-wider mb-4 text-xs">Industries</h4><ul class="space-y-2 text-xs"><li><a href="#" class="hover:text-orange-500 transition-colors">Banking</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Communications, Media & Information Services</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Education</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Energy, Resources & Utilities</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Healthcare</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Public Services</a></li></ul></div>
                 <div><h4 class="text-white font-semibold uppercase tracking-wider mb-4 text-xs">Services</h4><ul class="space-y-2 text-xs"><li><a href="#" class="hover:text-orange-500 transition-colors">Artificial Intelligence</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Cloud</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Cybersecurity</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Data and Analytics</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Enterprise Solutions</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">IoT and Digital Engineering</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">TTGLOBALIT and AWS Cloud</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">TTGLOBALIT Enterprise Cloud</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">TTGLOBALIT and Google Cloud</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">TTGLOBALIT and Microsoft Cloud</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">TTGLOBALIT and Pinnacle Teleservice</a></li></ul></div>
@@ -894,7 +894,7 @@
                 </div>
             </div>
             <div class="pt-8 text-center text-xs text-gray-600 flex flex-col md:flex-row justify-between items-center gap-2">
-                <p>&copy; 2019-2026 TRANSCRIPT TECHNOLOGY GLOBAL INFOTECH PRIVATE LIMITED</p>
+                <p data-cms="global.footer.copyright">&copy; 2019-2026 TRANSCRIPT TECHNOLOGY GLOBAL INFOTECH PRIVATE LIMITED</p>
                 <div class="flex items-center gap-4"><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a><a href="terms-and-conditions.html" class="hover:text-white transition-colors">Terms of Service</a></div>
             </div>
         </div>
@@ -959,5 +959,6 @@
     </script>
 
 <script src="chatbot.js"></script>
+<script src="cms-hydrate.js" defer></script>
 </body>
 </html>
