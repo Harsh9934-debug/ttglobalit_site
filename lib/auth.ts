@@ -12,7 +12,7 @@ function getSecret(): string {
 
 function toBase64Url(bytes: Uint8Array): string {
   let str = ''
-  for (const b of bytes) str += String.fromCharCode(b)
+  for (let i = 0; i < bytes.length; i++) str += String.fromCharCode(bytes[i])
   return btoa(str).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '')
 }
 
