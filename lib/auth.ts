@@ -5,9 +5,7 @@ export const SESSION_COOKIE = 'ttg_admin_session'
 const SESSION_MAX_AGE_SECONDS = 60 * 60 * 24 * 7 // 7 days
 
 function getSecret(): string {
-  const secret = process.env.SESSION_SECRET
-  if (!secret) throw new Error('SESSION_SECRET env var is not set')
-  return secret
+  return process.env.SESSION_SECRET || ''
 }
 
 function toBase64Url(bytes: Uint8Array): string {
@@ -40,6 +38,7 @@ async function sign(data: string): Promise<string> {
 }
 
 export async function createSessionToken(email: string): Promise<string> {
+  if (!getSecret()) throw new Error('SESSION_SECRET env var is not set')
   const payload = JSON.stringify({ email, exp: Date.now() + SESSION_MAX_AGE_SECONDS * 1000 })
   const payloadB64 = toBase64Url(new TextEncoder().encode(payload))
   const sig = await sign(payloadB64)
@@ -47,7 +46,7 @@ export async function createSessionToken(email: string): Promise<string> {
 }
 
 export async function verifySessionToken(token: string | undefined | null): Promise<boolean> {
-  if (!token) return false
+  if (!token || !getSecret()) return false
   const parts = token.split('.')
   if (parts.length !== 2) return false
   const [payloadB64, sig] = parts

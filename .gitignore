@@ -3,6 +3,7 @@ node_modules/
 bower_components/
 
 # Build outputs
+.next/
 dist/
 build/
 out/
