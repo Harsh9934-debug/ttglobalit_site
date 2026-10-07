@@ -197,7 +197,7 @@ const MegaMenuDemo = () => {
   ];
 
   return (
-    <div className="relative flex h-[450px] w-full items-start justify-center bg-black p-10">
+    <div className="relative flex h-[450px] w-full items-start justify-center bg-slate-50 p-10">
       <MegaMenu items={NAV_ITEMS} />
     </div>
   );
