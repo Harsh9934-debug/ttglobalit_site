@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,152 +8,742 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
     <style>
-        .text-orange { color: #ea580c; }
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        .animate-fade-in { animation: fadeInUp 0.6s ease-out; }
-    </style>
-</head>
-<body class="antialiased text-gray-800 relative bg-white overflow-x-hidden" style="font-family: 'Inter', system-ui, -apple-system, sans-serif" data-page-id="pinnacle">
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
 
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scroll-delay-1 { transition-delay: 0.1s; }
+        .scroll-delay-2 { transition-delay: 0.2s; }
+        .scroll-delay-3 { transition-delay: 0.3s; }
+    </style>
+    <link rel="stylesheet" href="scroll-reveal.css">
+</head>
+
+<body class="antialiased text-slate-800 bg-white overflow-x-hidden" data-page-id="pinnacle">
+
+    <!-- Top Navigation Header -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs">
         <div class="max-w-screen-2xl mx-auto px-6 lg:px-10 h-14 flex items-center justify-between">
-        <a href="index.html" class="flex items-center gap-3 cursor-pointer"><img src="assets/logo.png" alt="TT Global IT Logo" class="h-9 w-auto object-contain" data-cms="global.nav.logoSrc" data-cms-field="src"></a>
-        <div class="hidden lg:flex items-center h-full">
-            <div class="relative" data-whatwedo-menu><button data-whatwedo-btn class="h-full px-3 lg:px-4 flex cursor-pointer items-center gap-1 text-[13px] font-medium text-gray-600 hover:text-gray-900 transition-colors whitespace-nowrap"><span data-cms="global.nav.whatWeDo.label">What We do</span><svg data-whatwedo-arrow class="w-3 h-3 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div data-whatwedo-dropdown class="absolute left-0 top-full mt-2.5 w-max z-50 opacity-0 invisible translate-y-2 scale-95 transition-all duration-300 transform origin-top-left pointer-events-none"><div class="bg-white rounded-[16px] p-6 shadow-2xl border border-gray-100 relative"><div class="absolute -top-[6px] left-8 w-4 h-4 bg-white border-t border-l border-gray-100 rotate-45"></div><div class="w-56"><h3 class="mb-4 text-sm font-medium uppercase tracking-wider text-gray-400">What We Do</h3><ul class="space-y-4"><li><a href="overview.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-orange-50 group/item"><div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-gray-200 bg-gray-50 text-gray-500 group-hover/item:bg-orange-600 group-hover/item:text-white transition-all duration-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div><div><p class="text-sm font-medium text-gray-800 group-hover/item:text-orange-600" data-cms="global.nav.overview.title">Overview</p><p class="text-xs text-gray-500" data-cms="global.nav.overview.subtitle">What we offer</p></div></a></li><li><a href="industries.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-orange-50 group/item"><div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-gray-200 bg-gray-50 text-gray-500 group-hover/item:bg-orange-600 group-hover/item:text-white transition-all duration-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg></div><div><p class="text-sm font-medium text-gray-800 group-hover/item:text-orange-600" data-cms="global.nav.industries.title">Industries</p><p class="text-xs text-gray-500" data-cms="global.nav.industries.subtitle">Sectors we serve</p></div></a></li></ul></div></div></div></div>
-            <div class="relative" data-esahakara-menu><button data-esahakara-btn class="h-full px-3 lg:px-4 flex cursor-pointer items-center gap-1 text-[13px] font-medium text-gray-600 hover:text-gray-900 transition-colors whitespace-nowrap"><span data-cms="global.nav.esahakara.label">Esahakara</span><svg data-esahakara-arrow class="w-3 h-3 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div data-esahakara-dropdown class="absolute left-0 top-full mt-2.5 w-max z-50 opacity-0 invisible translate-y-2 scale-95 transition-all duration-300 transform origin-top-left pointer-events-none"><div class="bg-white rounded-[16px] p-6 shadow-2xl border border-gray-100 relative"><div class="absolute -top-[6px] left-8 w-4 h-4 bg-white border-t border-l border-gray-100 rotate-45"></div><div class="w-64"><h3 class="mb-4 text-sm font-medium uppercase tracking-wider text-gray-400">Esahakara</h3><ul class="space-y-6"><li><a href="Esahakara.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500 transition-colors duration-300"><svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div><div><p class="text-sm font-medium text-gray-800 group-hover/item:text-orange-600" data-cms="global.nav.esahakaraApp.title">Esahakara Application</p><p class="text-xs text-gray-500" data-cms="global.nav.esahakaraApp.subtitle">Core banking solution</p></div></a></li><li><a href="esahakara-pigmy-agent-app.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500 transition-colors duration-300"><svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg></div><div><p class="text-sm font-medium text-gray-800 group-hover/item:text-orange-600" data-cms="global.nav.esahakaraPigmy.title">Esahakara Pigmy Agent App</p><p class="text-xs text-gray-500" data-cms="global.nav.esahakaraPigmy.subtitle">Agent mobile application</p></div></a></li><li><a href="esahakara-customer-app.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500 transition-colors duration-300"><svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg></div><div><p class="text-sm font-medium text-gray-800 group-hover/item:text-orange-600" data-cms="global.nav.esahakaraCustomer.title">Esahakara Customer App</p><p class="text-xs text-gray-500" data-cms="global.nav.esahakaraCustomer.subtitle">Customer mobile application</p></div></a></li></ul></div></div></div></div>
-            <div class="relative" data-products-menu><button data-products-btn class="h-full px-3 lg:px-4 flex cursor-pointer items-center gap-1 text-[13px] font-medium text-orange-600 transition-colors whitespace-nowrap"><span data-cms="global.nav.products.label">Products</span><svg data-products-arrow class="w-3 h-3 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div data-products-dropdown class="absolute left-0 top-full mt-2.5 w-max z-50 opacity-0 invisible translate-y-2 scale-95 transition-all duration-300 transform origin-top-left pointer-events-none"><div class="bg-white rounded-[16px] p-6 shadow-2xl border border-gray-100 relative"><div class="absolute -top-[6px] left-8 w-4 h-4 bg-white border-t border-l border-gray-100 rotate-45"></div><div class="w-64"><h3 class="mb-4 text-sm font-medium uppercase tracking-wider text-gray-400">Products</h3><ul class="space-y-6"><li><a href="evyavahaar.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500 transition-colors duration-300"><svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"></path></svg></div><div><p class="text-sm font-medium text-gray-800 group-hover/item:text-orange-600" data-cms="global.nav.evyavahaar.title">EVYAVAHAAR</p><p class="text-xs text-gray-500" data-cms="global.nav.evyavahaar.subtitle">GST Billing</p></div></a></li><li><a href="echits.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500 transition-colors duration-300"><svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2z"></path></svg></div><div><p class="text-sm font-medium text-gray-800 group-hover/item:text-orange-600" data-cms="global.nav.echits.title">ECHITS</p><p class="text-xs text-gray-500" data-cms="global.nav.echits.subtitle">Chit Fund Management</p></div></a></li><li><a href="ribill.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500 transition-colors duration-300"><svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg></div><div><p class="text-sm font-medium text-gray-800 group-hover/item:text-orange-600" data-cms="global.nav.ribill.title">RIBILL</p><p class="text-xs text-gray-500" data-cms="global.nav.ribill.subtitle">Retail Billing &amp; POS</p></div></a></li><li><a href="pinnacle.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500 transition-colors duration-300"><svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path></svg></div><div><p class="text-sm font-medium text-gray-800 group-hover/item:text-orange-600" data-cms="global.nav.pinnacle.title">PINNACLE &amp; META</p><p class="text-xs text-gray-500" data-cms="global.nav.pinnacle.subtitle">Telecom &amp; Digital Services</p></div></a></li></ul></div></div></div></div>
-            <a href="aboutus.html" class="h-full px-3 lg:px-4 flex cursor-pointer items-center gap-1 text-[13px] font-medium text-gray-600 hover:text-gray-900 transition-colors whitespace-nowrap"><span data-cms="global.nav.aboutUs.label">About Us</span></a>
-            <a href="Internship.html" class="h-full px-3 lg:px-4 flex cursor-pointer items-center gap-1 text-[13px] font-medium text-gray-600 hover:text-gray-900 transition-colors whitespace-nowrap"><span data-cms="global.nav.internship.label">Internship</span></a>
-            <div class="relative" data-more-menu><button data-more-btn class="h-full px-3 lg:px-4 flex cursor-pointer items-center gap-1 text-[13px] font-medium text-gray-600 hover:text-gray-900 transition-colors whitespace-nowrap"><span data-cms="global.nav.more.label">More</span><svg data-more-arrow class="w-3 h-3 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button><div data-more-dropdown class="absolute right-0 top-full mt-2.5 w-max z-50 opacity-0 invisible translate-y-2 scale-95 transition-all duration-300 transform origin-top-right pointer-events-none">
-                    <div class="bg-white rounded-[16px] p-6 shadow-2xl border border-gray-100 relative">
-                        <div class="absolute -top-[6px] right-6 w-4 h-4 bg-white border-t border-l border-gray-100 rotate-45 transform"></div>
-                        <div class="flex gap-12 relative z-10">
+            <a href="index.html" class="flex items-center gap-3 cursor-pointer">
+                <div class="relative flex items-center justify-center">
+                    <img src="assets/logo.png" alt="TT Global IT Logo" class="h-9 w-auto object-contain" data-cms="global.nav.logoSrc" data-cms-field="src">
+                </div>
+            </a>
+            <div class="hidden lg:flex items-center h-full">
+                <!-- What We Do Menu -->
+                <div class="relative" data-whatwedo-menu>
+                    <button data-whatwedo-btn
+                        class="h-full px-3 lg:px-4 flex cursor-pointer items-center gap-1 text-[13px] font-medium text-slate-600 hover:text-slate-900 transition-colors whitespace-nowrap">
+                        <span data-cms="global.nav.whatWeDo.label">What We do</span>
+                        <svg data-whatwedo-arrow class="w-3 h-3 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div data-whatwedo-dropdown class="absolute left-0 top-full mt-2.5 w-max z-50 opacity-0 invisible translate-y-2 scale-95 transition-all duration-300 transform origin-top-left pointer-events-none">
+                        <div class="bg-white rounded-[16px] p-6 shadow-2xl border border-slate-100 relative">
+                            <div class="absolute -top-[6px] left-8 w-4 h-4 bg-white border-t border-l border-slate-100 rotate-45 transform"></div>
                             <div class="w-56">
-                                <h3 class="mb-4 text-sm font-medium uppercase tracking-wider text-gray-400">Company</h3>
-                                <ul class="space-y-6">
-                                    <li>
-                                        <a href="contact-us.html" class="flex items-start space-x-3 group/item">
-                                            <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500">
-                                                <svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                                            </div>
-                                            <div class="w-max leading-5">
-                                                <p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600" data-cms="global.nav.contactUs.title">Contact Us</p>
-                                                <p class="shrink-0 text-xs text-gray-500 transition-colors duration-300 group-hover/item:text-gray-600" data-cms="global.nav.contactUs.subtitle">Get in touch with us</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="w-56">
-                                <h3 class="mb-4 text-sm font-medium uppercase tracking-wider text-gray-400">Resources</h3>
-                                <ul class="space-y-6">
-                                    <li>
-                                        <a href="team.html" class="flex items-start space-x-3 group/item">
-                                            <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500">
-                                                <svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
-                                            </div>
-                                            <div class="w-max leading-5">
-                                                <p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600" data-cms="global.nav.teamLeads.title">Team leads</p>
-                                                <p class="shrink-0 text-xs text-gray-500 transition-colors duration-300 group-hover/item:text-gray-600" data-cms="global.nav.teamLeads.subtitle">Meet our leadership</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="privacy.html" class="flex items-start space-x-3 group/item">
-                                            <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-gray-200 bg-gray-50 text-gray-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500">
-                                                <svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                                            </div>
-                                            <div class="w-max leading-5">
-                                                <p class="shrink-0 text-sm font-medium text-gray-800 transition-colors group-hover/item:text-orange-600" data-cms="global.nav.privacyPolicy.title">Privacy Policy</p>
-                                                <p class="shrink-0 text-xs text-gray-500 transition-colors duration-300 group-hover/item:text-gray-600" data-cms="global.nav.privacyPolicy.subtitle">How we handle data</p>
-                                            </div>
-                                        </a>
-                                    </li>
+                                <h3 class="mb-4 text-sm font-medium uppercase tracking-wider text-slate-400">What We Do</h3>
+                                <ul class="space-y-4">
+                                    <li><a href="overview.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-orange-50 transition-colors duration-200 group/item"><div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 text-slate-500 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500 transition-all duration-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div><div><p class="text-sm font-medium text-slate-800 group-hover/item:text-orange-600 transition-colors" data-cms="global.nav.overview.title">Overview</p><p class="text-xs text-slate-500" data-cms="global.nav.overview.subtitle">What we offer</p></div></a></li>
+                                    <li><a href="industries.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-orange-50 transition-colors duration-200 group/item"><div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 text-slate-500 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500 transition-all duration-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg></div><div><p class="text-sm font-medium text-slate-800 group-hover/item:text-orange-600 transition-colors" data-cms="global.nav.industries.title">Industries</p><p class="text-xs text-slate-500" data-cms="global.nav.industries.subtitle">Sectors we serve</p></div></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                </div></div>
-        </div>
-        <div class="flex items-center gap-4">
-            <a href="contact-us.html" class="hidden lg:flex text-[13px] font-medium text-gray-700 hover:text-orange-600 transition-colors whitespace-nowrap" data-cms="global.nav.contactCta.label">Contact Us</a><button onclick="toggleChat()" class="hidden lg:flex items-center gap-1.5 px-4 py-1.5 bg-orange-500 hover:bg-orange-600 text-white text-[13px] font-semibold rounded-full transition-all duration-200 whitespace-nowrap"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>Ask AI</button>
-            <div class="lg:hidden flex items-center"><button id="mobile-menu-btn" class="text-gray-700 hover:text-orange-600 focus:outline-none transition p-2"><svg class="w-8 h-8 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button></div>
+                </div>
+
+                <!-- Esahakara Menu -->
+                <div class="relative" data-esahakara-menu>
+                    <button data-esahakara-btn class="h-full px-3 lg:px-4 flex cursor-pointer items-center gap-1 text-[13px] font-medium text-slate-600 hover:text-slate-900 transition-colors whitespace-nowrap">
+                        <span data-cms="global.nav.esahakara.label">Esahakara</span>
+                        <svg data-esahakara-arrow class="w-3 h-3 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div data-esahakara-dropdown class="absolute left-0 top-full mt-2.5 w-max z-50 opacity-0 invisible translate-y-2 scale-95 transition-all duration-300 transform origin-top-left pointer-events-none">
+                        <div class="bg-white rounded-[16px] p-6 shadow-2xl border border-slate-100 relative">
+                            <div class="absolute -top-[6px] left-8 w-4 h-4 bg-white border-t border-l border-slate-100 rotate-45 transform"></div>
+                            <div class="w-64">
+                                <h3 class="mb-4 text-sm font-medium uppercase tracking-wider text-slate-400">Esahakara</h3>
+                                <ul class="space-y-6">
+                                    <li><a href="https://esahakara.com/" target="_blank" rel="noopener" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-slate-50 text-slate-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-slate-800 transition-colors group-hover/item:text-orange-600" data-cms="global.nav.esahakaraApp.title">Esahakara Application</p><p class="shrink-0 text-xs text-slate-500" data-cms="global.nav.esahakaraApp.subtitle">Core banking solution</p></div></a></li>
+                                    <li><a href="esahakara-pigmy-agent-app.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-slate-50 text-slate-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-slate-800 transition-colors group-hover/item:text-orange-600" data-cms="global.nav.esahakaraPigmy.title">Esahakara Pigmy Agent App</p><p class="shrink-0 text-xs text-slate-500" data-cms="global.nav.esahakaraPigmy.subtitle">Agent mobile application</p></div></a></li>
+                                    <li><a href="esahakara-customer-app.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-slate-50 text-slate-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-slate-800 transition-colors group-hover/item:text-orange-600" data-cms="global.nav.esahakaraCustomer.title">Esahakara Customer App</p><p class="shrink-0 text-xs text-slate-500" data-cms="global.nav.esahakaraCustomer.subtitle">Customer mobile application</p></div></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products Menu -->
+                <div class="relative" data-products-menu>
+                    <button data-products-btn class="h-full px-3 lg:px-4 flex cursor-pointer items-center gap-1 text-[13px] font-medium text-orange-600 transition-colors whitespace-nowrap">
+                        <span data-cms="global.nav.products.label">Products</span>
+                        <svg data-products-arrow class="w-3 h-3 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div data-products-dropdown class="absolute left-0 top-full mt-2.5 w-max z-50 opacity-0 invisible translate-y-2 scale-95 transition-all duration-300 transform origin-top-left pointer-events-none">
+                        <div class="bg-white rounded-[16px] p-6 shadow-2xl border border-slate-100 relative">
+                            <div class="absolute -top-[6px] left-8 w-4 h-4 bg-white border-t border-l border-slate-100 rotate-45 transform"></div>
+                            <div class="w-64">
+                                <h3 class="mb-4 text-sm font-medium uppercase tracking-wider text-slate-400">Products</h3>
+                                <ul class="space-y-6">
+                                    <li><a href="evyavahaar.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-slate-50 text-slate-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-slate-800 transition-colors group-hover/item:text-orange-600" data-cms="global.nav.evyavahaar.title">EVYAVAHAAR</p><p class="shrink-0 text-xs text-slate-500" data-cms="global.nav.evyavahaar.subtitle">GST Billing</p></div></a></li>
+                                    <li><a href="https://esahakara.com/" target="_blank" rel="noopener" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-slate-50 text-slate-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2z"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-slate-800 transition-colors group-hover/item:text-orange-600" data-cms="global.nav.echits.title">ECHITS</p><p class="shrink-0 text-xs text-slate-500" data-cms="global.nav.echits.subtitle">Chit Fund Management</p></div></a></li>
+                                    <li><a href="ribill.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-slate-50 text-slate-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-slate-800 transition-colors group-hover/item:text-orange-600" data-cms="global.nav.ribill.title">RIBILL</p><p class="shrink-0 text-xs text-slate-500" data-cms="global.nav.ribill.subtitle">Retail Billing &amp; POS</p></div></a></li>
+                                    <li><a href="pinnacle.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-orange-500 bg-orange-600 text-white transition-colors duration-300"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-semibold text-orange-600 transition-colors" data-cms="global.nav.pinnacle.title">PINNACLE &amp; META</p><p class="shrink-0 text-xs text-slate-500" data-cms="global.nav.pinnacle.subtitle">Telecom &amp; Digital Services</p></div></a></li>
+                                    <li><a href="https://taaraskitchen.com/" target="_blank" rel="noopener" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-slate-50 text-slate-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-slate-800 transition-colors group-hover/item:text-orange-600" data-cms="global.nav.taarasroyals.title">TAARAS ROYALS KITCHEN</p><p class="shrink-0 text-xs text-slate-500" data-cms="global.nav.taarasroyals.subtitle">Culinary Services &amp; Products</p></div></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="aboutus.html" class="h-full px-3 lg:px-4 flex cursor-pointer items-center gap-1 text-[13px] font-medium text-slate-600 hover:text-slate-900 transition-colors whitespace-nowrap"><span data-cms="global.nav.aboutUs.label">About Us</span></a>
+                <a href="Internship.html" class="h-full px-3 lg:px-4 flex cursor-pointer items-center gap-1 text-[13px] font-medium text-slate-600 hover:text-slate-900 transition-colors whitespace-nowrap"><span data-cms="global.nav.internship.label">Internship</span></a>
+
+                <!-- More Menu -->
+                <div class="relative" data-more-menu>
+                    <button data-more-btn class="h-full px-3 lg:px-4 flex cursor-pointer items-center gap-1 text-[13px] font-medium text-slate-600 hover:text-slate-900 transition-colors whitespace-nowrap"><span data-cms="global.nav.more.label">More</span><svg data-more-arrow class="w-3 h-3 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                    <div data-more-dropdown class="absolute right-0 top-full mt-2.5 w-max z-50 opacity-0 invisible translate-y-2 scale-95 transition-all duration-300 transform origin-top-right pointer-events-none">
+                        <div class="bg-white rounded-[16px] p-6 shadow-2xl border border-slate-100 relative">
+                            <div class="absolute -top-[6px] right-6 w-4 h-4 bg-white border-t border-l border-slate-100 rotate-45 transform"></div>
+                            <div class="flex gap-12 relative z-10">
+                                <div class="w-56">
+                                    <h3 class="mb-4 text-sm font-medium uppercase tracking-wider text-slate-400">Company</h3>
+                                    <ul class="space-y-6">
+                                        <li><a href="contact-us.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-slate-50 text-slate-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-slate-800 transition-colors group-hover/item:text-orange-600" data-cms="global.nav.contactUs.title">Contact Us</p><p class="shrink-0 text-xs text-slate-500" data-cms="global.nav.contactUs.subtitle">Get in touch with us</p></div></a></li>
+                                    </ul>
+                                </div>
+                                <div class="w-56">
+                                    <h3 class="mb-4 text-sm font-medium uppercase tracking-wider text-slate-400">Resources</h3>
+                                    <ul class="space-y-6">
+                                        <li><a href="team.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-slate-50 text-slate-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-slate-800 transition-colors group-hover/item:text-orange-600" data-cms="global.nav.teamLeads.title">Team leads</p><p class="shrink-0 text-xs text-slate-500" data-cms="global.nav.teamLeads.subtitle">Meet our leadership</p></div></a></li>
+                                        <li><a href="privacy.html" class="flex items-start space-x-3 group/item"><div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-slate-50 text-slate-500 transition-colors duration-300 group-hover/item:bg-orange-600 group-hover/item:text-white group-hover/item:border-orange-500"><svg class="h-5 w-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg></div><div class="w-max leading-5"><p class="shrink-0 text-sm font-medium text-slate-800 transition-colors group-hover/item:text-orange-600" data-cms="global.nav.privacyPolicy.title">Privacy Policy</p><p class="shrink-0 text-xs text-slate-500" data-cms="global.nav.privacyPolicy.subtitle">How we handle data</p></div></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="contact-us.html" class="hidden lg:flex text-[13px] font-medium text-slate-700 hover:text-orange-600 transition-colors whitespace-nowrap" data-cms="global.nav.contactCta.label">Contact Us</a>
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-700 hover:text-orange-600 focus:outline-none transition p-2">
+                        <svg class="w-8 h-8 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <div id="mobile-menu" class="fixed inset-0 top-14 bg-white z-40 hidden flex-col border-t border-gray-100 p-6 overflow-y-auto lg:hidden">
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 top-14 bg-white z-40 hidden flex-col border-t border-slate-100 p-6 overflow-y-auto lg:hidden">
         <div class="flex flex-col gap-6">
-            <div class="space-y-4"><p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">What We Do</p><div class="pl-4 space-y-4 border-l border-gray-200"><a href="overview.html" class="block text-gray-700 font-medium hover:text-orange-600 transition-colors">Overview</a><a href="industries.html" class="block text-gray-700 font-medium hover:text-orange-600 transition-colors">Industries</a></div></div>
-            <div class="space-y-4"><p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Esahakara</p><div class="pl-4 space-y-4 border-l border-gray-200"><a href="Esahakara.html" class="block text-gray-700 font-medium hover:text-orange-600 transition-colors">Esahakara Application</a><a href="esahakara-pigmy-agent-app.html" class="block text-gray-700 font-medium hover:text-orange-600 transition-colors">Pigmy Agent App</a><a href="esahakara-customer-app.html" class="block text-gray-700 font-medium hover:text-orange-600 transition-colors">Customer App</a></div></div>
-            <div class="space-y-4"><p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Products</p><div class="pl-4 space-y-4 border-l border-orange-200"><a href="evyavahaar.html" class="block text-gray-700 font-medium hover:text-orange-600 transition-colors">EVYAVAHAAR</a><a href="echits.html" class="block text-gray-700 font-medium hover:text-orange-600 transition-colors">ECHITS</a><a href="ribill.html" class="block text-gray-700 font-medium hover:text-orange-600 transition-colors">RIBILL</a><a href="pinnacle.html" class="block text-orange-600 font-medium">PINNACLE &amp; META</a></div></div>
-            <a href="aboutus.html" class="text-gray-800 font-semibold text-base hover:text-orange-600 transition-colors">About Us</a>
-            <a href="Internship.html" class="text-gray-800 font-semibold text-base hover:text-orange-600 transition-colors">Internship</a>
-            <div class="space-y-4"><p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">More</p><div class="pl-4 space-y-4 border-l border-gray-200"><a href="contact-us.html" class="block text-gray-700 font-medium hover:text-orange-600 transition-colors">Contact Us</a><a href="careers.html" class="block text-gray-700 font-medium hover:text-orange-600 transition-colors">Careers</a><a href="privacy.html" class="block text-gray-700 font-medium hover:text-orange-600 transition-colors">Privacy Policy</a></div></div>
+            <div class="space-y-4"><p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">What We Do</p><div class="pl-4 space-y-4 border-l border-slate-200"><a href="overview.html" class="block text-slate-700 font-medium hover:text-orange-600 transition-colors">Overview</a><a href="industries.html" class="block text-slate-700 font-medium hover:text-orange-600 transition-colors">Industries</a></div></div>
+            <div class="space-y-4"><p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Esahakara</p><div class="pl-4 space-y-4 border-l border-slate-200"><a href="https://esahakara.com/" target="_blank" rel="noopener" class="block text-slate-700 font-medium hover:text-orange-600 transition-colors">Esahakara Application</a><a href="esahakara-pigmy-agent-app.html" class="block text-slate-700 font-medium hover:text-orange-600 transition-colors">Pigmy Agent App</a><a href="esahakara-customer-app.html" class="block text-slate-700 font-medium hover:text-orange-600 transition-colors">Customer App</a></div></div>
+            <div class="space-y-4"><p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Products</p><div class="pl-4 space-y-4 border-l border-orange-200"><a href="evyavahaar.html" class="block text-slate-700 font-medium hover:text-orange-600 transition-colors">EVYAVAHAAR</a><a href="https://esahakara.com/" target="_blank" rel="noopener" class="block text-slate-700 font-medium hover:text-orange-600 transition-colors">ECHITS</a><a href="ribill.html" class="block text-slate-700 font-medium hover:text-orange-600 transition-colors">RIBILL</a><a href="pinnacle.html" class="block text-orange-600 font-semibold">PINNACLE &amp; META</a></div></div>
+            <a href="aboutus.html" class="text-slate-800 font-semibold text-base hover:text-orange-600 transition-colors">About Us</a>
+            <a href="Internship.html" class="text-slate-800 font-semibold text-base hover:text-orange-600 transition-colors">Internship</a>
+            <div class="space-y-4"><p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">More</p><div class="pl-4 space-y-4 border-l border-slate-200"><a href="contact-us.html" class="block text-slate-700 font-medium hover:text-orange-600 transition-colors">Contact Us</a><a href="careers.html" class="block text-slate-700 font-medium hover:text-orange-600 transition-colors">Careers</a><a href="privacy.html" class="block text-slate-700 font-medium hover:text-orange-600 transition-colors">Privacy Policy</a></div></div>
         </div>
     </div>
 
-    <section class="relative min-h-[50vh] md:min-h-[60vh] flex items-center overflow-hidden bg-[#0A0A0A] pt-14 pb-16 md:pb-20">
-        <div class="absolute inset-0 z-0"><div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div><div class="absolute top-0 right-1/4 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-orange-600/10 rounded-full blur-[100px] md:blur-[150px] animate-pulse pointer-events-none"></div><div class="absolute bottom-1/4 left-1/4 w-[250px] md:w-[400px] h-[250px] md:h-[400px] bg-orange-500/10 rounded-full blur-[80px] md:blur-[130px] animate-pulse pointer-events-none"></div><div class="absolute inset-0 bg-gradient-to-r from-[#0A0A0A] via-[#0A0A0A]/70 to-[#0A0A0A]/20"></div></div>
-        <div class="container mx-auto px-6 md:px-16 relative z-10 text-center">
-            <div class="inline-flex items-center border border-orange-500/30 bg-orange-500/10 py-1.5 px-4 md:px-5 rounded-full text-xs md:text-sm font-medium text-orange-400 tracking-wide backdrop-blur-sm mb-5 md:mb-6"><span class="w-1.5 h-1.5 bg-orange-400 rounded-full mr-2 animate-pulse"></span><span data-cms="hero.badge">Products &amp; Platforms</span></div>
-            <h1 class="text-3xl sm:text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight" data-cms="hero.heading" data-cms-field="html">PINNACLE &amp; META<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-amber-500">Telecom &amp; Digital Services</span></h1>
-            <p class="text-gray-400 text-base md:text-lg lg:text-xl max-w-3xl mx-auto mt-4 md:mt-6 font-light leading-relaxed px-2" data-cms="hero.subtext">Partnership platform combining Pinnacle Teleservice and META digital services for integrated telecom solutions.</p>
+    <!-- 1. Hero Section (Clean Luminous Light Design) -->
+    <section class="relative py-20 md:py-28 bg-gradient-to-b from-slate-50 via-white to-slate-50 border-b border-slate-200/60 overflow-hidden text-center">
+        <!-- Dot Grid Matrix Pattern -->
+        <div class="absolute inset-0 bg-[radial-gradient(#cbd5e1_1.2px,transparent_1.2px)] [background-size:24px_24px] [mask-image:radial-gradient(ellipse_75%_65%_at_50%_40%,#000_70%,transparent_100%)] pointer-events-none"></div>
+
+        <!-- Ambient Accent Orbs -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[550px] h-[300px] bg-orange-400/10 rounded-full blur-[110px] pointer-events-none"></div>
+        <div class="absolute -top-10 right-1/4 w-[350px] h-[250px] bg-amber-300/15 rounded-full blur-[90px] pointer-events-none"></div>
+
+        <div class="container mx-auto px-6 sm:px-8 md:px-12 lg:px-16 relative z-10 max-w-5xl">
+            <!-- Breadcrumb Badge Pill -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange-50 border border-orange-200/80 text-orange-700 text-xs font-semibold uppercase tracking-wider mb-6">
+                <span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
+                <span data-cms="hero.badge">Products &amp; Platforms</span>
+            </div>
+
+            <!-- Page Main Headline -->
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-black text-slate-900 tracking-tight leading-[1.1] max-w-4xl mx-auto"
+                data-cms="hero.heading" data-cms-field="html">
+                PINNACLE &amp; META<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500">
+                    Telecom &amp; Digital Services
+                </span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="mt-5 text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-normal"
+                data-cms="hero.subtext">
+                Partnership platform combining Pinnacle Teleservice and META digital services for integrated telecom solutions.
+            </p>
+
+            <!-- Hero Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-8">
+                <a href="contact-us.html"
+                    class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-orange-600 hover:bg-orange-500 text-white rounded-full font-bold text-sm shadow-md hover:shadow-lg transition-all duration-300 w-full sm:w-auto">
+                    <span>Get in Touch</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
+                <a href="#features"
+                    class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-700 rounded-full font-semibold text-sm border border-slate-200/90 shadow-2xs transition-all duration-300 w-full sm:w-auto">
+                    <span>Explore Features</span>
+                </a>
+            </div>
         </div>
     </section>
 
-    <section class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-6 md:px-16"><div class="max-w-4xl mx-auto text-center"><div class="inline-flex items-center border border-orange-200 bg-orange-50 py-1 px-3 md:px-4 rounded-full text-xs md:text-sm font-medium text-orange-700 tracking-wide mb-4 md:mb-6" data-cms="description.badge">About PINNACLE &amp; META</div><h2 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight mb-6" data-cms="description.heading">Integrated Telecom &amp; Digital Solutions</h2><p class="text-gray-600 leading-relaxed text-sm md:text-base" data-cms="description.paragraph1">TTGLOBALIT PINNACLE AND META Service is a partnership platform combining Pinnacle Teleservice and META digital services to deliver integrated telecom solutions, digital payments, and value-added services to businesses of all sizes.</p><p class="text-gray-600 mt-4 leading-relaxed text-sm md:text-base" data-cms="description.paragraph2">From telecom infrastructure integration to digital payment gateways and analytics dashboards, PINNACLE &amp; META provides a unified platform to drive digital transformation across your business operations.</p></div></div>
-    </section>
-
-    <section class="py-16 md:py-24 bg-gray-50">
+    <!-- 2. About Section (Redesigned with Refined Aesthetics) -->
+    <section class="py-16 md:py-24 bg-white border-b border-slate-100">
         <div class="container mx-auto px-6 md:px-16">
-            <div class="text-center mb-12 md:mb-16"><div class="inline-flex items-center border border-orange-200 bg-orange-50 py-1 px-3 md:px-4 rounded-full text-xs md:text-sm font-medium text-orange-700 tracking-wide mb-4 md:mb-6" data-cms="features.badge">Key Features</div><h2 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight" data-cms="features.heading">Telecom &amp; Digital Capabilities</h2><p class="text-gray-500 mt-3 md:mt-4 text-sm md:text-base" data-cms="features.subtext">Everything you need for integrated telecom and digital services</p></div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                <div class="group p-6 sm:p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-orange-500/30 hover:-translate-y-1 transition-all duration-300"><div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-orange-50 flex items-center justify-center text-orange-600 mb-4 sm:mb-5 group-hover:bg-orange-600 group-hover:text-white transition-all duration-300"><svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path></svg></div><h3 class="text-base sm:text-lg font-bold text-gray-900 mb-2 sm:mb-3" data-cms="features.telecom.title">Telecom Integration</h3><p class="text-gray-500 text-xs sm:text-sm leading-relaxed" data-cms="features.telecom.description">Seamless integration with telecom networks for voice, data, and messaging services with multi-operator support.</p></div>
-                <div class="group p-6 sm:p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-orange-500/30 hover:-translate-y-1 transition-all duration-300"><div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-orange-50 flex items-center justify-center text-orange-600 mb-4 sm:mb-5 group-hover:bg-orange-600 group-hover:text-white transition-all duration-300"><svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg></div><h3 class="text-base sm:text-lg font-bold text-gray-900 mb-2 sm:mb-3" data-cms="features.payments.title">Digital Payments</h3><p class="text-gray-500 text-xs sm:text-sm leading-relaxed" data-cms="features.payments.description">Comprehensive digital payment gateway supporting UPI, wallets, cards, and net banking with real-time settlement.</p></div>
-                <div class="group p-6 sm:p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-orange-500/30 hover:-translate-y-1 transition-all duration-300"><div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-orange-50 flex items-center justify-center text-orange-600 mb-4 sm:mb-5 group-hover:bg-orange-600 group-hover:text-white transition-all duration-300"><svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg></div><h3 class="text-base sm:text-lg font-bold text-gray-900 mb-2 sm:mb-3" data-cms="features.vas.title">VAS Platform</h3><p class="text-gray-500 text-xs sm:text-sm leading-relaxed" data-cms="features.vas.description">Value-added services platform for recharge, bill payments, travel bookings, and financial services distribution.</p></div>
-                <div class="group p-6 sm:p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-orange-500/30 hover:-translate-y-1 transition-all duration-300"><div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-orange-50 flex items-center justify-center text-orange-600 mb-4 sm:mb-5 group-hover:bg-orange-600 group-hover:text-white transition-all duration-300"><svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg></div><h3 class="text-base sm:text-lg font-bold text-gray-900 mb-2 sm:mb-3" data-cms="features.api.title">API Gateway</h3><p class="text-gray-500 text-xs sm:text-sm leading-relaxed" data-cms="features.api.description">Robust API gateway for third-party integrations, enabling businesses to connect with external services seamlessly.</p></div>
-                <div class="group p-6 sm:p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-orange-500/30 hover:-translate-y-1 transition-all duration-300"><div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-orange-50 flex items-center justify-center text-orange-600 mb-4 sm:mb-5 group-hover:bg-orange-600 group-hover:text-white transition-all duration-300"><svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg></div><h3 class="text-base sm:text-lg font-bold text-gray-900 mb-2 sm:mb-3" data-cms="features.analytics.title">Analytics Dashboard</h3><p class="text-gray-500 text-xs sm:text-sm leading-relaxed" data-cms="features.analytics.description">Real-time transaction analytics, revenue tracking, and business intelligence dashboards for data-driven decisions.</p></div>
-                <div class="group p-6 sm:p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-orange-500/30 hover:-translate-y-1 transition-all duration-300"><div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-orange-50 flex items-center justify-center text-orange-600 mb-4 sm:mb-5 group-hover:bg-orange-600 group-hover:text-white transition-all duration-300"><svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div><h3 class="text-base sm:text-lg font-bold text-gray-900 mb-2 sm:mb-3" data-cms="features.support.title">24/7 Support</h3><p class="text-gray-500 text-xs sm:text-sm leading-relaxed" data-cms="features.support.description">Round-the-clock technical support with dedicated account managers and SLA-backed service guarantees.</p></div>
+            <div class="max-w-4xl mx-auto text-center scroll-reveal">
+                <!-- Badge -->
+                <div class="inline-flex items-center border border-orange-200 bg-orange-50 py-1 px-3.5 md:px-4 rounded-full text-xs md:text-sm font-semibold text-orange-700 tracking-wide mb-5"
+                    data-cms="description.badge">
+                    About PINNACLE &amp; META
+                </div>
+
+                <!-- Heading -->
+                <h2 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6"
+                    data-cms="description.heading">
+                    Integrated Telecom &amp; Digital Solutions
+                </h2>
+
+                <!-- Paragraphs -->
+                <div class="space-y-4 max-w-3xl mx-auto text-slate-600 leading-relaxed text-sm md:text-base text-center">
+                    <p data-cms="description.paragraph1">
+                        TTGLOBALIT PINNACLE AND META Service is a partnership platform combining Pinnacle Teleservice and META digital services to deliver integrated telecom solutions, digital payments, and value-added services to businesses of all sizes.
+                    </p>
+                    <p data-cms="description.paragraph2">
+                        From telecom infrastructure integration to digital payment gateways and analytics dashboards, PINNACLE &amp; META provides a unified platform to drive digital transformation across your business operations.
+                    </p>
+                </div>
+
+                <!-- Key Value Badges -->
+                <div class="mt-8 pt-4 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 text-xs font-semibold text-slate-600">
+                    <span class="px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-slate-700">✓ Multi-Operator Support</span>
+                    <span class="px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-slate-700">✓ Real-time Settlement</span>
+                    <span class="px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-slate-700">✓ Robust API Gateways</span>
+                    <span class="px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-slate-700">✓ 24/7 Dedicated Support</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="py-16 md:py-20 bg-gradient-to-r from-[#0A0A0A] to-[#111]">
-        <div class="container mx-auto px-6 md:px-16 text-center relative"><div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-orange-600/5 rounded-full blur-[80px] md:blur-[120px] pointer-events-none"></div><div class="relative z-10"><h2 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white tracking-tight" data-cms="cta.heading">Ready to transform your telecom business?</h2><p class="text-gray-400 text-sm sm:text-base md:text-lg mt-3 md:mt-4 max-w-xl mx-auto" data-cms="cta.subtext">Discover how PINNACLE &amp; META can power your digital services.</p><div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-8 md:mt-10"><a href="contact-us.html" class="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full font-bold text-sm sm:text-base transition-all duration-300 hover:shadow-[0_0_30px_rgba(234,88,12,0.4)] hover:-translate-y-1 w-full sm:w-auto justify-center"><span data-cms="cta.primaryLabel">Get in Touch</span> <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a><a href="tel:+918073804799" class="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-transparent hover:bg-white/5 text-gray-300 hover:text-white rounded-full font-semibold text-sm sm:text-base border border-white/20 hover:border-white/40 transition-all duration-300 w-full sm:w-auto justify-center"><svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg><span data-cms="cta.phone">+91 807-3804-799</span></a></div></div></div>
+    <!-- 3. Key Features Section (The 6 Features with Sarvam AI Style Hover Motifs) -->
+    <section id="features" class="py-16 md:py-24 bg-[#FAFAFA] border-b border-slate-200/60">
+        <div class="container mx-auto px-6 md:px-16 max-w-6xl">
+            <div class="text-center mb-12 md:mb-16">
+                <!-- Badge -->
+                <div class="inline-flex items-center border border-orange-200 bg-orange-50 py-1 px-3.5 md:px-4 rounded-full text-xs md:text-sm font-semibold text-orange-700 tracking-wide mb-4"
+                    data-cms="features.badge">
+                    Key Features
+                </div>
+
+                <!-- Heading -->
+                <h2 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight"
+                    data-cms="features.heading">
+                    Telecom &amp; Digital Capabilities
+                </h2>
+
+                <!-- Subtext -->
+                <p class="text-slate-500 mt-3 md:mt-4 text-sm md:text-base max-w-xl mx-auto leading-relaxed"
+                    data-cms="features.subtext">
+                    Everything you need for integrated telecom and digital services
+                </p>
+            </div>
+
+            <!-- The 6 Features Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7">
+
+                <!-- 1. Telecom Integration -->
+                <div class="group bg-white rounded-[28px] p-7 sm:p-8 border border-slate-200/80 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.08)] hover:border-slate-300 transition-all duration-500 relative overflow-hidden flex flex-col justify-between scroll-reveal cursor-pointer">
+                    <!-- Corner Floral Motif (Rose-Coral) -->
+                    <svg viewBox="0 0 160 160" class="w-36 h-36 absolute -top-14 -right-14 pointer-events-none transition-all duration-500 ease-out transform translate-x-3 -translate-y-3 scale-90 opacity-0 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rotate-12">
+                        <defs>
+                            <radialGradient id="pinn-1" cx="70%" cy="30%" r="70%">
+                                <stop offset="0%" stop-color="#e11d48" stop-opacity="0.95" />
+                                <stop offset="55%" stop-color="#f43f5e" stop-opacity="0.8" />
+                                <stop offset="100%" stop-color="#c084fc" stop-opacity="0.3" />
+                            </radialGradient>
+                        </defs>
+                        <g transform="translate(80, 80)">
+                            <path d="M0 -70 C15 -45 35 -45 50 -50 C45 -35 45 -15 70 0 C45 15 45 35 50 50 C35 45 15 45 0 70 C-15 45 -35 45 -50 50 C-45 35 -45 15 -70 0 C-45 -15 -45 -35 -50 -50 C-35 -45 -15 -45 0 -70 Z" fill="url(#pinn-1)"/>
+                            <path d="M0 -70 C15 -45 35 -45 50 -50 C45 -35 45 -15 70 0 C45 15 45 35 50 50 C35 45 15 45 0 70 C-15 45 -35 45 -50 50 C-45 35 -45 15 -70 0 C-45 -15 -45 -35 -50 -50 C-35 -45 -15 -45 0 -70 Z" transform="rotate(22.5)" fill="url(#pinn-1)" opacity="0.7"/>
+                        </g>
+                    </svg>
+
+                    <!-- Icon -->
+                    <div class="relative z-10 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-orange-50 border border-orange-100 flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 shadow-2xs">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="relative z-10">
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 leading-snug" data-cms="features.telecom.title">
+                            Telecom Integration
+                        </h3>
+                        <p class="text-slate-500 text-xs sm:text-sm leading-relaxed" data-cms="features.telecom.description">
+                            Seamless integration with telecom networks for voice, data, and messaging services with multi-operator support.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2. Digital Payments -->
+                <div class="group bg-white rounded-[28px] p-7 sm:p-8 border border-slate-200/80 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.08)] hover:border-slate-300 transition-all duration-500 relative overflow-hidden flex flex-col justify-between scroll-reveal scroll-delay-1 cursor-pointer">
+                    <!-- Corner Floral Motif (Indigo) -->
+                    <svg viewBox="0 0 160 160" class="w-36 h-36 absolute -top-14 -right-14 pointer-events-none transition-all duration-500 ease-out transform translate-x-3 -translate-y-3 scale-90 opacity-0 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rotate-12">
+                        <defs>
+                            <radialGradient id="pinn-2" cx="70%" cy="30%" r="70%">
+                                <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.95" />
+                                <stop offset="55%" stop-color="#6366f1" stop-opacity="0.8" />
+                                <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.3" />
+                            </radialGradient>
+                        </defs>
+                        <g transform="translate(80, 80)">
+                            <path d="M0 -70 C15 -45 35 -45 50 -50 C45 -35 45 -15 70 0 C45 15 45 35 50 50 C35 45 15 45 0 70 C-15 45 -35 45 -50 50 C-45 35 -45 15 -70 0 C-45 -15 -45 -35 -50 -50 C-35 -45 -15 -45 0 -70 Z" fill="url(#pinn-2)"/>
+                            <path d="M0 -70 C15 -45 35 -45 50 -50 C45 -35 45 -15 70 0 C45 15 45 35 50 50 C35 45 15 45 0 70 C-15 45 -35 45 -50 50 C-45 35 -45 15 -70 0 C-45 -15 -45 -35 -50 -50 C-35 -45 -15 -45 0 -70 Z" transform="rotate(22.5)" fill="url(#pinn-2)" opacity="0.7"/>
+                        </g>
+                    </svg>
+
+                    <!-- Icon -->
+                    <div class="relative z-10 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 shadow-2xs">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="relative z-10">
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 leading-snug" data-cms="features.payments.title">
+                            Digital Payments
+                        </h3>
+                        <p class="text-slate-500 text-xs sm:text-sm leading-relaxed" data-cms="features.payments.description">
+                            Comprehensive digital payment gateway supporting UPI, wallets, cards, and net banking with real-time settlement.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. VAS Platform -->
+                <div class="group bg-white rounded-[28px] p-7 sm:p-8 border border-slate-200/80 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.08)] hover:border-slate-300 transition-all duration-500 relative overflow-hidden flex flex-col justify-between scroll-reveal scroll-delay-2 cursor-pointer">
+                    <!-- Corner Floral Motif (Amber) -->
+                    <svg viewBox="0 0 160 160" class="w-36 h-36 absolute -top-14 -right-14 pointer-events-none transition-all duration-500 ease-out transform translate-x-3 -translate-y-3 scale-90 opacity-0 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rotate-12">
+                        <defs>
+                            <radialGradient id="pinn-3" cx="70%" cy="30%" r="70%">
+                                <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.95" />
+                                <stop offset="55%" stop-color="#ea580c" stop-opacity="0.8" />
+                                <stop offset="100%" stop-color="#fdba74" stop-opacity="0.3" />
+                            </radialGradient>
+                        </defs>
+                        <g transform="translate(80, 80)">
+                            <path d="M0 -70 C15 -45 35 -45 50 -50 C45 -35 45 -15 70 0 C45 15 45 35 50 50 C35 45 15 45 0 70 C-15 45 -35 45 -50 50 C-45 35 -45 15 -70 0 C-45 -15 -45 -35 -50 -50 C-35 -45 -15 -45 0 -70 Z" fill="url(#pinn-3)"/>
+                            <path d="M0 -70 C15 -45 35 -45 50 -50 C45 -35 45 -15 70 0 C45 15 45 35 50 50 C35 45 15 45 0 70 C-15 45 -35 45 -50 50 C-45 35 -45 15 -70 0 C-45 -15 -45 -35 -50 -50 C-35 -45 -15 -45 0 -70 Z" transform="rotate(22.5)" fill="url(#pinn-3)" opacity="0.7"/>
+                        </g>
+                    </svg>
+
+                    <!-- Icon -->
+                    <div class="relative z-10 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center text-amber-600 group-hover:bg-amber-600 group-hover:text-white transition-all duration-300 shadow-2xs">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="relative z-10">
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 leading-snug" data-cms="features.vas.title">
+                            VAS Platform
+                        </h3>
+                        <p class="text-slate-500 text-xs sm:text-sm leading-relaxed" data-cms="features.vas.description">
+                            Value-added services platform for recharge, bill payments, travel bookings, and financial services distribution.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 4. API Gateway -->
+                <div class="group bg-white rounded-[28px] p-7 sm:p-8 border border-slate-200/80 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.08)] hover:border-slate-300 transition-all duration-500 relative overflow-hidden flex flex-col justify-between scroll-reveal cursor-pointer">
+                    <!-- Corner Floral Motif (Emerald) -->
+                    <svg viewBox="0 0 160 160" class="w-36 h-36 absolute -top-14 -right-14 pointer-events-none transition-all duration-500 ease-out transform translate-x-3 -translate-y-3 scale-90 opacity-0 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rotate-12">
+                        <defs>
+                            <radialGradient id="pinn-4" cx="70%" cy="30%" r="70%">
+                                <stop offset="0%" stop-color="#059669" stop-opacity="0.95" />
+                                <stop offset="55%" stop-color="#10b981" stop-opacity="0.8" />
+                                <stop offset="100%" stop-color="#6ee7b7" stop-opacity="0.3" />
+                            </radialGradient>
+                        </defs>
+                        <g transform="translate(80, 80)">
+                            <path d="M0 -70 C15 -45 35 -45 50 -50 C45 -35 45 -15 70 0 C45 15 45 35 50 50 C35 45 15 45 0 70 C-15 45 -35 45 -50 50 C-45 35 -45 15 -70 0 C-45 -15 -45 -35 -50 -50 C-35 -45 -15 -45 0 -70 Z" fill="url(#pinn-4)"/>
+                            <path d="M0 -70 C15 -45 35 -45 50 -50 C45 -35 45 -15 70 0 C45 15 45 35 50 50 C35 45 15 45 0 70 C-15 45 -35 45 -50 50 C-45 35 -45 15 -70 0 C-45 -15 -45 -35 -50 -50 C-35 -45 -15 -45 0 -70 Z" transform="rotate(22.5)" fill="url(#pinn-4)" opacity="0.7"/>
+                        </g>
+                    </svg>
+
+                    <!-- Icon -->
+                    <div class="relative z-10 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300 shadow-2xs">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="relative z-10">
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 leading-snug" data-cms="features.api.title">
+                            API Gateway
+                        </h3>
+                        <p class="text-slate-500 text-xs sm:text-sm leading-relaxed" data-cms="features.api.description">
+                            Robust API gateway for third-party integrations, enabling businesses to connect with external services seamlessly.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 5. Analytics Dashboard -->
+                <div class="group bg-white rounded-[28px] p-7 sm:p-8 border border-slate-200/80 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.08)] hover:border-slate-300 transition-all duration-500 relative overflow-hidden flex flex-col justify-between scroll-reveal scroll-delay-1 cursor-pointer">
+                    <!-- Corner Floral Motif (Rose-Violet) -->
+                    <svg viewBox="0 0 160 160" class="w-36 h-36 absolute -top-14 -right-14 pointer-events-none transition-all duration-500 ease-out transform translate-x-3 -translate-y-3 scale-90 opacity-0 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rotate-12">
+                        <defs>
+                            <radialGradient id="pinn-5" cx="70%" cy="30%" r="70%">
+                                <stop offset="0%" stop-color="#dc2626" stop-opacity="0.95" />
+                                <stop offset="55%" stop-color="#e11d48" stop-opacity="0.8" />
+                                <stop offset="100%" stop-color="#9333ea" stop-opacity="0.3" />
+                            </radialGradient>
+                        </defs>
+                        <g transform="translate(80, 80)">
+                            <path d="M0 -70 C15 -45 35 -45 50 -50 C45 -35 45 -15 70 0 C45 15 45 35 50 50 C35 45 15 45 0 70 C-15 45 -35 45 -50 50 C-45 35 -45 15 -70 0 C-45 -15 -45 -35 -50 -50 C-35 -45 -15 -45 0 -70 Z" fill="url(#pinn-5)"/>
+                            <path d="M0 -70 C15 -45 35 -45 50 -50 C45 -35 45 -15 70 0 C45 15 45 35 50 50 C35 45 15 45 0 70 C-15 45 -35 45 -50 50 C-45 35 -45 15 -70 0 C-45 -15 -45 -35 -50 -50 C-35 -45 -15 -45 0 -70 Z" transform="rotate(22.5)" fill="url(#pinn-5)" opacity="0.7"/>
+                        </g>
+                    </svg>
+
+                    <!-- Icon -->
+                    <div class="relative z-10 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-red-50 border border-red-100 flex items-center justify-center text-red-600 group-hover:bg-red-600 group-hover:text-white transition-all duration-300 shadow-2xs">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="relative z-10">
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 leading-snug" data-cms="features.analytics.title">
+                            Analytics Dashboard
+                        </h3>
+                        <p class="text-slate-500 text-xs sm:text-sm leading-relaxed" data-cms="features.analytics.description">
+                            Real-time transaction analytics, revenue tracking, and business intelligence dashboards for data-driven decisions.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 6. 24/7 Support -->
+                <div class="group bg-white rounded-[28px] p-7 sm:p-8 border border-slate-200/80 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.08)] hover:border-slate-300 transition-all duration-500 relative overflow-hidden flex flex-col justify-between scroll-reveal scroll-delay-2 cursor-pointer">
+                    <!-- Corner Floral Motif (Sky-Indigo) -->
+                    <svg viewBox="0 0 160 160" class="w-36 h-36 absolute -top-14 -right-14 pointer-events-none transition-all duration-500 ease-out transform translate-x-3 -translate-y-3 scale-90 opacity-0 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rotate-12">
+                        <defs>
+                            <radialGradient id="pinn-6" cx="70%" cy="30%" r="70%">
+                                <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.95" />
+                                <stop offset="55%" stop-color="#6366f1" stop-opacity="0.8" />
+                                <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.3" />
+                            </radialGradient>
+                        </defs>
+                        <g transform="translate(80, 80)">
+                            <path d="M0 -70 C15 -45 35 -45 50 -50 C45 -35 45 -15 70 0 C45 15 45 35 50 50 C35 45 15 45 0 70 C-15 45 -35 45 -50 50 C-45 35 -45 15 -70 0 C-45 -15 -45 -35 -50 -50 C-35 -45 -15 -45 0 -70 Z" fill="url(#pinn-6)"/>
+                            <path d="M0 -70 C15 -45 35 -45 50 -50 C45 -35 45 -15 70 0 C45 15 45 35 50 50 C35 45 15 45 0 70 C-15 45 -35 45 -50 50 C-45 35 -45 15 -70 0 C-45 -15 -45 -35 -50 -50 C-35 -45 -15 -45 0 -70 Z" transform="rotate(22.5)" fill="url(#pinn-6)" opacity="0.7"/>
+                        </g>
+                    </svg>
+
+                    <!-- Icon -->
+                    <div class="relative z-10 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center text-sky-600 group-hover:bg-sky-600 group-hover:text-white transition-all duration-300 shadow-2xs">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="relative z-10">
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 leading-snug" data-cms="features.support.title">
+                            24/7 Support
+                        </h3>
+                        <p class="text-slate-500 text-xs sm:text-sm leading-relaxed" data-cms="features.support.description">
+                            Round-the-clock technical support with dedicated account managers and SLA-backed service guarantees.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </section>
 
-    <footer class="bg-black border-t border-white/10 pt-16 md:pt-20 pb-10 text-gray-400">
-        <div class="container mx-auto px-8 md:px-16">
-            <div class="grid grid-cols-2 lg:grid-cols-5 gap-6 md:gap-10 border-b border-white/10 pb-14">
-                <div class="space-y-5 col-span-full lg:col-span-1"><span class="font-bold text-lg tracking-widest text-white uppercase block" data-cms="global.footer.brandName">TT GLOBAL IT</span><p class="text-xs leading-relaxed" data-cms="global.footer.brandBlurb">Optimizing the digital presence of brands, fueled by a drive to provide exceptional solutions and cutting-edge software products.</p><div class="space-y-2 pt-2"><p class="text-xs flex items-center gap-2"><svg class="w-3.5 h-3.5 text-orange-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg> <span data-cms="global.footer.phone">+91 807-3804-799 | +91 8660402580</span></p><p class="text-xs flex items-center gap-2"><svg class="w-3.5 h-3.5 text-orange-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> <span data-cms="global.footer.email">ttglobalinfotech7@gmail.com</span></p></div><div class="pt-2"><h4 class="text-white font-semibold uppercase tracking-wider mb-3 text-xs">Offices</h4><ul class="space-y-2 text-xs"><li><strong class="block text-gray-300" data-cms="global.footer.office1.label">Corporate</strong> <span data-cms="global.footer.office1.address">#166 &amp;167, 5th Cross, Hebbal, Bengaluru 560024</span></li><li><strong class="block text-gray-300" data-cms="global.footer.office2.label">Head Office</strong> <span data-cms="global.footer.office2.address">35 Mayasandra, Turuvekere, Tumkur 572221</span></li><li><strong class="block text-gray-300" data-cms="global.footer.office3.label">Branch</strong> <span data-cms="global.footer.office3.address">291/A KIADB, Hebbal Industrial Area, Mysuru 570016</span></li></ul></div></div>
-                <div><h4 class="text-white font-semibold uppercase tracking-wider mb-4 text-xs">Industries</h4><ul class="space-y-2 text-xs"><li><a href="industry-banking.html" class="hover:text-orange-500 transition-colors">Banking</a></li><li><a href="industry-communications.html" class="hover:text-orange-500 transition-colors">Communications, Media &amp; Information Services</a></li><li><a href="industry-education.html" class="hover:text-orange-500 transition-colors">Education</a></li><li><a href="industry-energy.html" class="hover:text-orange-500 transition-colors">Energy, Resources &amp; Utilities</a></li><li><a href="industry-healthcare.html" class="hover:text-orange-500 transition-colors">Healthcare</a></li><li><a href="industry-public-services.html" class="hover:text-orange-500 transition-colors">Public Services</a></li></ul></div>
-                <div><h4 class="text-white font-semibold uppercase tracking-wider mb-4 text-xs">Services</h4><ul class="space-y-2 text-xs"><li><a href="overview.html" class="hover:text-orange-500 transition-colors">Artificial Intelligence</a></li><li><a href="overview.html" class="hover:text-orange-500 transition-colors">Cloud</a></li><li><a href="overview.html" class="hover:text-orange-500 transition-colors">Cybersecurity</a></li><li><a href="overview.html" class="hover:text-orange-500 transition-colors">Data and Analytics</a></li><li><a href="overview.html" class="hover:text-orange-500 transition-colors">Enterprise Solutions</a></li><li><a href="overview.html" class="hover:text-orange-500 transition-colors">IoT and Digital Engineering</a></li><li><a href="overview.html" class="hover:text-orange-500 transition-colors">TTGLOBALIT and AWS Cloud</a></li><li><a href="overview.html" class="hover:text-orange-500 transition-colors">TTGLOBALIT Enterprise Cloud</a></li><li><a href="overview.html" class="hover:text-orange-500 transition-colors">TTGLOBALIT and Google Cloud</a></li><li><a href="overview.html" class="hover:text-orange-500 transition-colors">TTGLOBALIT and Microsoft Cloud</a></li><li><a href="overview.html" class="hover:text-orange-500 transition-colors">TTGLOBALIT and Pinnacle Teleservice</a></li></ul></div>
-                <div class="col-span-full lg:col-span-2"><div class="grid grid-cols-2 lg:grid-cols-3 gap-6"><div class="col-span-full lg:col-span-1"><h4 class="text-white font-semibold uppercase tracking-wider mb-4 text-xs">Products &amp; Platforms</h4><ul class="space-y-2 text-xs"><li><a href="Esahakara.html" class="hover:text-orange-500 transition-colors">TTGLOBALIT ESAHAKARA</a></li><li><a href="evyavahaar.html" class="hover:text-orange-500 transition-colors">TTGLOBALIT EVYAVAHAAR</a></li><li><a href="echits.html" class="hover:text-orange-500 transition-colors">TTGLOBALIT ECHITS</a></li><li><a href="ribill.html" class="hover:text-orange-500 transition-colors">TTGLOBALIT RIBILL</a></li><li><a href="pinnacle.html" class="hover:text-orange-500 transition-colors">TTGLOBALIT PINNACLE AND META Service</a></li></ul></div><div><h4 class="text-white font-semibold uppercase tracking-wider mb-4 text-xs">Insights</h4><ul class="space-y-2 text-xs"><li><a href="#" class="hover:text-orange-500 transition-colors">Customer Stories</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Cloud</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Blockchain</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">IoT</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Pinnacle &amp; Meta with TTGLOBALIT</a></li><li><a href="#" class="hover:text-orange-500 transition-colors">Future of Work</a></li></ul></div><div><h4 class="text-white font-semibold uppercase tracking-wider mb-4 text-xs">More Info</h4><ul class="space-y-2 text-xs"><li><a href="contact-us.html" class="hover:text-orange-500 transition-colors">Contact Us</a></li><li><a href="careers.html" class="hover:text-orange-500 transition-colors">Careers</a></li><li><a href="privacy.html" class="hover:text-orange-500 transition-colors">Privacy Policy</a></li><li><a href="terms-and-conditions.html" class="hover:text-orange-500 transition-colors">Terms &amp; Conditions</a></li><li><a href="refund-policy.html" class="hover:text-orange-500 transition-colors">Refund Policy</a></li></ul></div></div></div>
+    <!-- 4. Bottom CTA Section (Midnight-to-Periwinkle Card Style) -->
+    <section class="py-16 md:py-24 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+        <div class="container mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
+            <div
+                class="rounded-[2.5rem] p-10 sm:p-14 md:p-20 relative overflow-hidden bg-gradient-to-b from-[#131722] via-[#1a2233] to-[#859bbd] text-center shadow-2xl border border-slate-800/40">
+                <div class="relative z-10 max-w-3xl mx-auto space-y-4">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-normal text-white tracking-tight leading-tight"
+                        style="font-family: 'Playfair Display', Georgia, serif;" data-cms="cta.heading">
+                        Ready to transform your telecom business?
+                    </h2>
+                    <p class="text-slate-200/90 text-base sm:text-lg max-w-xl mx-auto font-normal leading-relaxed"
+                        data-cms="cta.subtext">
+                        Scale your carrier-grade SMS, WhatsApp, and Voice gateway solutions.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+                        <a href="contact-us.html"
+                            class="inline-flex items-center gap-2.5 px-8 py-4 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white rounded-full font-bold text-sm sm:text-base shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 transition-all duration-300 transform hover:-translate-y-0.5 w-full sm:w-auto justify-center">
+                            <span data-cms="cta.primaryButtonLabel">Get in Touch</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                        <a href="tel:+918073804799"
+                            class="inline-flex items-center gap-2.5 px-7 py-4 bg-slate-900/80 hover:bg-slate-900 text-white rounded-full font-semibold text-sm sm:text-base border border-slate-700/80 shadow-md transition-all duration-300 transform hover:-translate-y-0.5 w-full sm:w-auto justify-center">
+                            <svg class="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                </path>
+                            </svg>
+                            <span data-cms="cta.phoneLabel">+91 807-3804-799</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="pt-8 text-center text-xs text-gray-600 flex flex-col md:flex-row justify-between items-center gap-2"><p data-cms="global.footer.copyright">&copy; 2019-2026 TRANSCRIPT TECHNOLOGY GLOBAL INFOTECH PRIVATE LIMITED</p><div class="flex items-center gap-4"><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a><a href="terms-and-conditions.html" class="hover:text-white transition-colors">Terms of Service</a></div></div>
+        </div>
+    </section>
+
+    <!-- 5. Footer -->
+    <!-- Footer -->
+    <footer class="bg-white text-slate-600 pt-16 md:pt-20 pb-12 relative overflow-hidden border-t border-slate-200/80">
+        <div class="container mx-auto px-6 sm:px-8 md:px-12 lg:px-16 relative z-10">
+
+            <!-- Main Footer Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 md:gap-12 border-b border-slate-100 pb-16">
+                <!-- Brand & Contact Information Column (LG 4 cols) -->
+                <div class="lg:col-span-4 space-y-6">
+                    <div class="space-y-3">
+                        <a href="index.html" class="inline-block focus:outline-none">
+                            <img src="assets/logo.png" alt="TT Global IT Logo" class="h-9 sm:h-10 w-auto object-contain" data-cms="global.footer.logoSrc">
+                            <p class="text-xs font-semibold text-slate-700 tracking-wider uppercase mt-2">Transcript Technology Global Infotech Private Limited</p>
+                        </a>
+                        <p class="text-xs sm:text-sm leading-relaxed text-slate-500" data-cms="global.footer.brandBlurb">
+                            Optimizing the digital presence of brands, fueled by a drive to provide exceptional solutions and cutting-edge software products.
+                        </p>
+                    </div>
+
+                    <!-- Direct Contact Cards -->
+                    <div class="space-y-2.5 pt-2">
+                        <a href="tel:+918073804799" class="group flex items-center gap-3 p-2.5 rounded-xl bg-slate-50/80 border border-slate-200/80 hover:border-orange-500/40 hover:bg-orange-50/40 transition-all duration-300">
+                            <div class="w-9 h-9 rounded-lg bg-orange-500/10 border border-orange-500/20 flex items-center justify-center shrink-0 group-hover:bg-orange-500/20 group-hover:border-orange-500/40 transition-all">
+                                <svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                            </div>
+                            <span data-cms="global.footer.phone" class="text-xs font-medium text-slate-700 group-hover:text-orange-600 transition-colors">+91 807-3804-799 | +91 8660402580</span>
+                        </a>
+
+                        <a href="mailto:ttglobalinfotech7@gmail.com" class="group flex items-center gap-3 p-2.5 rounded-xl bg-slate-50/80 border border-slate-200/80 hover:border-orange-500/40 hover:bg-orange-50/40 transition-all duration-300">
+                            <div class="w-9 h-9 rounded-lg bg-orange-500/10 border border-orange-500/20 flex items-center justify-center shrink-0 group-hover:bg-orange-500/20 group-hover:border-orange-500/40 transition-all">
+                                <svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <span data-cms="global.footer.email" class="text-xs font-medium text-slate-700 group-hover:text-orange-600 transition-colors">ttglobalinfotech7@gmail.com</span>
+                        </a>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="pt-2">
+                        <h5 class="text-xs font-semibold text-slate-700 uppercase tracking-wider mb-3">Connect With Us</h5>
+                        <div class="flex items-center gap-2">
+                            <a href="#" aria-label="LinkedIn" class="w-9 h-9 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-500 hover:text-white hover:bg-orange-500 hover:border-orange-500 transition-all duration-300 shadow-sm transform hover:-translate-y-0.5">
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-1.3.7-1.75 1.4-1.75s1.4.45 1.4 1.75v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                            </a>
+                            <a href="#" aria-label="Twitter" class="w-9 h-9 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-500 hover:text-white hover:bg-orange-500 hover:border-orange-500 transition-all duration-300 shadow-sm transform hover:-translate-y-0.5">
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            </a>
+                            <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-500 hover:text-white hover:bg-orange-500 hover:border-orange-500 transition-all duration-300 shadow-sm transform hover:-translate-y-0.5">
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H7.5v-3H10V9.5C10 7.01 11.49 5.65 13.75 5.65c1.08 0 2.2.19 2.2.19v2.42h-1.24c-1.23 0-1.61.77-1.61 1.56V12h2.72l-.43 3h-2.29v6.8c4.56-.93 8-4.96 8-9.8z"/></svg>
+                            </a>
+                            <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-500 hover:text-white hover:bg-orange-500 hover:border-orange-500 transition-all duration-300 shadow-sm transform hover:-translate-y-0.5">
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            </a>
+                            <a href="#" aria-label="GitHub" class="w-9 h-9 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-500 hover:text-white hover:bg-orange-500 hover:border-orange-500 transition-all duration-300 shadow-sm transform hover:-translate-y-0.5">
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Office Locations Column (LG 3 cols) -->
+                <div class="lg:col-span-3 space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-2 h-2 rounded-full bg-orange-500"></div>
+                        <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider">Our Offices</h4>
+                    </div>
+
+                    <ul class="space-y-3 text-xs">
+                        <li class="p-3 rounded-xl bg-slate-50/80 border border-slate-100 hover:border-slate-200 transition-colors">
+                            <strong class="block text-slate-800 font-semibold mb-0.5" data-cms="global.footer.office1.label">Corporate Office</strong>
+                            <span data-cms="global.footer.office1.address" class="text-slate-500 leading-relaxed block">#166 &amp; 167, 5th Cross, Hebbal, Bengaluru 560024</span>
+                        </li>
+                        <li class="p-3 rounded-xl bg-slate-50/80 border border-slate-100 hover:border-slate-200 transition-colors">
+                            <strong class="block text-slate-800 font-semibold mb-0.5" data-cms="global.footer.office2.label">Head Office</strong>
+                            <span data-cms="global.footer.office2.address" class="text-slate-500 leading-relaxed block">35 Mayasandra, Turuvekere, Tumkur 572221</span>
+                        </li>
+                        <li class="p-3 rounded-xl bg-slate-50/80 border border-slate-100 hover:border-slate-200 transition-colors">
+                            <strong class="block text-slate-800 font-semibold mb-0.5" data-cms="global.footer.office3.label">Branch Office</strong>
+                            <span data-cms="global.footer.office3.address" class="text-slate-500 leading-relaxed block">291/A KIADB, Hebbal Industrial Area, Mysuru 570016</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Links Navigation Columns (LG 5 cols) -->
+                <div class="lg:col-span-5 grid grid-cols-2 sm:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4 border-l-2 border-orange-500 pl-2.5">Industries</h4>
+                        <ul class="space-y-2.5 text-xs text-slate-500">
+                            <li><a href="industry-banking.html" class="hover:text-orange-600 transition-colors flex items-center gap-1 group"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-orange-500 transition-colors"></span>Banking</a></li>
+                            <li><a href="industry-communications.html" class="hover:text-orange-600 transition-colors flex items-center gap-1 group"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-orange-500 transition-colors"></span>Communications</a></li>
+                            <li><a href="industry-education.html" class="hover:text-orange-600 transition-colors flex items-center gap-1 group"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-orange-500 transition-colors"></span>Education</a></li>
+                            <li><a href="industry-energy.html" class="hover:text-orange-600 transition-colors flex items-center gap-1 group"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-orange-500 transition-colors"></span>Energy &amp; Utilities</a></li>
+                            <li><a href="industry-healthcare.html" class="hover:text-orange-600 transition-colors flex items-center gap-1 group"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-orange-500 transition-colors"></span>Healthcare</a></li>
+                            <li><a href="industry-public-services.html" class="hover:text-orange-600 transition-colors flex items-center gap-1 group"><span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-orange-500 transition-colors"></span>Public Services</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4 border-l-2 border-orange-500 pl-2.5">Products</h4>
+                        <ul class="space-y-2.5 text-xs text-slate-500">
+                            <li><a href="https://esahakara.com/" target="_blank" rel="noopener" class="hover:text-orange-600 transition-colors">ESAHAKARA</a></li>
+                            <li><a href="https://evyavahaar.com/" target="_blank" rel="noopener" class="hover:text-orange-600 transition-colors">EVYAVAHAAR</a></li>
+                            <li><a href="https://esahakara.com/" target="_blank" rel="noopener" class="hover:text-orange-600 transition-colors">ECHITS</a></li>
+                            <li><a href="https://rebileasy.com" target="_blank" rel="noopener" class="hover:text-orange-600 transition-colors">RIBILL</a></li>
+                            <li><a href="https://www.bolzanogroup.com/" target="_blank" rel="noopener" class="hover:text-orange-600 transition-colors">BOLZANO GROUP</a></li>
+                            <li><a href="https://taaraskitchen.com/" target="_blank" rel="noopener" class="hover:text-orange-600 transition-colors">TAARAS KITCHEN</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4 border-l-2 border-orange-500 pl-2.5">Company</h4>
+                        <ul class="space-y-2.5 text-xs text-slate-500">
+                            <li><a href="aboutus.html" class="hover:text-orange-600 transition-colors">About Us</a></li>
+                            <li><a href="careers.html" class="hover:text-orange-600 transition-colors">Careers</a></li>
+                            <li><a href="team.html" class="hover:text-orange-600 transition-colors">Our Team</a></li>
+                            <li><a href="contact-us.html" class="hover:text-orange-600 transition-colors">Contact Us</a></li>
+                            <li><a href="overview.html" class="hover:text-orange-600 transition-colors">Overview</a></li>
+                            <li><a href="privacy.html" class="hover:text-orange-600 transition-colors">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <p data-cms="global.footer.copyright" class="text-center md:text-left">&copy; 2019-2026 TRANSCRIPT TECHNOLOGY GLOBAL INFOTECH PRIVATE LIMITED. All rights reserved.</p>
+
+                <div class="flex items-center gap-6">
+                    <a href="privacy.html" class="hover:text-slate-900 transition-colors">Privacy Policy</a>
+                    <span class="text-slate-300">•</span>
+                    <a href="terms-and-conditions.html" class="hover:text-slate-900 transition-colors">Terms of Service</a>
+                    <span class="text-slate-300">•</span>
+                    <a href="refund-policy.html" class="hover:text-slate-900 transition-colors">Refund Policy</a>
+                </div>
+
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="group inline-flex items-center gap-2 px-4 py-2 bg-slate-50 hover:bg-orange-500 text-slate-600 hover:text-white rounded-full text-xs font-medium border border-slate-200 hover:border-orange-500 transition-all duration-300 shadow-sm cursor-pointer">
+                    <span>Back to top</span>
+                    <svg class="w-3.5 h-3.5 transform group-hover:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
     </footer>
 
+    <!-- Interactive Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const menuBtn = document.getElementById('mobile-menu-btn'); const mobileMenu = document.getElementById('mobile-menu');
-            menuBtn.addEventListener('click', () => { if (mobileMenu.classList.contains('hidden')) { mobileMenu.classList.remove('hidden'); mobileMenu.classList.add('flex'); } else { mobileMenu.classList.add('hidden'); mobileMenu.classList.remove('flex'); } });
-            function closeDropdown(d, a) { if (!d) return; d.classList.remove('visible','opacity-100','translate-y-0','scale-100'); d.classList.add('opacity-0','invisible','translate-y-2','scale-95'); d.style.pointerEvents='none'; if(a) a.classList.remove('rotate-180'); }
-            function openDropdown(d, a) { if (!d) return; d.classList.remove('opacity-0','invisible','translate-y-2','scale-95'); d.classList.add('visible','opacity-100','translate-y-0','scale-100'); d.style.pointerEvents='auto'; if(a) a.classList.add('rotate-180'); }
-            const mD=document.querySelector('[data-more-dropdown]'),mA=document.querySelector('[data-more-arrow]'),wD=document.querySelector('[data-whatwedo-dropdown]'),wA=document.querySelector('[data-whatwedo-arrow]'),eD=document.querySelector('[data-esahakara-dropdown]'),eA=document.querySelector('[data-esahakara-arrow]'),pD=document.querySelector('[data-products-dropdown]'),pA=document.querySelector('[data-products-arrow]');
-            const all=[[mD,mA],[wD,wA],[eD,eA],[pD,pA]];
-            function closeAll(){all.forEach(([d,a])=>closeDropdown(d,a));}
-            document.querySelector('[data-whatwedo-btn]')?.addEventListener('click',e=>{e.stopPropagation();const o=wD?.classList.contains('visible');closeAll();if(!o)openDropdown(wD,wA);});
-            document.querySelector('[data-esahakara-btn]')?.addEventListener('click',e=>{e.stopPropagation();const o=eD?.classList.contains('visible');closeAll();if(!o)openDropdown(eD,eA);});
-            document.querySelector('[data-products-btn]')?.addEventListener('click',e=>{e.stopPropagation();const o=pD?.classList.contains('visible');closeAll();if(!o)openDropdown(pD,pA);});
-            document.querySelector('[data-more-btn]')?.addEventListener('click',e=>{e.stopPropagation();const o=mD?.classList.contains('visible');closeAll();if(!o)openDropdown(mD,mA);});
-            document.addEventListener('click',closeAll);
+            // Mobile Menu
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    if (mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.remove('hidden');
+                        mobileMenu.classList.add('flex');
+                    } else {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenu.classList.remove('flex');
+                    }
+                });
+            }
+
+            // Dropdowns
+            function closeDropdown(d, a) {
+                if (!d) return;
+                d.classList.remove('visible', 'opacity-100', 'translate-y-0', 'scale-100');
+                d.classList.add('opacity-0', 'invisible', 'translate-y-2', 'scale-95');
+                d.style.pointerEvents = 'none';
+                if (a) a.classList.remove('rotate-180');
+            }
+
+            function openDropdown(d, a) {
+                if (!d) return;
+                d.classList.remove('opacity-0', 'invisible', 'translate-y-2', 'scale-95');
+                d.classList.add('visible', 'opacity-100', 'translate-y-0', 'scale-100');
+                d.style.pointerEvents = 'auto';
+                if (a) a.classList.add('rotate-180');
+            }
+
+            const mD = document.querySelector('[data-more-dropdown]'), mA = document.querySelector('[data-more-arrow]');
+            const wD = document.querySelector('[data-whatwedo-dropdown]'), wA = document.querySelector('[data-whatwedo-arrow]');
+            const eD = document.querySelector('[data-esahakara-dropdown]'), eA = document.querySelector('[data-esahakara-arrow]');
+            const pD = document.querySelector('[data-products-dropdown]'), pA = document.querySelector('[data-products-arrow]');
+            const all = [[mD, mA], [wD, wA], [eD, eA], [pD, pA]];
+
+            function closeAll() { all.forEach(([d, a]) => closeDropdown(d, a)); }
+
+            document.querySelector('[data-whatwedo-btn]')?.addEventListener('click', e => { e.stopPropagation(); const o = wD?.classList.contains('visible'); closeAll(); if (!o) openDropdown(wD, wA); });
+            document.querySelector('[data-esahakara-btn]')?.addEventListener('click', e => { e.stopPropagation(); const o = eD?.classList.contains('visible'); closeAll(); if (!o) openDropdown(eD, eA); });
+            document.querySelector('[data-products-btn]')?.addEventListener('click', e => { e.stopPropagation(); const o = pD?.classList.contains('visible'); closeAll(); if (!o) openDropdown(pD, pA); });
+            document.querySelector('[data-more-btn]')?.addEventListener('click', e => { e.stopPropagation(); const o = mD?.classList.contains('visible'); closeAll(); if (!o) openDropdown(mD, mA); });
+            document.addEventListener('click', closeAll);
+
+            // Scroll Reveal Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
         });
     </script>
-<script src="chatbot.js"></script>
-<script src="cms-hydrate.js" defer></script>
+    <script src="chatbot.js"></script>
+    <script src="cms-hydrate.js" defer></script>
 </body>
+
 </html>
