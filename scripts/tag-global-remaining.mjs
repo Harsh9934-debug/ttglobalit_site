@@ -63,8 +63,8 @@ const TEXT_MAP = [
 // Bare text nodes next to icons that need wrapping in a span.
 const TEXT_NODE_MAP = [
   ['global.nav.contactCta.label', 'Contact Us'], // top-right nav link (own <a>, no children)
-  ['global.footer.phone', '+91 807-3804-799 | +91 8660402580'],
-  ['global.footer.email', 'ttglobalinfotech7@gmail.com'],
+  ['global.footer.phone', '+91 807-3804-799'],
+  ['global.footer.email', 'info@ttglobalit.in'],
   ['global.footer.office1.address', '#166 &167, 5th Cross, Hebbal, Bengaluru 560024'],
   ['global.footer.office2.address', '35 Mayasandra, Turuvekere, Tumkur 572221'],
   ['global.footer.office3.address', '291/A KIADB, Hebbal Industrial Area, Mysuru 570016'],

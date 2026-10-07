@@ -18,7 +18,7 @@
     },
     {
       q: "What internship opportunities are available?",
-      a: 'We offer internships in: Android Development (3 openings), IoT (2), Machine Learning (3), Full Stack Development (4), Python Data Analysis (2), Data Science & AI (3).<br><br>Every intern gets a Certificate of Completion.<br><br>Apply by emailing ttglobalinfotech7@gmail.com with your name, college, and domain.<br><br><a href="Internship.html" class="text-orange-500 underline font-medium">View all positions →</a>'
+      a: 'We offer internships in: Android Development (3 openings), IoT (2), Machine Learning (3), Full Stack Development (4), Python Data Analysis (2), Data Science & AI (3).<br><br>Every intern gets a Certificate of Completion.<br><br>Apply by emailing info@ttglobalit.in with your name, college, and domain.<br><br><a href="Internship.html" class="text-orange-500 underline font-medium">View all positions →</a>'
     },
     {
       q: "Where are your offices?",
@@ -26,7 +26,7 @@
     },
     {
       q: "How can I contact you?",
-      a: '<b>Phone:</b> +91 807-3804-799 | +91 8660402580<br><br><b>Email:</b> info@ttglobalit.in<br><br><b>Hours:</b> Mon-Sat, 9:00 AM – 6:00 PM<br><br><a href="contact-us.html" class="text-orange-500 underline font-medium">Go to Contact page →</a>'
+      a: '<b>Phone:</b> +91 807-3804-799<br><br><b>Email:</b> info@ttglobalit.in<br><br><b>Hours:</b> Mon-Sat, 9:00 AM – 6:00 PM<br><br><a href="contact-us.html" class="text-orange-500 underline font-medium">Go to Contact page →</a>'
     },
     {
       q: "What services do you offer?",
